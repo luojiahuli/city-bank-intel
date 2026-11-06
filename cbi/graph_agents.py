@@ -99,7 +99,8 @@ def prepare(state: RunState) -> dict:
                                                  force=force):
             tasks.append(_task("financial", bank, **task_opts))
 
-    budget = int(state.get("max_tasks") or 80)
+    default_budget = 400 if mode in ("bootstrap", "all") else 80
+    budget = int(state.get("max_tasks") or default_budget)
     truncated = len(tasks) > budget
     if truncated:
         tasks = tasks[:budget]
@@ -286,16 +287,15 @@ def build_graph(checkpointer=None):
 
 def run(mode: str = "daily", limit: int = 20, group: str = "city", days: int = 180,
         use_llm: bool = True, force: bool = False, build: bool = True,
-        max_concurrency: int = 4, penalties: int = 0,
+        max_concurrency: int = 4, penalties: int = 0, max_tasks: int = 0,
         run_id: str | None = None) -> dict:
     """Execute one orchestrated run and return its final state."""
     run_id = run_id or f"{mode}-{datetime.now().strftime('%Y%m%d-%H%M%S')}-{uuid.uuid4().hex[:6]}"
-    tasks_force = force
     state: RunState = {
         "mode": mode, "run_id": run_id, "limit": limit, "group": group,
-        "days": days, "use_llm": use_llm, "force": tasks_force, "build": build,
+        "days": days, "use_llm": use_llm, "force": force, "build": build,
         "max_concurrency": max_concurrency, "penalties": penalties,
-        "results": [], "failures": [], "stats": {},
+        "max_tasks": max_tasks, "results": [], "failures": [], "stats": {},
     }
     with SqliteSaver.from_conn_string(str(CHECKPOINT_PATH)) as saver:
         graph = build_graph(saver)
@@ -320,10 +320,13 @@ def main() -> None:
     parser.add_argument("--penalties", type=int, default=0,
                         help="max NFRA list pages to crawl in this run")
     parser.add_argument("--concurrency", type=int, default=4)
+    parser.add_argument("--max-tasks", type=int, default=0,
+                        help="hard cap on tasks per run (budget guard)")
     args = parser.parse_args()
     final = run(mode=args.mode, limit=args.limit, group=args.group, days=args.days,
                 use_llm=not args.no_llm, force=args.force, build=not args.no_build,
-                max_concurrency=args.concurrency, penalties=args.penalties)
+                max_concurrency=args.concurrency, penalties=args.penalties,
+                max_tasks=args.max_tasks)
     print(json.dumps(final.get("stats") or {}, ensure_ascii=False, indent=2))
 
 
