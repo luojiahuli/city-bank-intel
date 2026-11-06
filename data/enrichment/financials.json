@@ -1,0 +1,1139 @@
+{
+ "bk_b0107h211000001": {
+  "listed": "A",
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "北京银行 定期报告财务数据（新浪财经 / 东方财富）",
+    "url": "https://finance.sina.com.cn/realstock/company/sh601169/nc.shtml",
+    "as_of": "2026-09-30"
+   }
+  ],
+  "asset": 47656.44,
+  "revenue": 548.15,
+  "profit": 223.86,
+  "period": "2026-09-30",
+  "asset_year": "2026"
+ },
+ "bk_b1030h336110001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "上饶银行 公开财务数据",
+    "url": "https://news.qq.com/rain/a/20260429A06WP700",
+    "field": "asset",
+    "quote": "截至报告期末，上饶银行总资产规模达3049.62亿元，较年初增加293.53亿元，增长10.65%",
+    "as_of": "2025年报"
+   },
+   {
+    "kind": "financial",
+    "title": "上饶银行 公开财务数据",
+    "url": "https://news.qq.com/rain/a/20260429A06WP700",
+    "field": "deposits",
+    "quote": "各项存款余额2270.48亿元，较年初增加262.45亿元，增长13.07%",
+    "as_of": "2025年报"
+   }
+  ],
+  "asset": 3049.62,
+  "deposits": 2270.48,
+  "period": "2025年报",
+  "asset_year": "2025"
+ },
+ "bk_b0139h231000001": {
+  "listed": "A",
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "上海银行 定期报告财务数据（新浪财经 / 东方财富）",
+    "url": "https://finance.sina.com.cn/realstock/company/sh601229/nc.shtml",
+    "as_of": "2026-09-30"
+   }
+  ],
+  "asset": 33688.63,
+  "revenue": 406.1,
+  "profit": 136.72,
+  "period": "2026-09-30",
+  "asset_year": "2026"
+ },
+ "bk_b0172h337050001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "东营银行 公开财务数据",
+    "url": "https://www.dyccb.net",
+    "field": "asset",
+    "quote": "截至2024年末，全行员工2159人，总行22个内设部门，营业网点128家，包括济南、青岛、烟台、潍坊、淄博、滨州6家异地分行，资产总额2365亿元，各项存款2027亿元，贷款余额1312亿元",
+    "as_of": "2024年末"
+   },
+   {
+    "kind": "financial",
+    "title": "东营银行 公开财务数据",
+    "url": "https://www.dyccb.net",
+    "field": "employees",
+    "quote": "截至2024年末，全行员工2159人",
+    "as_of": "2024年末"
+   },
+   {
+    "kind": "financial",
+    "title": "东营银行 公开财务数据",
+    "url": "https://www.dyccb.net",
+    "field": "branches",
+    "quote": "营业网点128家",
+    "as_of": "2024年末"
+   },
+   {
+    "kind": "financial",
+    "title": "东营银行 公开财务数据",
+    "url": "https://www.dyccb.net",
+    "field": "deposits",
+    "quote": "各项存款2027亿元",
+    "as_of": "2024年末"
+   },
+   {
+    "kind": "financial",
+    "title": "东营银行 公开财务数据",
+    "url": "https://www.dyccb.net",
+    "field": "loans",
+    "quote": "贷款余额1312亿元",
+    "as_of": "2024年末"
+   }
+  ],
+  "asset": 2365.0,
+  "employees": 2159,
+  "branches": 128,
+  "deposits": 2027.0,
+  "loans": 1312.0,
+  "period": "2024年末",
+  "asset_year": "2024"
+ },
+ "bk_b0615h241010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "中原银行 公开财务数据",
+    "url": "https://promote.caixin.com/2026-03-30/102429026.html",
+    "field": "asset",
+    "quote": "截至报告期末，中原银行总资产达14142.93亿元，较上年末增加490.96亿元，增幅3.6%",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "中原银行 公开财务数据",
+    "url": "https://promote.caixin.com/2026-03-30/102429026.html",
+    "field": "revenue",
+    "quote": "实现营业收入265.07亿元，增幅2.1%",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "中原银行 公开财务数据",
+    "url": "https://promote.caixin.com/2026-03-30/102429026.html",
+    "field": "profit",
+    "quote": "实现净利润35.76亿元，增幅3.1%",
+    "as_of": "2025年报/2025年末"
+   }
+  ],
+  "asset": 14142.93,
+  "revenue": 265.07,
+  "profit": 35.76,
+  "period": "2025年报/2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b0179h337130001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "临商银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "asset",
+    "quote": "截至2025年末，临商银行资产总额达1913亿元",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "临商银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "revenue",
+    "quote": "实现营业净收入39.44亿元",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "临商银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "deposits",
+    "quote": "各项存款1530亿元",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "临商银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "loans",
+    "quote": "各项贷款1344亿元",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "临商银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "employees",
+    "quote": "截至2024年，在职员工约2369人",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "临商银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "branches",
+    "quote": "截至2024年，分支机构扩展至93家",
+    "as_of": "2025年末"
+   }
+  ],
+  "asset": 1913.0,
+  "revenue": 39.44,
+  "employees": 2369,
+  "branches": 93,
+  "deposits": 1530.0,
+  "loans": 1344.0,
+  "period": "2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b0126h321060001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "丹东银行 公开财务数据",
+    "url": "https://www.bbxin.com/institutions/121",
+    "field": "asset",
+    "quote": "截至2023年末，丹东银行总资产达1050亿元",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "丹东银行 公开财务数据",
+    "url": "https://www.bbxin.com/institutions/121",
+    "field": "revenue",
+    "quote": "全年实现营业收入24亿元",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "丹东银行 公开财务数据",
+    "url": "https://www.bbxin.com/institutions/121",
+    "field": "profit",
+    "quote": "净利润9.5亿元",
+    "as_of": "2023年末"
+   }
+  ],
+  "asset": 1050.0,
+  "revenue": 24.0,
+  "profit": 9.5,
+  "period": "2023年末",
+  "asset_year": "2023"
+ },
+ "bk_b1068h315030001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "乌海银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B9%8C%E6%B5%B7%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20008932",
+    "field": "asset",
+    "quote": "截至2024年3月末，资产总额336.81亿元",
+    "as_of": "2024年3月末"
+   },
+   {
+    "kind": "financial",
+    "title": "乌海银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B9%8C%E6%B5%B7%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20008932",
+    "field": "deposits",
+    "quote": "存款余额287.64亿元",
+    "as_of": "2024年3月末"
+   },
+   {
+    "kind": "financial",
+    "title": "乌海银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E4%B9%8C%E6%B5%B7%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20008932",
+    "field": "branches",
+    "quote": "下设51家分支机构",
+    "as_of": "2024年3月末"
+   }
+  ],
+  "asset": 336.81,
+  "branches": 51,
+  "deposits": 287.64,
+  "period": "2024年3月末",
+  "asset_year": "2024"
+ },
+ "bk_b0213h251110001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "乐山市商业银行 公开财务数据",
+    "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwhraa6183193.shtml?froms=ggmp",
+    "field": "asset",
+    "quote": "截至2025年末，资产规模突破2200亿元，达到2215.26亿元，同比增长7.34%",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "乐山市商业银行 公开财务数据",
+    "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwhraa6183193.shtml?froms=ggmp",
+    "field": "deposits",
+    "quote": "存款规模1720.42亿元，年度净增269亿元",
+    "as_of": "2025年末"
+   }
+  ],
+  "asset": 2215.26,
+  "deposits": 1720.42,
+  "period": "2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b0348h336040001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "九江银行 公开财务数据",
+    "url": "https://www.21jingji.com/article/20260404/herald/0555844e7f5b31090586a38f83218840.html",
+    "field": "asset",
+    "quote": "截至2025年末，该行总资产同比增长1.35%至5234.35亿元",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "九江银行 公开财务数据",
+    "url": "https://finance.sina.com.cn/roll/2026-04-10/doc-inhtzhts1187761.shtml",
+    "field": "revenue",
+    "quote": "2025年，九江银行实现营业收入104.77亿元，同比增长0.85%",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "九江银行 公开财务数据",
+    "url": "https://www.21jingji.com/article/20260404/herald/0555844e7f5b31090586a38f83218840.html",
+    "field": "profit",
+    "quote": "2025年，九江银行实现营业收入104.77亿元、净利润8.41亿元",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "九江银行 公开财务数据",
+    "url": "https://www.21jingji.com/article/20260404/herald/0555844e7f5b31090586a38f83218840.html",
+    "field": "loans",
+    "quote": "贷款总额为3288.43亿元，较上年末增加80.08亿元，增幅2.5%",
+    "as_of": "2025年报/2025年末"
+   }
+  ],
+  "asset": 5234.35,
+  "revenue": 104.77,
+  "profit": 8.41,
+  "loans": 3288.43,
+  "period": "2025年报/2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b0260h253040001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "云南红塔银行 公开财务数据",
+    "url": "https://finance.ifeng.com/c/8tb1WWO37Fi",
+    "field": "revenue",
+    "quote": "2025年,红塔银行实现营业收入18.12亿元",
+    "as_of": "2025年报"
+   },
+   {
+    "kind": "financial",
+    "title": "云南红塔银行 公开财务数据",
+    "url": "https://finance.ifeng.com/c/8tb1WWO37Fi",
+    "field": "profit",
+    "quote": "净利润5.29亿元,同比增长1",
+    "as_of": "2025年报"
+   }
+  ],
+  "revenue": 18.12,
+  "profit": 5.29,
+  "period": "2025年报",
+  "asset_year": "2025"
+ },
+ "bk_b0268h262010001": {
+  "listed": "A",
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "兰州银行 定期报告财务数据（新浪财经 / 东方财富）",
+    "url": "https://finance.sina.com.cn/realstock/company/sz001227/nc.shtml",
+    "as_of": "2026-09-30"
+   }
+  ],
+  "asset": 5348.17,
+  "revenue": 63.07,
+  "profit": 14.07,
+  "period": "2026-09-30",
+  "asset_year": "2026"
+ },
+ "bk_b0140h232010001": {
+  "listed": "A",
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "南京银行 定期报告财务数据（新浪财经 / 东方财富）",
+    "url": "https://finance.sina.com.cn/realstock/company/sh601009/nc.shtml",
+    "as_of": "2026-09-30"
+   }
+  ],
+  "asset": 32867.58,
+  "revenue": 471.9,
+  "profit": 195.63,
+  "period": "2026-09-30",
+  "asset_year": "2026"
+ },
+ "bk_b0025h235020001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "厦门国际银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%8E%A6%E9%97%A8%E5%9B%BD%E9%99%85%E9%93%B6%E8%A1%8C/1444627",
+    "field": "asset",
+    "quote": "截至2025年9月末，该行合并口径资产总额突破1.18万亿元",
+    "as_of": "2025年9月末"
+   },
+   {
+    "kind": "financial",
+    "title": "厦门国际银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%8E%A6%E9%97%A8%E5%9B%BD%E9%99%85%E9%93%B6%E8%A1%8C/1444627",
+    "field": "overseas",
+    "quote": "该行是国内城商行中唯一一家在港澳均拥有全功能附属商业银行（集友银行、澳门国际银行）的机构",
+    "as_of": "2025年9月末"
+   }
+  ],
+  "asset": 11800.0,
+  "overseas": true,
+  "period": "2025年9月末",
+  "asset_year": "2025"
+ },
+ "bk_b0164h235020001": {
+  "listed": "A",
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "厦门银行 定期报告财务数据（新浪财经 / 东方财富）",
+    "url": "https://finance.sina.com.cn/realstock/company/sh601187/nc.shtml",
+    "as_of": "2026-09-30"
+   }
+  ],
+  "asset": 4941.2,
+  "revenue": 50.69,
+  "profit": 21.16,
+  "period": "2026-09-30",
+  "asset_year": "2026"
+ },
+ "bk_b0159h233100001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "台州银行 公开财务数据",
+    "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/BOND/2024/2024-8/2024-08-21/20667566.PDF",
+    "field": "asset",
+    "quote": "台州银行 4,014.96 327.11 3,032.89 2,347.58 48.31 0.88 15.42",
+    "as_of": "2023年"
+   },
+   {
+    "kind": "financial",
+    "title": "台州银行 公开财务数据",
+    "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/BOND/2024/2024-8/2024-08-21/20667566.PDF",
+    "field": "revenue",
+    "quote": "净营业收入（亿元） 111.86 112.20 125.52",
+    "as_of": "2023年"
+   },
+   {
+    "kind": "financial",
+    "title": "台州银行 公开财务数据",
+    "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/BOND/2024/2024-8/2024-08-21/20667566.PDF",
+    "field": "profit",
+    "quote": "净利润（亿元） 42.28 42.52 48.31",
+    "as_of": "2023年"
+   },
+   {
+    "kind": "financial",
+    "title": "台州银行 公开财务数据",
+    "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/BOND/2024/2024-8/2024-08-21/20667566.PDF",
+    "field": "deposits",
+    "quote": "台州银行 4,014.96 327.11 3,032.89 2,347.58 48.31 0.88 15.42",
+    "as_of": "2023年"
+   },
+   {
+    "kind": "financial",
+    "title": "台州银行 公开财务数据",
+    "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/BOND/2024/2024-8/2024-08-21/20667566.PDF",
+    "field": "loans",
+    "quote": "台州银行 4,014.96 327.11 3,032.89 2,347.58 48.31 0.88 15.42",
+    "as_of": "2023年"
+   }
+  ],
+  "asset": 4014.96,
+  "revenue": 125.52,
+  "profit": 48.31,
+  "deposits": 3032.89,
+  "loans": 2347.58,
+  "period": "2023年",
+  "asset_year": "2023"
+ },
+ "bk_b0302h222010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "吉林银行 公开财务数据",
+    "url": "https://www.jlbank.com.cn/jlbank/gyjx/tzzgx/xxpl/dqbg/2026043015241980357/2026043015013920958.pdf",
+    "field": "asset",
+    "quote": "截至2025 年末，本公司资产总额 8,632.52 亿元，增速15.74%",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "吉林银行 公开财务数据",
+    "url": "https://www.jlbank.com.cn/jlbank/gyjx/tzzgx/xxpl/dqbg/2026043015241980357/2026043015013920958.pdf",
+    "field": "deposits",
+    "quote": "各项存款、贷款分别为6,262.39 亿元和5,441.91 亿元",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "吉林银行 公开财务数据",
+    "url": "https://www.jlbank.com.cn/jlbank/gyjx/tzzgx/xxpl/dqbg/2026043015241980357/2026043015013920958.pdf",
+    "field": "loans",
+    "quote": "各项存款、贷款分别为6,262.39 亿元和5,441.91 亿元",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "吉林银行 公开财务数据",
+    "url": "https://www.jlbank.com.cn/jlbank/gyjx/tzzgx/xxpl/dqbg/2026043015241980357/2026043015013920958.pdf",
+    "field": "revenue",
+    "quote": "实现营业收入152.03 亿元、净利润16.13 亿元",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "吉林银行 公开财务数据",
+    "url": "https://www.jlbank.com.cn/jlbank/gyjx/tzzgx/xxpl/dqbg/2026043015241980357/2026043015013920958.pdf",
+    "field": "profit",
+    "quote": "实现营业收入152.03 亿元、净利润16.13 亿元",
+    "as_of": "2025年报/2025年末"
+   }
+  ],
+  "asset": 8632.52,
+  "revenue": 152.03,
+  "profit": 16.13,
+  "deposits": 6262.39,
+  "loans": 5441.91,
+  "period": "2025年报/2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b0306h223010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "哈尔滨银行 公开财务数据",
+    "url": "https://www.hrbb.com.cn/harBinBank/tzzgx22/1248775/index.html",
+    "field": "asset",
+    "quote": "资产总额 | 1,025,864.5 | 1,019,340.0 | 0.64%",
+    "as_of": "2026.6.30"
+   },
+   {
+    "kind": "financial",
+    "title": "哈尔滨银行 公开财务数据",
+    "url": "https://www.hrbb.com.cn/harBinBank/tzzgx22/1248775/index.html",
+    "field": "revenue",
+    "quote": "营业收入 | 7,719.9 | 7,385.5 | 4.53%",
+    "as_of": "2026.6.30"
+   },
+   {
+    "kind": "financial",
+    "title": "哈尔滨银行 公开财务数据",
+    "url": "https://www.hrbb.com.cn/harBinBank/tzzgx22/1248775/index.html",
+    "field": "profit",
+    "quote": "净利润 | 1,104.1 | 992.1 | 11.29%",
+    "as_of": "2026.6.30"
+   },
+   {
+    "kind": "financial",
+    "title": "哈尔滨银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/zh-hans/%E5%93%88%E5%B0%94%E6%BB%A8%E9%93%B6%E8%A1%8C",
+    "field": "employees",
+    "quote": "员工人数 | 6825",
+    "as_of": "2026.6.30"
+   },
+   {
+    "kind": "financial",
+    "title": "哈尔滨银行 公开财务数据",
+    "url": "https://www.hrbb.com.cn/harBinBank/tzzgx22/1248775/index.html",
+    "field": "deposits",
+    "quote": "其中：客户存款总额 | 724,570.5 | 719,243.7 | 0.74%",
+    "as_of": "2026.6.30"
+   },
+   {
+    "kind": "financial",
+    "title": "哈尔滨银行 公开财务数据",
+    "url": "https://www.hrbb.com.cn/harBinBank/tzzgx22/1248775/index.html",
+    "field": "loans",
+    "quote": "其中：客户贷款和垫款总额 | 422,549.8 | 410,625.4 | 2.90%",
+    "as_of": "2026.6.30"
+   }
+  ],
+  "asset": 10258.65,
+  "revenue": 77.2,
+  "profit": 11.04,
+  "employees": 6825,
+  "deposits": 7245.7,
+  "loans": 4225.5,
+  "period": "2026.6.30",
+  "asset_year": "2026"
+ },
+ "bk_b1013h313020001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "唐山银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%94%90%E5%B1%B1%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/18203974",
+    "field": "asset",
+    "quote": "资产总额达到3063亿元",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "唐山银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%94%90%E5%B1%B1%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/18203974",
+    "field": "profit",
+    "quote": "实现净利润30.17亿元",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "唐山银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%94%90%E5%B1%B1%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/18203974",
+    "field": "employees",
+    "quote": "全行正式在岗员工1600余人",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "唐山银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%94%90%E5%B1%B1%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/18203974",
+    "field": "branches",
+    "quote": "网点78家",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "唐山银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%94%90%E5%B1%B1%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/18203974",
+    "field": "deposits",
+    "quote": "个人存款余额1724亿元",
+    "as_of": "2023年末"
+   },
+   {
+    "kind": "financial",
+    "title": "唐山银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%94%90%E5%B1%B1%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/18203974",
+    "field": "loans",
+    "quote": "各项贷款余额1773亿元",
+    "as_of": "2023年末"
+   }
+  ],
+  "asset": 3063.0,
+  "profit": 30.17,
+  "employees": 1600,
+  "branches": 78,
+  "deposits": 1724.0,
+  "loans": 1773.0,
+  "period": "2023年末",
+  "asset_year": "2023"
+ },
+ "bk_b0154h233040001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "嘉兴银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%98%89%E5%85%B4%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19980423",
+    "field": "asset",
+    "quote": "截至2025年末，嘉兴银行总资产为1986.84亿元，同比增长7.8%",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "嘉兴银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%98%89%E5%85%B4%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19980423",
+    "field": "loans",
+    "quote": "贷款总额为1156亿元",
+    "as_of": "2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "嘉兴银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%98%89%E5%85%B4%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19980423",
+    "field": "branches",
+    "quote": "下辖4家异地分行及99家分支机构",
+    "as_of": "2025年末"
+   }
+  ],
+  "asset": 1986.84,
+  "branches": 99,
+  "loans": 1156.0,
+  "period": "2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b0214h251130001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "四川天府银行 公开财务数据",
+    "url": "https://caifuhao.eastmoney.com/news/20260715175426032079230",
+    "field": "asset",
+    "quote": "截至2025年末，该行总资产达2803.57亿元，较上年增长7.84%",
+    "as_of": "2025年末/2025年"
+   },
+   {
+    "kind": "financial",
+    "title": "四川天府银行 公开财务数据",
+    "url": "https://caifuhao.eastmoney.com/news/20260715175426032079230",
+    "field": "revenue",
+    "quote": "2025年营业收入23.10亿元，同比下降3.7%",
+    "as_of": "2025年末/2025年"
+   },
+   {
+    "kind": "financial",
+    "title": "四川天府银行 公开财务数据",
+    "url": "https://caifuhao.eastmoney.com/news/20260715175426032079230",
+    "field": "profit",
+    "quote": "2025年其实现归母净利润3.37亿元",
+    "as_of": "2025年末/2025年"
+   }
+  ],
+  "asset": 2803.57,
+  "revenue": 23.1,
+  "profit": 3.37,
+  "period": "2025年末/2025年",
+  "asset_year": "2025"
+ },
+ "bk_b1987h251010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "四川银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%9B%9B%E5%B7%9D%E9%93%B6%E8%A1%8C/20311676",
+    "field": "asset",
+    "quote": "报告期末，集团资产总额7138.61亿元，较上年末增长2804.42亿元，增幅64.70%",
+    "as_of": "2025年报（报告期末）"
+   },
+   {
+    "kind": "financial",
+    "title": "四川银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%9B%9B%E5%B7%9D%E9%93%B6%E8%A1%8C/20311676",
+    "field": "branches",
+    "quote": "截至2024年末，四川银行共拥有147家营业网点",
+    "as_of": "2025年报（报告期末）"
+   }
+  ],
+  "asset": 7138.61,
+  "branches": 147,
+  "period": "2025年报（报告期末）",
+  "asset_year": "2025"
+ },
+ "bk_b0261h221020001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "大连银行 公开财务数据",
+    "url": "http://www.bankofdl.com",
+    "field": "asset",
+    "quote": "截至2024年末，大连银行资产总额5203亿元",
+    "as_of": "2024年末"
+   },
+   {
+    "kind": "financial",
+    "title": "大连银行 公开财务数据",
+    "url": "http://www.bankofdl.com",
+    "field": "loans",
+    "quote": "各项贷款余额2713亿元",
+    "as_of": "2024年末"
+   },
+   {
+    "kind": "financial",
+    "title": "大连银行 公开财务数据",
+    "url": "http://www.bankofdl.com",
+    "field": "deposits",
+    "quote": "各项存款余额约3450亿元",
+    "as_of": "2024年末"
+   }
+  ],
+  "asset": 5203.0,
+  "deposits": 3450.0,
+  "loans": 2713.0,
+  "period": "2024年末",
+  "asset_year": "2024"
+ },
+ "bk_b0108h212000001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "天津银行 公开财务数据",
+    "url": "https://www.bankoftianjin.com/tianhangzhongwen/gytx/zjtx/mtgz/2025043017552361210/index.html",
+    "field": "asset",
+    "quote": "截至一季度末，该行资产规模达9,457.80亿元",
+    "as_of": "2025年一季度末"
+   },
+   {
+    "kind": "financial",
+    "title": "天津银行 公开财务数据",
+    "url": "https://www.bankoftianjin.com/tianhangzhongwen/gytx/zjtx/mtgz/2025043017552361210/index.html",
+    "field": "revenue",
+    "quote": "实现营业收入42.17亿元，同比增长2.4%",
+    "as_of": "2025年一季度末"
+   },
+   {
+    "kind": "financial",
+    "title": "天津银行 公开财务数据",
+    "url": "https://www.bankoftianjin.com/tianhangzhongwen/gytx/zjtx/mtgz/2025043017552361210/index.html",
+    "field": "profit",
+    "quote": "实现净利润11.00亿元，同比增长3.8%",
+    "as_of": "2025年一季度末"
+   },
+   {
+    "kind": "financial",
+    "title": "天津银行 公开财务数据",
+    "url": "https://www.bankoftianjin.com/tianhangzhongwen/gytx/zjtx/mtgz/2025043017552361210/index.html",
+    "field": "deposits",
+    "quote": "客户存款金额5,173.27亿元，较年初增长3.27%",
+    "as_of": "2025年一季度末"
+   },
+   {
+    "kind": "financial",
+    "title": "天津银行 公开财务数据",
+    "url": "https://www.bankoftianjin.com/tianhangzhongwen/gytx/zjtx/mtgz/2025043017552361210/index.html",
+    "field": "loans",
+    "quote": "客户贷款及垫款金额为4,592.29亿元，较年初增长4.19%",
+    "as_of": "2025年一季度末"
+   }
+  ],
+  "asset": 9457.8,
+  "revenue": 42.17,
+  "profit": 11.0,
+  "deposits": 5173.27,
+  "loans": 4592.29,
+  "period": "2025年一季度末",
+  "asset_year": "2025"
+ },
+ "bk_b0314h264010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "宁夏银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/zh-hans/%E5%AE%81%E5%A4%8F%E9%93%B6%E8%A1%8C",
+    "field": "asset",
+    "quote": "总资产 | ▲1847.31亿元",
+    "as_of": "2022年末"
+   },
+   {
+    "kind": "financial",
+    "title": "宁夏银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/zh-hans/%E5%AE%81%E5%A4%8F%E9%93%B6%E8%A1%8C",
+    "field": "revenue",
+    "quote": "年营业额 | ▼32.48亿元",
+    "as_of": "2022年末"
+   },
+   {
+    "kind": "financial",
+    "title": "宁夏银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/zh-hans/%E5%AE%81%E5%A4%8F%E9%93%B6%E8%A1%8C",
+    "field": "profit",
+    "quote": "净利润 | ▲7.21亿元",
+    "as_of": "2022年末"
+   },
+   {
+    "kind": "financial",
+    "title": "宁夏银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/zh-hans/%E5%AE%81%E5%A4%8F%E9%93%B6%E8%A1%8C",
+    "field": "employees",
+    "quote": "员工人数 | 2515",
+    "as_of": "2022年末"
+   },
+   {
+    "kind": "financial",
+    "title": "宁夏银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/zh-hans/%E5%AE%81%E5%A4%8F%E9%93%B6%E8%A1%8C",
+    "field": "branches",
+    "quote": "宁夏银行现时拥有49家分支机构",
+    "as_of": "2022年末"
+   }
+  ],
+  "asset": 1847.31,
+  "revenue": 32.48,
+  "profit": 7.21,
+  "employees": 2515,
+  "branches": 49,
+  "overseas": true,
+  "period": "2022年末",
+  "asset_year": "2022"
+ },
+ "bk_b0358h233020001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "宁波东海银行 公开财务数据",
+    "url": "https://www.tianyancha.com/company/79224829",
+    "field": "revenue",
+    "quote": "营业总收入, 4.89亿, 3.75亿, 2.84亿, 2.76亿, 3.29亿",
+    "as_of": "2025年报"
+   }
+  ],
+  "revenue": 4.89,
+  "period": "2025年报",
+  "asset_year": "2025"
+ },
+ "bk_b1311h233020001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "宁波通商银行 公开财务数据",
+    "url": "https://jg-static.eeo.com.cn/article/info?id=f6aae57cbe864d2dbfbdb61972868871",
+    "field": "asset",
+    "quote": "截至2025年末，该行总资产达1897亿元",
+    "as_of": "2025年报"
+   },
+   {
+    "kind": "financial",
+    "title": "宁波通商银行 公开财务数据",
+    "url": "https://jg-static.eeo.com.cn/article/info?id=f6aae57cbe864d2dbfbdb61972868871",
+    "field": "revenue",
+    "quote": "全年实现营业收入39.39亿元",
+    "as_of": "2025年报"
+   }
+  ],
+  "asset": 1897.0,
+  "revenue": 39.39,
+  "period": "2025年报",
+  "asset_year": "2025"
+ },
+ "bk_b0152h233020001": {
+  "listed": "A",
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "宁波银行 定期报告财务数据（新浪财经 / 东方财富）",
+    "url": "https://finance.sina.com.cn/realstock/company/sz002142/nc.shtml",
+    "as_of": "2026-09-30"
+   }
+  ],
+  "asset": 40973.54,
+  "revenue": 612.12,
+  "profit": 253.93,
+  "period": "2026-09-30",
+  "asset_year": "2026"
+ },
+ "bk_b0284h251150001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "asset",
+    "quote": "截至2025年6月30日，宜宾市商业银行总资产达到1132.3亿元",
+    "as_of": "2025年上半年/2025年6月末"
+   },
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "revenue",
+    "quote": "2025年上半年，宜宾市商业银行实现营业收入11.68亿元",
+    "as_of": "2025年上半年/2025年6月末"
+   },
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "profit",
+    "quote": "净利润为2.91亿元，同比增长11.1%",
+    "as_of": "2025年上半年/2025年6月末"
+   },
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "employees",
+    "quote": "全行在岗员工807人",
+    "as_of": "2025年上半年/2025年6月末"
+   },
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "branches",
+    "quote": "下设39家分支机构",
+    "as_of": "2025年上半年/2025年6月末"
+   },
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "deposits",
+    "quote": "客户存款总额达922.26亿元",
+    "as_of": "2025年上半年/2025年6月末"
+   },
+   {
+    "kind": "financial",
+    "title": "宜宾市商业银行 公开财务数据",
+    "url": "https://baike.baidu.com/item/%E5%AE%9C%E5%AE%BE%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981136",
+    "field": "loans",
+    "quote": "发放贷款及垫款净额为630.91亿元",
+    "as_of": "2025年上半年/2025年6月末"
+   }
+  ],
+  "asset": 1132.3,
+  "revenue": 11.68,
+  "profit": 2.91,
+  "employees": 807,
+  "branches": 39,
+  "deposits": 922.26,
+  "loans": 630.91,
+  "period": "2025年上半年/2025年6月末",
+  "asset_year": "2025"
+ },
+ "bk_b0258h253010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "富滇银行 公开财务数据",
+    "url": "https://www.fudian-bank.com/file/fudian/cn/file/20260430/1777511219648069082.pdf",
+    "field": "revenue",
+    "quote": "营业收入 6,287,682 7,490,558 (16.06) 6,552,332",
+    "as_of": "2025年报"
+   },
+   {
+    "kind": "financial",
+    "title": "富滇银行 公开财务数据",
+    "url": "https://www.fudian-bank.com/file/fudian/cn/file/20260430/1777511219648069082.pdf",
+    "field": "profit",
+    "quote": "净利润 954,725 886,156 7.74 828,485",
+    "as_of": "2025年报"
+   }
+  ],
+  "revenue": 62.88,
+  "profit": 9.55,
+  "period": "2025年报",
+  "asset_year": "2025"
+ },
+ "bk_b2027h214010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "山西银行 公开财务数据",
+    "url": "https://jnzstatic.cs.com.cn/zzb/htmlInfo/74cf4d42b976ab4618b8022b4a3a1ad4.html",
+    "field": "asset",
+    "quote": "截至报告期末，该行资产总额3620.84亿元",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "山西银行 公开财务数据",
+    "url": "https://jnzstatic.cs.com.cn/zzb/htmlInfo/74cf4d42b976ab4618b8022b4a3a1ad4.html",
+    "field": "revenue",
+    "quote": "营业收入为32.44亿元",
+    "as_of": "2025年报/2025年末"
+   }
+  ],
+  "asset": 3620.84,
+  "revenue": 32.44,
+  "period": "2025年报/2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b1194h244050001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "广东华兴银行 公开财务数据",
+    "url": "http://qxb-pdf-osscache.qixin.com/AnBaseinfo/07aa35a9a274418626da4ee69eb07c13.pdf",
+    "field": "asset",
+    "quote": "资产总额（亿元） 4,104.35 4,382.09 4,654.58",
+    "as_of": "2024年"
+   },
+   {
+    "kind": "financial",
+    "title": "广东华兴银行 公开财务数据",
+    "url": "http://qxb-pdf-osscache.qixin.com/AnBaseinfo/07aa35a9a274418626da4ee69eb07c13.pdf",
+    "field": "revenue",
+    "quote": "净营业收入（亿元） 88.99 84.09 83.67",
+    "as_of": "2024年"
+   },
+   {
+    "kind": "financial",
+    "title": "广东华兴银行 公开财务数据",
+    "url": "http://qxb-pdf-osscache.qixin.com/AnBaseinfo/07aa35a9a274418626da4ee69eb07c13.pdf",
+    "field": "profit",
+    "quote": "净利润（亿元） 33.12 30.20 28.52",
+    "as_of": "2024年"
+   }
+  ],
+  "asset": 4654.58,
+  "revenue": 83.67,
+  "profit": 28.52,
+  "period": "2024年",
+  "asset_year": "2024"
+ },
+ "bk_b0200h344080001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "广东南粤银行 公开财务数据",
+    "url": "https://finance.sina.com.cn/wm/2026-05-27/doc-inhzizph8315256.shtml",
+    "field": "asset",
+    "quote": "截至2025年末，广东南粤银行的总资产规模达到3375.76亿元，同比增长1.47%。",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "广东南粤银行 公开财务数据",
+    "url": "https://www.donews.com/article/detail/5092/101930.html",
+    "field": "revenue",
+    "quote": "2025年报显示,广东南粤银行的营业收入为28.54亿元,同比增长0.33%;归母净利润为3.22亿元,同比下降24.84%。",
+    "as_of": "2025年报/2025年末"
+   },
+   {
+    "kind": "financial",
+    "title": "广东南粤银行 公开财务数据",
+    "url": "https://www.donews.com/article/detail/5092/101930.html",
+    "field": "profit",
+    "quote": "2025年报显示,广东南粤银行的营业收入为28.54亿元,同比增长0.33%;归母净利润为3.22亿元,同比下降24.84%。",
+    "as_of": "2025年报/2025年末"
+   }
+  ],
+  "asset": 3375.76,
+  "revenue": 28.54,
+  "profit": 3.22,
+  "period": "2025年报/2025年末",
+  "asset_year": "2025"
+ },
+ "bk_b1041h244010001": {
+  "sources": [
+   {
+    "kind": "financial",
+    "title": "广州银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/wiki/%E5%B9%BF%E5%B7%9E%E9%93%B6%E8%A1%8C",
+    "field": "revenue",
+    "quote": "年營業額 ▲171.53亿元",
+    "as_of": "未明确（维基百科数据，年份不详）"
+   },
+   {
+    "kind": "financial",
+    "title": "广州银行 公开财务数据",
+    "url": "https://zh.wikipedia.org/wiki/%E5%B9%BF%E5%B7%9E%E9%93%B6%E8%A1%8C",
+    "field": "branches",
+    "quote": "拥有82个机构网点",
+    "as_of": "未明确（维基百科数据，年份不详）"
+   }
+  ],
+  "revenue": 171.53,
+  "branches": 82,
+  "period": "未明确（维基百科数据，年份不详）"
+ }
+}

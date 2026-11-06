@@ -1,0 +1,28 @@
+{
+  "as_of": "2025-12-31",
+  "source": {
+    "title": "2025年A股城商行年报盘点：资产规模总额突破30万亿大关",
+    "url": "http://news.subaoxw.com/guonei/2026/0519/267161.html",
+    "publisher": "速豹新闻网",
+    "published": "2026-05-19"
+  },
+  "banks": {
+    "江苏银行": {"asset": 49300, "revenue": 879.42, "profit": 345.01, "listed": "A"},
+    "北京银行": {"asset": 49400, "revenue": 680.36, "profit": 200.86, "listed": "A"},
+    "宁波银行": {"asset": 36300, "revenue": 719.68, "profit": 293.33, "listed": "A"},
+    "上海银行": {"asset": 33100, "revenue": 547.61, "profit": 241.93, "listed": "A"},
+    "南京银行": {"asset": 30200, "revenue": 555.42, "profit": 218.07, "listed": "A"},
+    "杭州银行": {"asset": 23600, "revenue": 387.99, "profit": null, "listed": "A"},
+    "成都银行": {"asset": 14000, "revenue": 236.03, "profit": null, "listed": "A"},
+    "长沙银行": {"asset": 12700, "revenue": 254.71, "profit": null, "listed": "A"},
+    "重庆银行": {"asset": 10300, "revenue": 151.13, "profit": null, "listed": "A+H"},
+    "青岛银行": {"asset": null, "asset_tier": "5000-10000", "revenue": 145.73, "profit": 51.88, "listed": "A+H"},
+    "齐鲁银行": {"asset": null, "asset_tier": "5000-10000", "revenue": 131.35, "profit": null, "listed": "A"},
+    "苏州银行": {"asset": null, "asset_tier": "5000-10000", "revenue": 123.56, "profit": null, "listed": "A"},
+    "郑州银行": {"asset": null, "asset_tier": "5000-10000", "revenue": 129.21, "profit": 18.95, "listed": "A+H"},
+    "贵阳银行": {"asset": null, "asset_tier": "5000-10000", "revenue": 129.99, "profit": null, "listed": "A"},
+    "西安银行": {"asset": null, "asset_tier": "5000-10000", "revenue": null, "profit": 26.5, "listed": "A"},
+    "兰州银行": {"asset": null, "asset_tier": "5000-10000", "revenue": null, "profit": 18.65, "listed": "A"},
+    "厦门银行": {"asset": null, "asset_tier": "<5000", "revenue": null, "profit": 26.34, "listed": "A"}
+  }
+}

@@ -1,0 +1,1207 @@
+{
+ "bk_b0107h211000001": {
+  "people": [
+   {
+    "name": "霍学文",
+    "role": "党委书记、董事长",
+    "since": "党委书记：2022年2月；董事长：202",
+    "until": ""
+   },
+   {
+    "name": "戴炜",
+    "role": "董事、行长",
+    "since": "董事：2025年4月；行长：2025年5",
+    "until": ""
+   },
+   {
+    "name": "孟猛",
+    "role": "董事",
+    "since": "2025年5月",
+    "until": ""
+   },
+   {
+    "name": "韩雪松",
+    "role": "董事",
+    "since": "2025年2月",
+    "until": ""
+   },
+   {
+    "name": "张传红",
+    "role": "董事",
+    "since": "2024年12月",
+    "until": ""
+   },
+   {
+    "name": "周一晨",
+    "role": "董事",
+    "since": "2025年5月",
+    "until": ""
+   },
+   {
+    "name": "王瑞华",
+    "role": "独立董事",
+    "since": "2019年12月",
+    "until": ""
+   },
+   {
+    "name": "瞿强",
+    "role": "独立董事",
+    "since": "2021年7月",
+    "until": ""
+   },
+   {
+    "name": "杨涛",
+    "role": "独立董事",
+    "since": "2024年12月",
+    "until": ""
+   },
+   {
+    "name": "刘霄仑",
+    "role": "独立董事",
+    "since": "2025年2月",
+    "until": ""
+   },
+   {
+    "name": "王雪松",
+    "role": "独立董事",
+    "since": "2025年4月",
+    "until": ""
+   },
+   {
+    "name": "谭宁",
+    "role": "监事",
+    "since": "2023年12月",
+    "until": ""
+   },
+   {
+    "name": "李晓慧",
+    "role": "外部监事",
+    "since": "2021年7月",
+    "until": ""
+   },
+   {
+    "name": "徐林",
+    "role": "外部监事",
+    "since": "2022年7月",
+    "until": ""
+   },
+   {
+    "name": "吴文杰",
+    "role": "监事",
+    "since": "2018年12月",
+    "until": ""
+   },
+   {
+    "name": "毛文利",
+    "role": "副行长",
+    "since": "2025年7月",
+    "until": ""
+   },
+   {
+    "name": "郭轶锋",
+    "role": "副行长",
+    "since": "2024年10月",
+    "until": ""
+   },
+   {
+    "name": "徐毛毛",
+    "role": "副行长",
+    "since": "2024年11月",
+    "until": ""
+   },
+   {
+    "name": "柳阳",
+    "role": "董事会秘书",
+    "since": "2025年8月",
+    "until": ""
+   },
+   {
+    "name": "明立松",
+    "role": "首席信息官",
+    "since": "2025年8月",
+    "until": ""
+   },
+   {
+    "name": "杨书剑",
+    "role": "董事、行长",
+    "since": "董事：2014年5月；行长：2017年1",
+    "until": "2025年2月"
+   },
+   {
+    "name": "成苏宁",
+    "role": "董事",
+    "since": "2023年12月",
+    "until": "2025年4月"
+   },
+   {
+    "name": "李建营",
+    "role": "监事",
+    "since": "2021年6月",
+    "until": "2025年5月"
+   }
+  ],
+  "cross_bank": [
+   {
+    "name": "戴炜",
+    "other_bank": "中国建设银行、招商银行",
+    "role": "",
+    "period": "1995年7月至2009年8月",
+    "quote": "1995年7月至2009年8月分别在中国建设银行和招商银行从事相关工作。"
+   }
+  ],
+  "period": "2025年半年度报告及2025年相关公告",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "北京银行股份有限公司",
+    "url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627748.PDF",
+    "field": "people",
+    "quote": "霍学文先生 党委书记、董事长……2022年2月至今担任本行党委书记 2022年3月至今担任本行董事长",
+    "as_of": "2025年半年度报告及2025年相关公告"
+   },
+   {
+    "kind": "governance",
+    "title": "北京银行股份有限公司",
+    "url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627748.PDF",
+    "field": "people",
+    "quote": "戴炜 男 董事 行长 1972 董事：2025.4 至任职期满 行长：2025.5 至任职期满 副行长：2023.5 至2025.5",
+    "as_of": "2025年半年度报告及2025年相关公告"
+   },
+   {
+    "kind": "governance",
+    "title": "北京银行股份有限公司",
+    "url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627748.PDF",
+    "field": "people",
+    "quote": "杨书剑 男 董事：2014.5 至2025.2 行长：2017.12 至2025.2 不再担任本行董事、行长 工作调动",
+    "as_of": "2025年半年度报告及2025年相关公告"
+   },
+   {
+    "kind": "governance",
+    "title": "北京银行股份有限公司",
+    "url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627748.PDF",
+    "field": "people",
+    "quote": "成苏宁 男 董事：2023.12 至2025.4 不再担任本行董事 工作调动",
+    "as_of": "2025年半年度报告及2025年相关公告"
+   },
+   {
+    "kind": "governance",
+    "title": "北京银行股份有限公司",
+    "url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627748.PDF",
+    "field": "people",
+    "quote": "李建营 男 2021.6 至2025.5 不再担任本行监事 工作调动",
+    "as_of": "2025年半年度报告及2025年相关公告"
+   },
+   {
+    "kind": "governance",
+    "title": "北京银行股份有限公司",
+    "url": "http://static.cninfo.com.cn/finalpage/2025-08-30/1224627748.PDF",
+    "field": "people",
+    "quote": "现任监事 谭宁 男 监事 1969 2023.12 至任职期满 李晓慧 女 外部监事 1967 2021.7 至任职期满 徐林 男 外部监事 1962 2022.7 至任职期满 吴文杰 女 监事 1971 2018.12 至任职期满",
+    "as_of": "2025年半年度报告及2025年相关公告"
+   }
+  ],
+  "checked_at": "2026-11-06T13:18:10+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b0139h231000001": {
+  "people": [
+   {
+    "name": "顾建忠",
+    "role": "董事长、执行董事",
+    "since": "2025.8",
+    "until": ""
+   },
+   {
+    "name": "施红敏",
+    "role": "副董事长、执行董事、行长、首席财务官、首席合规官",
+    "since": "2024.1",
+    "until": ""
+   },
+   {
+    "name": "牛韧",
+    "role": "职工董事",
+    "since": "2025.2",
+    "until": ""
+   },
+   {
+    "name": "叶峻",
+    "role": "非执行董事",
+    "since": "2009.7",
+    "until": ""
+   },
+   {
+    "name": "应晓明",
+    "role": "非执行董事",
+    "since": "2015.9",
+    "until": ""
+   },
+   {
+    "name": "孔旭洪",
+    "role": "非执行董事",
+    "since": "2018.10",
+    "until": ""
+   },
+   {
+    "name": "黎健",
+    "role": "非执行董事",
+    "since": "2022.1",
+    "until": ""
+   },
+   {
+    "name": "陶宏君",
+    "role": "非执行董事",
+    "since": "2021.3",
+    "until": ""
+   },
+   {
+    "name": "庄喆",
+    "role": "非执行董事",
+    "since": "2017.8",
+    "until": ""
+   },
+   {
+    "name": "甘湘南",
+    "role": "非执行董事",
+    "since": "2017.12",
+    "until": ""
+   },
+   {
+    "name": "于福林",
+    "role": "非执行董事",
+    "since": "2026-05-28",
+    "until": ""
+   },
+   {
+    "name": "李正强",
+    "role": "独立董事",
+    "since": "2025-12-26",
+    "until": ""
+   },
+   {
+    "name": "杨德红",
+    "role": "独立董事",
+    "since": "2025-12-26",
+    "until": ""
+   },
+   {
+    "name": "董煜",
+    "role": "独立董事",
+    "since": "2025-12-26",
+    "until": ""
+   },
+   {
+    "name": "肖微",
+    "role": "独立董事",
+    "since": "2025-12-26",
+    "until": ""
+   },
+   {
+    "name": "薛云奎",
+    "role": "独立董事",
+    "since": "2025-12-26",
+    "until": ""
+   },
+   {
+    "name": "靳庆鲁",
+    "role": "独立董事",
+    "since": "2025-12-26",
+    "until": ""
+   },
+   {
+    "name": "金煜",
+    "role": "董事长、执行董事",
+    "since": "2015.6",
+    "until": "2025.4"
+   },
+   {
+    "name": "顾金山",
+    "role": "非执行董事",
+    "since": "2020.1",
+    "until": "2025.12"
+   },
+   {
+    "name": "汪明",
+    "role": "副行长、总法律顾问",
+    "since": "2018.8",
+    "until": "2025.5"
+   },
+   {
+    "name": "陈雷",
+    "role": "副行长",
+    "since": "2025.12",
+    "until": ""
+   },
+   {
+    "name": "李晓红",
+    "role": "董事会秘书",
+    "since": "",
+    "until": ""
+   }
+  ],
+  "cross_bank": [
+   {
+    "name": "靳庆鲁",
+    "other_bank": "哈尔滨银行股份有限公司",
+    "role": "独立董事",
+    "period": "",
+    "quote": "靳庆鲁 上海财经大学 会计学院院长 中国会计学会 会计教育分会会长 哈尔滨银行股份有限公司 独立董事"
+   },
+   {
+    "name": "黎健",
+    "other_bank": "中国建设银行",
+    "role": "惠州市分行国际业务部经理",
+    "period": "",
+    "quote": "曾任中国建设银行惠州市分行国际业务部经理"
+   }
+  ],
+  "period": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "上海银行股份有限公司2025 年半年度报告",
+    "url": "http://dataclouds.cninfo.com.cn/shgonggao/2025/2025-08-29/a5b200f0840711f08b46fa163e957f7a.pdf",
+    "field": "cross_bank",
+    "quote": "靳庆鲁 上海财经大学 会计学院院长 中国会计学会 会计教育分会会长 哈尔滨银行股份有限公司 独立董事",
+    "as_of": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级管理人员）"
+   },
+   {
+    "kind": "governance",
+    "title": "上海银行(601229)_公司公告_上海银行：2025年度报告新浪财经_新浪网",
+    "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=601229&id=12174076",
+    "field": "people",
+    "quote": "顾建忠 | 董事长 | 男 | 1974 | 2025.8起；施红敏 | 副董事长 | 男 | 1968 | 2024.1起；行长 | 2024.1起；首席财务官 | 2012.8起；首席合规官 | 2026.2起；牛 韧 | 职工董事 | 男 | 1976 | 2025.2起；金 煜 | 董事长 | 男 | 1965 | 2015.6-2025.4；顾金山",
+    "as_of": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级管理人员）"
+   },
+   {
+    "kind": "governance",
+    "title": "上海银行股份有限公司2025 年度报告",
+    "url": "https://stockmc.xueqiu.com/202604/601229_20260424_01H9.pdf",
+    "field": "people",
+    "quote": "2025 年12 月 陈 雷 本公司董事会2025 年第八次会议聘任为副行长，于 2025 年12 月经国家金融监督管理总局上海监管局核准任职资格。2026 年2 月 施红敏 本公司董事会2026 年第二次会议聘任兼任本公司首席合规官。2026 年3 月 刘 方 本公司董事会2025 年第九次会议聘任为总审计师，于 2026 年3 月经国家金融监督管理总局上",
+    "as_of": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级管理人员）"
+   },
+   {
+    "kind": "governance",
+    "title": "上海银行股份有限公司2025 年第二次临时股东会",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-12-16/1224878333.PDF",
+    "field": "cross_bank",
+    "quote": "黎健：女，1972 年3 月出生……曾任中国建设银行惠州市分行国际业务部经理",
+    "as_of": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级管理人员）"
+   },
+   {
+    "kind": "governance",
+    "title": "上海银行股份有限公司 - QQ",
+    "url": "https://file.finance.qq.com/finance/hs/pdf/2025/08/29/1224614103.PDF",
+    "field": "people",
+    "quote": "董事会秘书 证券事务代表 姓名 李晓红 杜进朝",
+    "as_of": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级管理人员）"
+   },
+   {
+    "kind": "governance",
+    "title": "上海银行(601229)公司高管_新浪财经_新浪网",
+    "url": "http://money.finance.sina.com.cn/corp/go.php/vCI_CorpManager/stockid/601229.phtml",
+    "as_of": "2025年度（含2025年半年度报告及2025年度报告披露的现任及离任董事、高级管理人员）"
+   }
+  ],
+  "checked_at": "2026-11-06T13:19:32+00:00",
+  "shares": [
+   {
+    "name": "靳庆鲁",
+    "bank_id": "bk_b0306h223010001",
+    "bank": "哈尔滨银行股份有限公司",
+    "role": "独立董事",
+    "period": "",
+    "quote": "靳庆鲁 上海财经大学 会计学院院长 中国会计学会 会计教育分会会长 哈尔滨银行股份有限公司 独立董事",
+    "confidence": 0.9,
+    "basis": "公开简历/报道明确记载"
+   }
+  ],
+  "explicit_names": [
+   "靳庆鲁"
+  ]
+ },
+ "bk_b1030h336110001": {
+  "people": [
+   {
+    "name": "钟继伟",
+    "role": "董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "孙德洲",
+    "role": "董事",
+    "since": "",
+    "until": ""
+   }
+  ],
+  "cross_bank": [],
+  "period": "",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "上饶银行股份有限公司",
+    "url": "https://m.qcc.com/firm/358817987cf9c624021511dbfac4a698.html",
+    "field": "people",
+    "quote": "钟继伟. 董事,其他人员. 关联企业4 家 · 孙. 孙德洲. 董事,其他人员. 关联企业1 家",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "上饶银行股份有限公司2025年度",
+    "url": "https://www.chinamoney.com.cn/dqs/cm-s-notice-query/fileDownLoad.do?contentId=3054216&priority=0&mode=save",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "[江西]2025年上饶银行春季招聘公告",
+    "url": "http://m.yinhangzhaopin.com/m/189293.htm",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "上饶银行2025年报深度解读：稳健运营筑牢发展根基 - 财经",
+    "url": "https://economy.jxnews.com.cn/system/2026/04/29/031117699.shtml",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "青春耀向“上”—上饶银行2025年春季招聘",
+    "url": "https://job.hdu.edu.cn/campus/view?id=6870",
+    "as_of": ""
+   }
+  ],
+  "checked_at": "2026-11-06T13:19:38+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b0201h244190001": {
+  "people": [
+   {
+    "name": "程劲松",
+    "role": "董事长、法定代表人",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "谢勇维",
+    "role": "副董事长、行长",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "李启聪",
+    "role": "董事、董事会秘书",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "王燕鸣",
+    "role": "独立董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "王雄",
+    "role": "独立董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "张永宏",
+    "role": "独立董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "赵向雷",
+    "role": "独立董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "谢浩成",
+    "role": "外部监事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "姚小聪",
+    "role": "外部监事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "卢国锋",
+    "role": "党委书记、董事长",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "张涛",
+    "role": "党委委员、执行董事、副行长",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "张孟军",
+    "role": "党委委员、执行董事、副行长",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "尹可非",
+    "role": "非执行董事",
+    "since": "",
+    "until": ""
+   }
+  ],
+  "cross_bank": [
+   {
+    "name": "王雄",
+    "other_bank": "中国建设银行",
+    "role": "广州市分行建企处副处长、经济技术中介服务管理中心副主任、清远市分行党委书记、行长、四川省分行纪委书记、深圳市分行纪委书记、广东省分行党委委员、副行长等",
+    "period": "",
+    "quote": "曾任……中国建设银行广州市分行建企处副处长……清远市分行党委书记、行长，四川省分行纪委书记、党委委员，深圳市分行纪委书记、党委委员，广东省分行党委委员、副行长"
+   },
+   {
+    "name": "张永宏",
+    "other_bank": "招商银行",
+    "role": "总行国际业务部外汇资金组组长",
+    "period": "",
+    "quote": "曾任招商银行总行国际业务部外汇资金组组长"
+   },
+   {
+    "name": "张永宏",
+    "other_bank": "广发银行",
+    "role": "深圳分行离岸业务部、国际业务部、资金计划部、信贷管理部、授信审批部总经理，武汉分行副行长",
+    "period": "",
+    "quote": "广发银行深圳分行离岸业务部、国际业务部、资金计划部、信贷管理部、授信审批部总经理，广发银行武汉分行副行长"
+   },
+   {
+    "name": "张永宏",
+    "other_bank": "平安银行",
+    "role": "深圳分行副行长、总行公司风险管理部负责人",
+    "period": "",
+    "quote": "平安银行深圳分行副行长，总行公司风险管理部负责人"
+   },
+   {
+    "name": "张永宏",
+    "other_bank": "华融湘江银行",
+    "role": "党委副书记、行长、党委书记、董事长",
+    "period": "",
+    "quote": "华融湘江银行党委副书记、行长、党委书记、董事长"
+   },
+   {
+    "name": "张永宏",
+    "other_bank": "九江银行",
+    "role": "独立董事",
+    "period": "",
+    "quote": "现任深圳前海金融管理学院院长，九江银行独立董事"
+   },
+   {
+    "name": "李启聪",
+    "other_bank": "建设银行",
+    "role": "东莞市分行国际业务部辖属会计部经理、客户部经理、公司业务部副科级客户经理",
+    "period": "",
+    "quote": "曾任建设银行东莞市分行国际业务部辖属会计部经理，客户部经理、公司业务部副科级客户经理"
+   },
+   {
+    "name": "李启聪",
+    "other_bank": "交通银行",
+    "role": "东莞分行公司部经理",
+    "period": "",
+    "quote": "交通银行东莞分行公司部经理"
+   },
+   {
+    "name": "卢国锋",
+    "other_bank": "中国建设银行",
+    "role": "东莞市分行党委委员、副行长",
+    "period": "",
+    "quote": "曾任中国建设银行东莞市分行党委委员、副行长"
+   },
+   {
+    "name": "程劲松",
+    "other_bank": "中国建设银行",
+    "role": "韶关市分行党委书记、行长",
+    "period": "",
+    "quote": "曾任中国建设银行韶关市分行党委书记、行长"
+   }
+  ],
+  "period": "2025年年度报告及公开资料",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "2025",
+    "url": "https://www.dongguanbank.cn/site/attachDir/2026/06/2026060419142776901.pdf",
+    "field": "people",
+    "quote": "程劲松 法定代表人 谢勇维 行长 孙炜玲 主管财务工作负责人 林维山 财务机构负责人",
+    "as_of": "2025年年度报告及公开资料"
+   },
+   {
+    "kind": "governance",
+    "title": "2025",
+    "url": "https://www.dongguanbank.cn/site/attachDir/2026/06/2026060419142776901.pdf",
+    "field": "cross_bank",
+    "quote": "王雄……曾任……中国建设银行广州市分行建企处副处长……清远市分行党委书记、行长，四川省分行纪委书记、党委委员，深圳市分行纪委书记、党委委员，广东省分行党委委员、副行长",
+    "as_of": "2025年年度报告及公开资料"
+   },
+   {
+    "kind": "governance",
+    "title": "2025",
+    "url": "https://www.dongguanbank.cn/site/attachDir/2026/06/2026060419142776901.pdf",
+    "field": "cross_bank",
+    "quote": "张永宏……曾任招商银行总行国际业务部外汇资金组组长……广发银行深圳分行离岸业务部、国际业务部、资金计划部、信贷管理部、授信审批部总经理，广发银行武汉分行副行长，平安银行深圳分行副行长，总行公司风险管理部负责人……华融湘江银行党委副书记、行长、党委书记、董事长；现任……九江银行独立董事",
+    "as_of": "2025年年度报告及公开资料"
+   },
+   {
+    "kind": "governance",
+    "title": "东莞银行",
+    "url": "https://baike.baidu.com/item/%E4%B8%9C%E8%8E%9E%E9%93%B6%E8%A1%8C/5496091",
+    "field": "people",
+    "quote": "董事长：程劲松 副董事长、行长：谢勇维 董事：李启聪",
+    "as_of": "2025年年度报告及公开资料"
+   },
+   {
+    "kind": "governance",
+    "title": "重要提示",
+    "url": "https://www.dongguanbank.cn/msite/953738/953743/2024120616293519164/2019032708531988924.pdf",
+    "field": "people",
+    "quote": "卢国锋，党委书记、董事长……程劲松，党委副书记、副董事长、行长……张 涛，党委委员、执行董事、副行长……张孟军，党委委员、执行董事、副行长……谢勇维，党委委员、副行长……李启聪，党委委员、董事会秘书……尹可非，非执行董事……谢浩成，外部监事……姚小聪，外部监事",
+    "as_of": "2025年年度报告及公开资料"
+   },
+   {
+    "kind": "governance",
+    "title": "重要提示",
+    "url": "https://www.dongguanbank.cn/msite/953738/953743/2024120616293519164/2019032708531988924.pdf",
+    "field": "cross_bank",
+    "quote": "卢国锋……曾任中国建设银行东莞市分行党委委员、副行长……程劲松……曾任中国建设银行韶关市分行党委书记、行长",
+    "as_of": "2025年年度报告及公开资料"
+   }
+  ],
+  "checked_at": "2026-11-06T13:19:49+00:00",
+  "shares": [
+   {
+    "name": "张永宏",
+    "bank_id": "bk_b0348h336040001",
+    "bank": "九江银行股份有限公司",
+    "role": "独立董事",
+    "period": "",
+    "quote": "现任深圳前海金融管理学院院长，九江银行独立董事",
+    "confidence": 0.9,
+    "basis": "公开简历/报道明确记载"
+   }
+  ],
+  "explicit_names": [
+   "张永宏"
+  ]
+ },
+ "bk_b0615h241010001": {
+  "people": [
+   {
+    "name": "周锋",
+    "role": "董事长、执行董事",
+    "since": "2026-06-25",
+    "until": ""
+   },
+   {
+    "name": "李文强",
+    "role": "非执行董事",
+    "since": "2025-12-12",
+    "until": ""
+   },
+   {
+    "name": "徐义国",
+    "role": "独立非执行董事",
+    "since": "2023-11-28",
+    "until": ""
+   }
+  ],
+  "cross_bank": [
+   {
+    "name": "李文强",
+    "other_bank": "中国工商银行",
+    "role": "总行私人银行部郑州分部投资顾问、河南省分行私人银行部投资顾问主管",
+    "period": "",
+    "quote": "曾任中国工商银行总行私人银行部郑州分部投资顾问、中国工商银行河南省分行私人银行部投资顾问主管"
+   },
+   {
+    "name": "李文强",
+    "other_bank": "中国农业银行",
+    "role": "总行私人银行部产品研发部副总经理",
+    "period": "",
+    "quote": "中国农业银行总行私人银行部产品研发部副总经理"
+   }
+  ],
+  "period": "",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "中原银行(HK1216) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK1216/manager.html",
+    "field": "people",
+    "quote": "周锋 | 董事长，执行董事 | 本届任期：2026-06-25 至今",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "中原银行(HK1216) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK1216/manager.html",
+    "field": "people",
+    "quote": "于2025年12月31日获委任为中原银行股份有限公司行长。于2026年01月04日获委任为中原银行股份有限公司副董事长、执行",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "中原银行(HK1216) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK1216/manager.html",
+    "field": "people",
+    "quote": "李文强 | 非执行董事 | 本届任期：2025-12-12 至今",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "中原银行(HK1216) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK1216/manager.html",
+    "field": "people",
+    "quote": "徐义国 | 独立非执行董事 | 本届任期：2023-11-28 至今",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "中原银行(HK1216) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK1216/manager.html",
+    "field": "cross_bank",
+    "quote": "曾任中国工商银行总行私人银行部郑州分部投资顾问、中国工商银行河南省分行私人银行部投资顾问主管",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "中原银行(HK1216) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK1216/manager.html",
+    "field": "cross_bank",
+    "quote": "中国农业银行总行私人银行部产品研发部副总经理",
+    "as_of": ""
+   }
+  ],
+  "checked_at": "2026-11-06T13:20:02+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b0179h337130001": {
+  "people": [
+   {
+    "name": "刘成田",
+    "role": "董事长",
+    "since": "2024",
+    "until": ""
+   }
+  ],
+  "cross_bank": [
+   {
+    "name": "刘成田",
+    "other_bank": "中国银行德州分行",
+    "role": "行长",
+    "period": "",
+    "quote": "此前曾担任中行德州分行行长"
+   }
+  ],
+  "period": "2024-2025",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "临商银行股份有限公司",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "people",
+    "quote": "空缺近4年后,刘成田任命临商银行董事长,此前曾担任中行德州分行行长",
+    "as_of": "2024-2025"
+   },
+   {
+    "kind": "governance",
+    "title": "临商银行股份有限公司",
+    "url": "https://baike.baidu.com/item/%E4%B8%B4%E5%95%86%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/20057479",
+    "field": "cross_bank",
+    "quote": "此前曾担任中行德州分行行长",
+    "as_of": "2024-2025"
+   },
+   {
+    "kind": "governance",
+    "title": "临商银行股份有限公司_临商银行-信息查询-官方资质&背景数据-天眼查",
+    "url": "https://www.tianyancha.com/company/1235676766",
+    "as_of": "2024-2025"
+   },
+   {
+    "kind": "governance",
+    "title": "临商银行：乱象不休，颓势不止",
+    "url": "https://finance.sina.com.cn/roll/2024-11-13/doc-incvxarq5612634.shtml",
+    "as_of": "2024-2025"
+   },
+   {
+    "kind": "governance",
+    "title": "临商银行临商银行股份有限公司2025年度报告",
+    "url": "https://www.lsbchina.com/lsbchina/2026-04/29/article_2026042917205843605.html",
+    "as_of": "2024-2025"
+   }
+  ],
+  "checked_at": "2026-11-06T13:20:09+00:00",
+  "shares": [
+   {
+    "name": "刘成田",
+    "bank_id": "bk_b0003h111000001",
+    "bank": "中国银行股份有限公司",
+    "role": "行长",
+    "period": "",
+    "quote": "此前曾担任中行德州分行行长",
+    "confidence": 0.9,
+    "basis": "公开简历/报道明确记载"
+   }
+  ],
+  "explicit_names": [
+   "刘成田"
+  ]
+ },
+ "bk_b0126h321060001": {
+  "people": [
+   {
+    "name": "戴鸿丽",
+    "role": "独立董事",
+    "since": "2025年7月1日",
+    "until": ""
+   },
+   {
+    "name": "孟奇",
+    "role": "董事",
+    "since": "",
+    "until": ""
+   }
+  ],
+  "cross_bank": [],
+  "period": "",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "监管批复！戴鸿丽就任丹东银行独立董事",
+    "url": "https://i.ifeng.com/c/8kczZ9RlMgh",
+    "field": "people",
+    "quote": "2025年7月1日，根据国家金融监督管理总局消息，《丹东银行股份有限公司关于戴鸿丽董事任职资格审查的请示》获得通过，批复戴鸿丽丹东银行股份有限公司",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "辽宁金融监管局关于孟奇丹东银行股份有限公司董事任职资格的批复",
+    "url": "https://www.nfra.gov.cn/branch/liaoning/view/pages/common/ItemDetail.html?docId=1235330&itemId=1689",
+    "field": "people",
+    "quote": "核准孟奇丹东银行股份有限公司董事",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "丹东银行股份有限公司",
+    "url": "https://m.qcc.com/firm/ab31aae6b299e2e29bb22c82f196585e.html",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "丹东银行股份有限公司存续",
+    "url": "https://www.tianyancha.com/company/366427485",
+    "as_of": ""
+   }
+  ],
+  "checked_at": "2026-11-06T13:20:14+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b1068h315030001": {
+  "people": [
+   {
+    "name": "刘瑞江",
+    "role": "董事长",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "张彤",
+    "role": "董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "蔺剑飞",
+    "role": "董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "张强小",
+    "role": "董事",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "赵孔章",
+    "role": "党委书记",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "崔洪杰",
+    "role": "党委书记、董事长",
+    "since": "",
+    "until": ""
+   }
+  ],
+  "cross_bank": [],
+  "period": "",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "乌海银行股份有限公司",
+    "url": "https://www.qcc.com/firm/0998ffcc913ce45ffbe3ab53b2b88521.html",
+    "field": "people",
+    "quote": "刘瑞江. 董事长；邹峰. 经理；张彤. 董事；蔺剑飞. 董事；张强小. 董事",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乌海银行“换帅”：赵孔章已出任党委书记",
+    "url": "https://www.stcn.com/article/detail/4041746.html",
+    "field": "people",
+    "quote": "赵孔章已出任党委书记；行党委书记、董事长一职由崔洪杰担任",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乌海银行股份有限公司",
+    "url": "https://m.qcc.com/firm/0998ffcc913ce45ffbe3ab53b2b88521.html",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乌海银行",
+    "url": "https://www.wuhaicb.com",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乌海银行股份有限公司关于召开2025年度股东会的通知",
+    "url": "https://www.wuhaicb.com/wuhai/news/tztg/21891.html",
+    "as_of": ""
+   }
+  ],
+  "checked_at": "2026-11-06T13:20:23+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b0796h265010001": {
+  "people": [
+   {
+    "name": "方炜钏",
+    "role": "副行长",
+    "since": "",
+    "until": ""
+   },
+   {
+    "name": "王辉",
+    "role": "董事长",
+    "since": "2025",
+    "until": ""
+   }
+  ],
+  "cross_bank": [],
+  "period": "2025年",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "乌鲁木齐银行九个月内迎来第二任行长 - 科技金融在线",
+    "url": "https://www.jrkjaq.com/all/39373.shtml",
+    "field": "people",
+    "quote": "方炜钏的职务是时任副行长",
+    "as_of": "2025年"
+   },
+   {
+    "kind": "governance",
+    "title": "上市辅导进行时乌鲁木齐银行迎来新任董事长王辉",
+    "url": "https://www.cnr.cn/jrpd/mxdj/20250611/t20250611_527205481.shtml",
+    "field": "people",
+    "quote": "上市辅导进行时乌鲁木齐银行迎来新任董事长王辉",
+    "as_of": "2025年"
+   },
+   {
+    "kind": "governance",
+    "title": "新疆银行和乌鲁木齐银行，谁能成为新疆首家上市银行？",
+    "url": "https://m.36kr.com/p/3309618546384644",
+    "as_of": "2025年"
+   },
+   {
+    "kind": "governance",
+    "title": "乌鲁木齐银行股份有限公司昌吉市长宁路支行2025年报- 企业年报公示查询",
+    "url": "https://nianbao.tianyancha.com/2589058717/2025",
+    "as_of": "2025年"
+   }
+  ],
+  "checked_at": "2026-11-06T13:20:30+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b0213h251110001": {
+  "people": [
+   {
+    "name": "李映军",
+    "role": "行长",
+    "since": "",
+    "until": ""
+   }
+  ],
+  "cross_bank": [],
+  "period": "",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "乐山市商业银行股份有限公司",
+    "url": "https://baike.baidu.com/item/%E4%B9%90%E5%B1%B1%E5%B8%82%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/19981635",
+    "field": "people",
+    "quote": "行长：李映军",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "规模、效益、口碑协同并进，乐山市商业银行稳中有进答好高质量发展考题_新浪财经_新浪网",
+    "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwhraa6183193.shtml?froms=ggmp",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乐山市商业银行股份有限公司2025年报",
+    "url": "https://m.tianyancha.com/nianbao/216323680",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乐山市商业银行",
+    "url": "https://tavily.com/knowledge/company/bT4tDSioYU9W",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "定期报告--乐山市商业银行",
+    "url": "https://www.lsccb.com/tzzgx/dqbg",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "乐山市商业银行欢迎您!",
+    "url": "https://www.lsccb.com",
+    "as_of": ""
+   }
+  ],
+  "checked_at": "2026-11-06T13:20:36+00:00",
+  "shares": [],
+  "explicit_names": []
+ },
+ "bk_b0348h336040001": {
+  "people": [
+   {
+    "name": "郭杰群",
+    "role": "独立非执行董事",
+    "since": "2023-09-19",
+    "until": ""
+   },
+   {
+    "name": "杜中文",
+    "role": "副行长",
+    "since": "2025-01-27",
+    "until": ""
+   },
+   {
+    "name": "蓝进伟",
+    "role": "副行长",
+    "since": "2026-03-04",
+    "until": ""
+   },
+   {
+    "name": "袁德磊",
+    "role": "党委委员、风险总监兼首席独立授信审批官",
+    "since": "2021-08",
+    "until": ""
+   }
+  ],
+  "cross_bank": [
+   {
+    "name": "杜中文",
+    "other_bank": "中国农业银行",
+    "role": "共青支行办公室副主任",
+    "period": "",
+    "quote": "曾任中国农业银行共青支行办公室副主任"
+   },
+   {
+    "name": "蓝进伟",
+    "other_bank": "兴业银行",
+    "role": "莆田分行党委委员、行长助理、副行长",
+    "period": "",
+    "quote": "曾在兴业银行担任莆田分行党委委员、行长助理、副行长等职务"
+   },
+   {
+    "name": "袁德磊",
+    "other_bank": "中国工商银行",
+    "role": "安徽省分行法律事务部副科长、科长、副总经理；安徽池州分行党委委员、副行长；安徽省分行法律事务部副总经理、信贷与投资管理部副总经理",
+    "period": "2003-07至2019-10",
+    "quote": "于2003年7月至2013年4月历任中国工商银行股份有限公司安徽省分行法律事务部副科长、科长、副总经理；于2013年4月至2016年1月担任中国工商银行股份有限公司安徽池州分行党委委员、副行长；于2016年1月至2019年10月历任中国工商银行股份有限公司安徽省分行法律事务部副总经理、信贷与投资管理部副总经理"
+   }
+  ],
+  "period": "",
+  "sources": [
+   {
+    "kind": "governance",
+    "title": "九江银行(HK6190) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK6190/manager.html",
+    "field": "people",
+    "quote": "郭杰群 | 独立非执行董事 | 本届任期：2023-09-19 至今",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "九江银行(HK6190) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK6190/manager.html",
+    "field": "people",
+    "quote": "杜中文 | 副行长 | 本届任期：2025-01-27 至今",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "九江银行(HK6190) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK6190/manager.html",
+    "field": "people",
+    "quote": "蓝进伟 | 副行长 | 本届任期：2026-03-04 至今",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "九江银行(HK6190) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK6190/manager.html",
+    "field": "people",
+    "quote": "于2021年8月至今担任党委委员、风险总监兼首席独立授信审批官",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "九江银行(HK6190) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK6190/manager.html",
+    "field": "cross_bank",
+    "quote": "曾任中国农业银行共青支行办公室副主任",
+    "as_of": ""
+   },
+   {
+    "kind": "governance",
+    "title": "九江银行(HK6190) 高管介绍_F10_同花顺金融服务网",
+    "url": "https://basic.10jqka.com.cn/HK6190/manager.html",
+    "field": "cross_bank",
+    "quote": "曾在兴业银行担任莆田分行党委委员、行长助理、副行长等职务",
+    "as_of": ""
+   }
+  ],
+  "checked_at": "2026-11-06T13:30:40+00:00",
+  "shares": [],
+  "explicit_names": []
+ }
+}

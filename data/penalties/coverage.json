@@ -1,0 +1,35 @@
+{
+ "since": "2021-11-07",
+ "generated_at": "2026-11-06T12:57:24+00:00",
+ "items": {
+  "4113": {
+   "next_page": 14,
+   "done": true,
+   "old_pages": 3,
+   "docs_seen": 252,
+   "docs_kept": 196
+  },
+  "4114": {
+   "next_page": 81,
+   "done": false,
+   "old_pages": 0,
+   "docs_seen": 1440,
+   "docs_kept": 1430
+  },
+  "4115": {
+   "next_page": 4,
+   "done": false,
+   "old_pages": 0,
+   "docs_seen": 54,
+   "docs_kept": 54
+  }
+ },
+ "processed_docs": 1680,
+ "scanned_this_run": 656,
+ "matched_docs_this_run": 185,
+ "matched_rows_this_run": 267,
+ "banks_with_penalties": 149,
+ "records": 581,
+ "partial": true,
+ "matched_docs": 400
+}
