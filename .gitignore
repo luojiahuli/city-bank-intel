@@ -11,3 +11,4 @@ data/registry/*.pdf
 
 node_modules/
 .wrangler/
+data/enrichment/website.shard*.json

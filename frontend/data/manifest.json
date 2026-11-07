@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generated_at": "2026-11-06T13:31:29+00:00",
+ "generated_at": "2026-11-07T23:46:58+00:00",
  "registry_as_of": "2024-12-31",
  "registry_source": "https://www.nfra.gov.cn/chinese/docfile/2025/e80bc363856b4032901e40a79d6a8486.pdf",
  "total": 3811,
@@ -72,19 +72,29 @@
   "with_news": 8,
   "with_penalties": 149,
   "with_governance": 11,
-  "with_opportunities": 3811
+  "with_opportunities": 3811,
+  "with_focus": 2,
+  "with_focus_confirmed": 2,
+  "with_website": 107,
+  "with_site_profile": 107
  },
  "agent_stats": {
   "penalty_banks": 149,
   "news_banks": 8,
   "financial_banks": 44,
-  "governance_banks": 11
+  "governance_banks": 11,
+  "website_banks": 107,
+  "site_profile_banks": 107,
+  "focus_banks": 2,
+  "focus_confirmed_banks": 2
  },
  "edges": {
-  "business": 9895,
+  "business": 15063,
+  "focus": 6411,
   "it": 7622,
-  "huawei": 15244,
-  "governance": 3
+  "huawei": 15343,
+  "governance": 3,
+  "similar": 29
  },
  "files": {
   "graph": "graph.json",
@@ -92,9 +102,11 @@
   "facets": "facets.json",
   "edges": [
    "business",
+   "focus",
    "it",
    "huawei",
-   "governance"
+   "governance",
+   "similar"
   ]
  },
  "disclaimer": "本页仅整理公开信息，缺失字段标注为“未披露”，不构成投资建议。数据基准日以页面标注为准，来源链接见各银行详情。"
