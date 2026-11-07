@@ -3,14 +3,18 @@
 const VIEW_HUBS = {
   region: ["province"],
   business: ["business"],
+  focus: ["focus"],
   it: ["it", "digital"],
   huawei: ["huawei"],
   governance: ["province"],
+  similar: [],
 };
 
 const EDGE_STYLE = {
   region: { color: "rgba(140,163,190,0.16)", width: 0.7 },
   business: { color: "rgba(244,114,182,0.18)", width: 0.7 },
+  focus: { color: "rgba(251,191,36,0.16)", width: 0.7 },
+  similar: { color: "rgba(56,189,248,0.45)", width: 0.9 },
   it: { color: "rgba(96,165,250,0.15)", width: 0.65 },
   digital: { color: "rgba(167,139,250,0.13)", width: 0.65 },
   huawei: { color: "rgba(255,138,76,0.14)", width: 0.7 },
@@ -99,6 +103,14 @@ export class GraphCanvas {
 
   setEdges(view, links) {
     this.edges[view] = Array.isArray(links) ? links : [];
+    if (view === "similar") {
+      const ids = new Set();
+      for (const link of this.edges[view]) {
+        ids.add(link.source);
+        ids.add(link.target);
+      }
+      this._similarIds = ids;
+    }
     if (view === this.activeView) {
       this._rebuildQuad();
       this._mark();
@@ -141,7 +153,15 @@ export class GraphCanvas {
 
   _visible(node) {
     if (!node) return false;
-    if (node.type === "bank") return !this.visible || this.visible.has(node.id);
+    if (node.type === "bank") {
+      if (!this.visible || this.visible.has(node.id)) {
+        if (this.activeView === "similar" && this._similarIds) {
+          return this._similarIds.has(node.id);
+        }
+        return true;
+      }
+      return false;
+    }
     if (node.type === "province") {
       return (VIEW_HUBS[this.activeView] || []).includes("province") &&
         (this._liveCount.get(node.id) || 0) > 0;
@@ -223,7 +243,7 @@ export class GraphCanvas {
       maxX = Math.max(maxX, n.x);
       maxY = Math.max(maxY, n.y);
     }
-    const pad = 56;
+    const pad = this.w < 640 ? 24 : 56;
     const bw = Math.max(1, maxX - minX);
     const bh = Math.max(1, maxY - minY);
     const k = clamp(Math.min((this.w - pad * 2) / bw, (this.h - pad * 2) / bh), 0.12, maxK);
@@ -251,8 +271,9 @@ export class GraphCanvas {
   focusNode(node, k = 2) {
     if (!node) return;
     const kk = clamp(k, 0.2, 5);
+    const mobile = this.w < 768;
     const tx = this.w / 2 - node.x * kk;
-    const ty = this.h / 2 - node.y * kk;
+    const ty = (mobile ? this.h * 0.34 : this.h / 2) - node.y * kk;
     this._animateTo(kk, tx, ty, 380, node.id);
   }
 
@@ -308,9 +329,45 @@ export class GraphCanvas {
 
   _bindEvents() {
     const cv = this.canvas;
+    this._pointers = new Map();
+    this._pinch = null;
+
+    const pinchState = () => {
+      const pts = [...this._pointers.values()];
+      if (pts.length < 2) return null;
+      const [a, b] = pts;
+      return {
+        dist: Math.hypot(a.x - b.x, a.y - b.y),
+        cx: (a.x + b.x) / 2,
+        cy: (a.y + b.y) / 2,
+      };
+    };
+
     cv.addEventListener("pointerdown", (e) => {
-      if (e.button !== 0) return;
+      if (e.pointerType === "mouse" && e.button !== 0) return;
       this._anim = null;
+      this._pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      if (this._pointers.size === 2) {
+        const p = pinchState();
+        this._pinch = {
+          dist: Math.max(1, p.dist),
+          cx: p.cx,
+          cy: p.cy,
+          k: this.transform.k,
+          x: this.transform.x,
+          y: this.transform.y,
+        };
+        this._drag = null;
+        this.hoverId = null;
+        this.onHover(null);
+        cv.classList.add("dragging");
+        cv.style.cursor = "grabbing";
+        return;
+      }
+      if (this._pointers.size > 2) return;
+
+      const hit = this._hitTest(e);
       this._drag = {
         x: e.clientX,
         y: e.clientY,
@@ -319,31 +376,66 @@ export class GraphCanvas {
         tx: this.transform.x,
         ty: this.transform.y,
         moved: false,
+        node: hit && hit.type === "bank" ? hit : null,
+        nx: hit ? hit.x : 0,
+        ny: hit ? hit.y : 0,
       };
       cv.setPointerCapture(e.pointerId);
       cv.classList.add("dragging");
+      cv.style.cursor = "grabbing";
     });
 
     cv.addEventListener("pointermove", (e) => {
+      if (this._pointers.has(e.pointerId)) {
+        this._pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      }
+
+      if (this._pinch && this._pointers.size >= 2) {
+        const p = pinchState();
+        if (!p) return;
+        const rect = cv.getBoundingClientRect();
+        const startMx = this._pinch.cx - rect.left;
+        const startMy = this._pinch.cy - rect.top;
+        const wx = (startMx - this._pinch.x) / this._pinch.k;
+        const wy = (startMy - this._pinch.y) / this._pinch.k;
+        const mx = p.cx - rect.left;
+        const my = p.cy - rect.top;
+        const k = clamp(this._pinch.k * (p.dist / this._pinch.dist), 0.12, 6);
+        this.transform = { k, x: mx - wx * k, y: my - wy * k };
+        this.onZoom(k);
+        this._mark();
+        return;
+      }
+
       if (this._drag) {
         const dx = e.clientX - this._drag.startX;
         const dy = e.clientY - this._drag.startY;
         if (Math.abs(dx) > 3 || Math.abs(dy) > 3) this._drag.moved = true;
         if (this._drag.moved) {
-          this.transform = {
-            k: this.transform.k,
-            x: this._drag.tx + dx,
-            y: this._drag.ty + dy,
-          };
+          if (this._drag.node) {
+            const k = this.transform.k;
+            this._drag.node.x = this._drag.nx + dx / k;
+            this._drag.node.y = this._drag.ny + dy / k;
+            this._rebuildQuad();
+          } else {
+            this.transform = {
+              k: this.transform.k,
+              x: this._drag.tx + dx,
+              y: this._drag.ty + dy,
+            };
+          }
           this._mark();
         }
         return;
       }
+
+      if (e.pointerType === "touch") return;
+
       const node = this._hitTest(e);
       const id = node ? node.id : null;
       if (id !== this.hoverId) {
         this.hoverId = id;
-        cv.style.cursor = id ? "pointer" : "";
+        cv.style.cursor = id ? (node.type === "bank" ? "grab" : "pointer") : "";
         this.onHover(node, e);
         this._mark();
       } else if (id) {
@@ -352,11 +444,37 @@ export class GraphCanvas {
     });
 
     const end = (e) => {
-      if (!this._drag) return;
-      const wasClick = !this._drag.moved;
+      this._pointers.delete(e.pointerId);
+
+      if (this._pinch) {
+        if (this._pointers.size < 2) this._pinch = null;
+        try { cv.releasePointerCapture(e.pointerId); } catch (_) { /* noop */ }
+        if (!this._pointers.size) {
+          cv.classList.remove("dragging");
+          cv.style.cursor = "";
+        }
+        return;
+      }
+
+      if (!this._drag) {
+        if (!this._pointers.size) {
+          cv.classList.remove("dragging");
+          cv.style.cursor = "";
+        }
+        return;
+      }
+
+      const drag = this._drag;
+      const wasClick = !drag.moved;
       this._drag = null;
       cv.classList.remove("dragging");
+      cv.style.cursor = "";
       try { cv.releasePointerCapture(e.pointerId); } catch (_) { /* noop */ }
+      if (drag.node && drag.moved) {
+        this._rebuildQuad();
+        this._mark();
+        return;
+      }
       if (wasClick) {
         const node = this._hitTest(e);
         if (node) this.onSelect(node, e);
@@ -364,13 +482,16 @@ export class GraphCanvas {
       }
     };
     cv.addEventListener("pointerup", end);
-    cv.addEventListener("pointercancel", () => {
+    cv.addEventListener("pointercancel", (e) => {
+      this._pointers.delete(e.pointerId);
+      if (this._pointers.size < 2) this._pinch = null;
       this._drag = null;
       cv.classList.remove("dragging");
+      cv.style.cursor = "";
     });
 
-    cv.addEventListener("pointerleave", () => {
-      if (this._drag) return;
+    cv.addEventListener("pointerleave", (e) => {
+      if (this._drag || e.pointerType === "touch") return;
       this.hoverId = null;
       this.onHover(null);
       this._mark();

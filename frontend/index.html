@@ -2,7 +2,11 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#070b14" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>中国中小银行关系图谱 · 华为机会视图</title>
   <meta name="description" content="全国银行业法人关系网络：区域、业务、IT投入、董监高与华为能力机会分析。" />
   <link rel="stylesheet" href="styles.css" />
@@ -22,6 +26,7 @@
         <input id="searchInput" type="search" placeholder="搜索银行名称 / 简称 / 城市" autocomplete="off" />
         <div class="search-results" id="searchResults"></div>
       </div>
+      <button class="icon-btn mobile-only" id="filterBtn" title="筛选" aria-label="打开筛选">☰</button>
       <button class="icon-btn" id="fitBtn" title="重置视图">⤢</button>
     </header>
 
@@ -66,6 +71,7 @@
               <option value="60">≥ 60</option>
             </select>
             <label class="check-row"><input type="checkbox" id="listedOnly" /> 仅看上市银行</label>
+            <label class="check-row"><input type="checkbox" id="siteOnly" /> 仅看有官网画像</label>
             <label class="check-row"><input type="checkbox" id="allHuawei" /> 显示全部华为机会边</label>
             <button class="reset-btn" id="resetFilters">重置筛选</button>
           </section>
@@ -82,14 +88,17 @@
           </section>
         </div>
       </aside>
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
       <section class="stage">
         <div class="view-tabs" id="viewTabs">
           <button class="view-tab active" data-view="region">区域</button>
           <button class="view-tab" data-view="business">主要业务</button>
+          <button class="view-tab" data-view="focus">重点产业</button>
           <button class="view-tab" data-view="it">IT 投入</button>
           <button class="view-tab" data-view="huawei">华为机会</button>
           <button class="view-tab" data-view="governance">董监高</button>
+          <button class="view-tab" data-view="similar">相似银行</button>
         </div>
         <canvas id="graphCanvas"></canvas>
         <div class="canvas-tooltip" id="tooltip"></div>

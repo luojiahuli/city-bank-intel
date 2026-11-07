@@ -2,6 +2,7 @@
 
 const TABS = [
   ["overview", "概览"],
+  ["site", "官网"],
   ["finance", "财务"],
   ["news", "新闻"],
   ["penalties", "处罚"],
@@ -15,6 +16,7 @@ const GROUP_LABEL = { city: "城商行", rural: "农商行", village: "村镇银
 const HUB_KICKER = {
   province: "区域枢纽",
   business: "业务枢纽",
+  focus: "重点产业枢纽",
   it: "IT 投入分组",
   digital: "数字化活跃度分组",
   huawei: "华为能力枢纽",
@@ -169,13 +171,13 @@ export class DetailPanel {
     this._load(node);
   }
 
-  showHub(node, connections = []) {
+  showHub(node, connections = [], total = connections.length) {
     this.open();
-    this.current = { kind: "hub", node, connections };
+    this.current = { kind: "hub", node, connections, total };
     this._renderHeader({
       kicker: HUB_KICKER[node.type] || "网络枢纽",
       title: node.name,
-      sub: node.desc || node.entry || `共关联 ${connections.length} 家银行`,
+      sub: node.desc || node.entry || `共关联 ${total} 家银行`,
       badges: [
         node.category && badge(node.category, "orange"),
         node.entry && badge(node.entry),
@@ -254,6 +256,9 @@ export class DetailPanel {
       badges: this._bankBadges(data),
     });
     switch (this.activeTab) {
+      case "site":
+        this.bodyEl.innerHTML = this._siteHtml(data);
+        break;
       case "finance":
         this.bodyEl.innerHTML = this._financeHtml(data);
         break;
@@ -318,8 +323,53 @@ export class DetailPanel {
       "主要业务",
       `<div class="tags">${tags || tag("未披露", "warn")}</div>` +
         (d.business_inferred
-          ? `<div class="note" style="margin-top:10px">业务标签为按机构类型的结构性推断，尚未由年报或官网原文确认。</div>`
+          ? `<div class="note" style="margin-top:10px">业务标签结合机构类型与所在省份产业结构推断，尚未由年报或官网原文确认。</div>`
           : "")
+    );
+
+    const sp = d.site_profile;
+    const siteBlock = sp
+      ? block(
+          "官网画像",
+          `<div class="note">${esc(sp.features || "")}</div>` +
+            `<div class="tags" style="margin-top:9px">${(sp.key_business || []).slice(0, 6).map((t) => tag(t)).join("")}</div>` +
+            (sp.recent_moves && sp.recent_moves.length
+              ? `<div class="news-meta" style="margin-top:10px"><span>最近动向</span></div>` +
+                sp.recent_moves.slice(0, 3).map((m) => `<div class="opp-why">· ${esc(m)}</div>`).join("")
+              : "") +
+            `<div class="side-note" style="margin-top:8px">依据官网公开页面整理，详见「官网」页签。</div>`
+        )
+      : "";
+
+    const focusEntries = (d.business_focus && d.business_focus.length)
+      ? d.business_focus
+      : (d.region_industries || []).map((t) => ({
+          tag: t, basis: "区域产业结构推断（待核验）",
+        }));
+    const focusRows = focusEntries.map((f) => {
+      const confirmed = f.basis === "公开报道";
+      const src = f.url
+        ? ` <a href="${esc(f.url)}" target="_blank" rel="noopener">原文</a>` : "";
+      const quote = f.quote ? `<div class="opp-why">“${esc(f.quote)}”</div>` : "";
+      return `<div class="news-item">
+        <div class="news-meta">${tag(f.tag, confirmed ? "green" : "warn")}${tag(confirmed ? "公开报道" : "区域推断", confirmed ? "green" : "warn")}${src}</div>
+        ${quote || `<div class="note">${esc(f.title || "按省级产业结构推断，待该行公开报道核验。")}</div>`}
+      </div>`;
+    }).join("");
+    const focusBlock = block(
+      "重点产业",
+      focusEntries.length
+        ? focusRows + (d.focus_summary ? `<div class="note">${esc(d.focus_summary)}</div>` : "")
+        : `<div class="note">尚未取得该行公开报道或区域产业结构数据。</div>`
+    );
+
+    const simRows = (d.similar_banks || []).map((s) =>
+      `<div class="news-item"><a href="#" data-bank-id="${esc(s.id)}">${esc(s.name)}</a>
+        <div class="news-meta"><span>相似度 ${(s.similarity * 100).toFixed(1)}%</span><span>${esc((s.fields || []).join("、"))}</span></div>
+      </div>`).join("");
+    const similarBlock = block(
+      "相似银行（公开财务结构）",
+      simRows || `<div class="note">尚未取得足够公开财务指标进行相似度计算。</div>`
     );
 
     const opp = (d.opportunities || [])[0];
@@ -352,13 +402,56 @@ export class DetailPanel {
         <dt>机构全称</dt><dd>${esc(d.name || "—")}</dd>
         <dt>所在地</dt><dd>${esc(local || "未披露")}</dd>
         <dt>监管单位</dt><dd>${esc(d.regulator || "未披露")}</dd>
+        <dt>官方网站</dt><dd>${d.website ? `<a href="${esc(safeUrl(d.website))}" target="_blank" rel="noopener">${esc(d.website)}</a>` : '<span style="color:#4e5b70">未找到</span>'}</dd>
         <dt>数据基准日</dt><dd>${esc(d.as_of || "未披露")}</dd>
       </div>
       <div class="metric-grid" style="margin-top:14px">${metrics}</div>
       ${businessBlock}
+      ${siteBlock}
+      ${focusBlock}
+      ${similarBlock}
       ${oppBlock}
       ${completeness}
       ${notes ? block("数据说明", notes) : ""}
+    `;
+  }
+
+  _siteHtml(d) {
+    const sp = d.site_profile;
+    const siteLine = d.website
+      ? `<div class="kv" style="margin-bottom:4px">
+          <dt>官方网站</dt><dd><a href="${esc(safeUrl(d.website))}" target="_blank" rel="noopener">${esc(d.website)}</a></dd>
+          <dt>抓取时间</dt><dd>${esc(String(sp && sp.fetched_at || "").slice(0, 10) || "—")}</dd>
+        </div>`
+      : `<div class="note">未找到可直接访问的银行官网。</div>`;
+    if (!sp) {
+      return siteLine + (d.site_checked
+        ? `<div class="note" style="margin-top:10px">官网搜索已完成，但未取得可用文本；不代表该行没有官网。</div>`
+        : `<div class="note" style="margin-top:10px">官网画像尚未采集。</div>`);
+    }
+    const biz = (sp.key_business || []).map((t) => tag(t)).join("");
+    const moves = (sp.recent_moves || [])
+      .map((m) => `<div class="news-item"><div class="p-main">${esc(m)}</div></div>`)
+      .join("");
+    const items = (sp.recent_items || [])
+      .map((it) => `<div class="news-item">
+        <a href="${esc(safeUrl(it.url))}" target="_blank" rel="noopener">${esc(it.title)}</a>
+        <div class="news-meta"><span>${esc(it.date || "")}</span></div>
+      </div>`)
+      .join("");
+    const ev = (sp.evidence || []).slice(0, 4)
+      .map((e) => `<div class="source-item">
+        <div class="s-kind">官网原文摘录</div>
+        <div class="opp-why">“${esc(e.text || "")}”</div>
+        <a href="${esc(safeUrl(e.url))}" target="_blank" rel="noopener">${esc(e.url || "")}</a>
+      </div>`)
+      .join("");
+    return siteLine + `
+      ${block("机构特征", `<div class="note">${esc(sp.features || "未披露")}</div>`)}
+      ${block("关键业务", `<div class="tags">${biz || tag("未披露", "warn")}</div>`)}
+      ${block("最近动向", moves || `<div class="note">官网未提供带日期的近期条目。</div>`)}
+      ${items ? block("官网近期公告 / 新闻", items) : ""}
+      ${block("来源与置信度", `<div class="news-meta">${tag(`置信度 ${sp.confidence || "低"}`)}${tag(sp.basis || "官网")}</div>${ev}`)}
     `;
   }
 
@@ -574,7 +667,7 @@ export class DetailPanel {
 
   /* ---------------- hub ---------------- */
 
-  _hubHtml({ node, connections }) {
+  _hubHtml({ node, connections, total }) {
     const rows = connections
       .map((item) => {
         const n = item.node || item;
@@ -589,7 +682,8 @@ export class DetailPanel {
       ? `<div class="note">${esc(node.desc)}</div>`
       : `<div class="note">${esc(HUB_KICKER[node.type] || "网络枢纽")}，点击下方银行可查看详情。</div>`;
     const entry = node.entry ? `<div class="kv" style="margin-top:12px"><dt>切入方向</dt><dd>${esc(node.entry)}</dd></div>` : "";
-    const count = node.type === "province" ? node.count : connections.length;
+    const count = node.type === "province" ? node.count : (total ?? connections.length);
+    const more = count > connections.length ? `，显示前 ${connections.length} 家` : "";
     return `
       <div class="kv">
         <dt>节点类型</dt><dd>${esc(HUB_KICKER[node.type] || node.type)}</dd>
@@ -597,7 +691,7 @@ export class DetailPanel {
         ${count != null ? `<dt>关联银行</dt><dd>${esc(count)} 家</dd>` : ""}
       </div>
       ${intro}${entry}
-      ${block(`关联银行（前 ${connections.length} 家）`, rows || empty("当前筛选下没有关联银行。"))}
+      ${block(`关联银行（共 ${count} 家${more}）`, rows || empty("当前筛选下没有关联银行。"))}
     `;
   }
 }

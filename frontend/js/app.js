@@ -14,17 +14,21 @@ const GROUPS = [
 const VIEW_LABEL = {
   region: "区域",
   business: "主要业务",
+  focus: "重点产业",
   it: "IT 投入",
   huawei: "华为机会",
   governance: "董监高",
+  similar: "相似银行",
 };
 
 const VIEW_NOTE = {
   region: "按省份聚合的机构分布；节点大小表示资产规模，未披露时按机构类型示意。",
   business: "业务边为按机构类型的结构性推断，待年报与官网披露补充后替换。",
+  focus: "重点产业优先采用该行公开报道原文；无报道时按所在省份产业结构推断并标注“区域推断”。",
   it: "IT 投入与 AI 活跃度均来自公开披露；未披露的银行归入对应“未披露”分组。",
-  huawei: "华为机会评分由规则分与公开证据组成；无公开证据时封顶 55 分并标注“推断/待验证”。",
+  huawei: "华为机会评分由规则分与公开证据组成；无公开证据时标注“推断/待验证”。",
   governance: "董监高名单与“共享董监高”关系线正在采集，计划优先覆盖 123 家城商行。",
+  similar: "仅连接同时披露资产与营收、且至少两项财务指标可比的银行；规模比 0.05–20，近似度≥0.93。",
 };
 
 const state = {
@@ -37,6 +41,7 @@ const state = {
   canvas: null,
   detail: null,
   searchBox: null,
+  drawer: null,
   visible: null,
   view: "region",
   edges: { region: [] },
@@ -49,11 +54,16 @@ const state = {
     penalty: "",
     opp: 0,
     listed: false,
+    siteOnly: false,
     allHuawei: false,
   },
 };
 
 const $ = (id) => document.getElementById(id);
+
+const MOBILE_QUERY = window.matchMedia("(max-width: 768px)");
+const TABLET_QUERY = window.matchMedia("(max-width: 1024px)");
+const TOUCH_QUERY = window.matchMedia("(pointer: coarse)");
 
 async function getJSON(path) {
   const res = await fetch(path, { cache: "no-store" });
@@ -77,6 +87,7 @@ function fmtNum(v) {
 /* ---------------- boot ---------------- */
 
 async function boot() {
+  applyDeviceMode();
   bindStaticControls();
   try {
     $("loadingSub").textContent = "读取机构名录与关系数据…";
@@ -152,7 +163,39 @@ function initDetail() {
   });
 }
 
+function applyDeviceMode() {
+  const root = document.documentElement;
+  const sync = () => {
+    root.classList.toggle("is-mobile", MOBILE_QUERY.matches);
+    root.classList.toggle("is-touch", TOUCH_QUERY.matches);
+  };
+  sync();
+  [MOBILE_QUERY, TOUCH_QUERY].forEach((q) => {
+    if (q.addEventListener) q.addEventListener("change", sync);
+  });
+}
+
+function setupDrawer() {
+  const btn = $("filterBtn");
+  const sidebar = $("sidebar");
+  const backdrop = $("drawerBackdrop");
+  if (!btn || !sidebar || !backdrop) return null;
+  const setOpen = (open) => {
+    sidebar.classList.toggle("open", open);
+    backdrop.classList.toggle("show", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  btn.setAttribute("aria-expanded", "false");
+  btn.addEventListener("click", () => setOpen(!sidebar.classList.contains("open")));
+  backdrop.addEventListener("click", () => setOpen(false));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+  return { close: () => setOpen(false) };
+}
+
 function bindStaticControls() {
+  state.drawer = setupDrawer();
   $("fitBtn").addEventListener("click", () => state.canvas && state.canvas.fit(null, { animate: true }));
   $("zoomIn").addEventListener("click", () => state.canvas && state.canvas.zoomBy(1.3));
   $("zoomOut").addEventListener("click", () => state.canvas && state.canvas.zoomBy(1 / 1.3));
@@ -164,6 +207,7 @@ function bindStaticControls() {
 
   $("resetFilters").addEventListener("click", () => {
     resetFilters(false);
+    if (state.drawer && TABLET_QUERY.matches) state.drawer.close();
     if (state.canvas) state.canvas.fit(null, { animate: true });
   });
 
@@ -174,10 +218,18 @@ function bindStaticControls() {
       if (id === "provinceFilter" && state.filters.province && state.canvas) {
         state.canvas.fitToProvince(state.filters.province);
       }
+      if (id === "provinceFilter" && state.drawer && TABLET_QUERY.matches) {
+        state.drawer.close();
+      }
     });
   });
 
   $("listedOnly").addEventListener("change", () => {
+    readFilters();
+    applyFilters();
+  });
+
+  $("siteOnly").addEventListener("change", () => {
     readFilters();
     applyFilters();
   });
@@ -256,6 +308,7 @@ function buildCoverage(m) {
     ["员工数", "with_employees"],
     ["上市标识", "listed"],
     ["新闻", "with_news"],
+    ["官网画像", "with_site_profile"],
     ["处罚采集", "with_penalties"],
     ["董监高", "with_governance"],
   ];
@@ -275,8 +328,10 @@ function buildLegend() {
     ...GROUPS,
     { key: "province", label: "区域枢纽", color: "#94a3b8" },
     { key: "business", label: "业务枢纽", color: "#f472b6" },
+    { key: "focus", label: "重点产业枢纽", color: "#fbbf24" },
     { key: "it", label: "IT / 数字化枢纽", color: "#60a5fa" },
     { key: "huawei", label: "华为能力枢纽", color: "#ff8a4c" },
+    { key: "similar", label: "相似银行关系", color: "#38bdf8" },
   ];
   $("legendList").innerHTML = items
     .map(
@@ -301,6 +356,7 @@ function readFilters() {
   f.penalty = $("penaltyFilter").value;
   f.opp = Number($("oppFilter").value) || 0;
   f.listed = $("listedOnly").checked;
+  f.siteOnly = $("siteOnly").checked;
   f.allHuawei = $("allHuawei").checked;
 }
 
@@ -313,6 +369,7 @@ function resetFilters(silent) {
   f.penalty = "";
   f.opp = 0;
   f.listed = false;
+  f.siteOnly = false;
   f.allHuawei = false;
   document.querySelectorAll("#groupFilters .filter-row").forEach((row) => {
     row.classList.add("active");
@@ -323,6 +380,7 @@ function resetFilters(silent) {
   });
   $("oppFilter").value = "0";
   $("listedOnly").checked = false;
+  $("siteOnly").checked = false;
   $("allHuawei").checked = false;
   if (state.view === "huawei" && state.canvas) {
     state.canvas.setEdges("huawei", edgeLinksFor("huawei"));
@@ -343,6 +401,7 @@ function applyFilters() {
     if (f.penalty === "no" && bank.penalty_checked) continue;
     if (f.opp && (bank.top_opportunity || 0) < f.opp) continue;
     if (f.listed && !bank.listed) continue;
+    if (f.siteOnly && !bank.has_site) continue;
     visible.add(bank.id);
   }
   state.visible = visible;
@@ -392,6 +451,7 @@ function showView(view, { initial = false } = {}) {
         state.edgeLoaded[view] = true;
         if (state.view !== view) return;
         state.canvas.setEdges(view, edgeLinksFor(view));
+        if (view === "similar") state.canvas.fit(null, { animate: true });
         setViewMessage(viewNote(view));
         updateHud();
       })
@@ -431,9 +491,10 @@ function handleSelect(node) {
     state.detail.showBank(node);
   } else {
     const neighbors = state.canvas.neighbors(node.id);
-    const connections = sortConnections(node, neighbors).slice(0, 26);
+    const ranked = sortConnections(node, neighbors);
+    const connections = ranked.slice(0, 60);
     state.canvas.setHighlight(neighbors.map((n) => n.id));
-    state.detail.showHub(node, connections);
+    state.detail.showHub(node, connections, ranked.length);
   }
   updateHud();
 }
@@ -513,7 +574,19 @@ function updateHud() {
   const hud = $("hud");
   if (!hud) return;
   const total = state.manifest ? state.manifest.total : state.banks.length;
-  const visible = state.visible ? state.visible.size : total;
+  let visible = state.visible ? state.visible.size : total;
+  if (state.view === "similar") {
+    const ids = new Set();
+    for (const link of state.edges.similar || []) {
+      ids.add(link.source);
+      ids.add(link.target);
+    }
+    if (state.visible) {
+      visible = [...ids].filter((id) => state.visible.has(id)).length;
+    } else {
+      visible = ids.size;
+    }
+  }
   const zoom = state.canvas ? state.canvas.zoom : 0;
   hud.innerHTML = `<span>视图 <em>${esc(VIEW_LABEL[state.view] || state.view)}</em></span>
     <span>可见 <em>${visible.toLocaleString()}</em> / ${total.toLocaleString()} 家</span>
