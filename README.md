@@ -49,11 +49,16 @@ python3 -m cbi.graph_agents --mode bootstrap --limit 124 --concurrency 4
 
 GitHub Actions 需要仓库 Secrets：`CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID`。
 
+## 规则说明
+
+华为机会点评分规则与银行业务分类规则见 [docs/scoring-rules.md](docs/scoring-rules.md)。
+
 ## 目录
 
 ```
 cbi/                采集与构建（registry/news/financial/governance/penalty/build/graph_agents）
 data/               原始数据与缓存（cache/state 不入库）
+docs/               评分与分类规则说明
 frontend/           静态站点与分片数据
 scripts/            定时与部署脚本
 ```
