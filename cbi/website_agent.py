@@ -551,6 +551,7 @@ def _sogou_candidates(bank: dict, use_cache: bool = True) -> list[str]:
     cpath = BAIDU_CACHE / f"{_cache_key(short, 'sogou-mobile')}.json"
     if use_cache and cpath.exists():
         return _load_json(cpath, [])
+    time.sleep(1.2)
     try:
         resp = requests.get(
             "https://m.sogou.com/web/searchList.jsp",
@@ -734,8 +735,8 @@ def collect_bank(bank: dict, use_cache: bool = True, use_llm: bool = True) -> di
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     try:
         candidates = search_site_candidates(bank, use_cache=use_cache)
-    except Exception as exc:
-        return {"status": "search_failed", "error": type(exc).__name__, "fetched_at": now}
+    except Exception:
+        candidates = []  # Tavily unavailable; domestic engines can still find it
     override = DOMAIN_OVERRIDES.get(bank.get("short_name") or "")
     if override:
         candidates = [override] + [u for u in candidates if u != override]
