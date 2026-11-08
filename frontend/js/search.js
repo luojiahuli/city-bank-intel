@@ -27,11 +27,12 @@ function esc(value) {
 }
 
 export class BankSearch {
-  constructor(input, resultsEl, items, onPick) {
+  constructor(input, resultsEl, items, onPick, filterFn = null) {
     this.input = input;
     this.resultsEl = resultsEl;
     this.items = items;
     this.onPick = onPick;
+    this.filterFn = filterFn;
     this.matches = [];
     this.activeIndex = -1;
     this._prepared = items.map((item) => ({ item, hay: haystack(item) }));
@@ -61,6 +62,7 @@ export class BankSearch {
     }
     const hits = [];
     for (const entry of this._prepared) {
+      if (this.filterFn && !this.filterFn(entry.item)) continue;
       if (!tokens.every((t) => entry.hay.includes(t))) continue;
       const name = norm(entry.item.name);
       let score = 10;

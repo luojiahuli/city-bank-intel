@@ -47,7 +47,8 @@ const state = {
   edges: { region: [] },
   edgeLoaded: { region: true },
   filters: {
-    groups: new Set(GROUPS.map((g) => g.key)),
+    // 中小银行本体：城商行 / 农商行 / 村镇银行。股份行、国有大行等在「其他银行」中默认关闭。
+    groups: new Set(["city", "rural", "village"]),
     province: "",
     asset: "",
     profit: "",
@@ -117,7 +118,7 @@ async function boot() {
     state.searchBox = new BankSearch($("searchInput"), $("searchResults"), searchItems, (item) => {
       const node = state.bankById.get(item.id);
       if (node) focusBank(node, true);
-    });
+    }, (item) => state.filters.groups.has(item.group));
 
     applyFilters();
     showView("region", { initial: true });
@@ -269,12 +270,13 @@ function buildStats(m) {
 
 function buildSidebar(m) {
   const counts = m.counts.group;
-  $("groupFilters").innerHTML = GROUPS.map(
-    (g) => `<div class="filter-row active" data-group="${g.key}" role="checkbox" aria-checked="true">
+  $("groupFilters").innerHTML = GROUPS.map((g) => {
+    const on = state.filters.groups.has(g.key);
+    return `<div class="filter-row${on ? " active" : ""}" data-group="${g.key}" role="checkbox" aria-checked="${on}">
       <span class="dot" style="background:${g.color}"></span>${esc(g.label)}
       <span class="count">${counts[g.key] || 0}</span>
-    </div>`
-  ).join("");
+    </div>`;
+  }).join("");
   $("groupFilters").addEventListener("click", (e) => {
     const row = e.target.closest("[data-group]");
     if (!row) return;
@@ -362,7 +364,7 @@ function readFilters() {
 
 function resetFilters(silent) {
   const f = state.filters;
-  f.groups = new Set(GROUPS.map((g) => g.key));
+  f.groups = new Set(["city", "rural", "village"]);
   f.province = "";
   f.asset = "";
   f.profit = "";
@@ -372,8 +374,9 @@ function resetFilters(silent) {
   f.siteOnly = false;
   f.allHuawei = false;
   document.querySelectorAll("#groupFilters .filter-row").forEach((row) => {
-    row.classList.add("active");
-    row.setAttribute("aria-checked", "true");
+    const on = f.groups.has(row.dataset.key);
+    row.classList.toggle("active", on);
+    row.setAttribute("aria-checked", on ? "true" : "false");
   });
   ["provinceFilter", "assetFilter", "profitFilter", "penaltyFilter"].forEach((id) => {
     $(id).value = "";
