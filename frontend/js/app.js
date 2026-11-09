@@ -113,6 +113,9 @@ async function boot() {
     $("loadingSub").textContent = "初始化画布与图谱索引…";
     initCanvas();
     initDetail();
+    getJSON("data/china.json")
+      .then((geo) => state.canvas.setMap(geo))
+      .catch(() => {});
 
     const searchItems = await getJSON("data/search.json");
     state.searchBox = new BankSearch($("searchInput"), $("searchResults"), searchItems, (item) => {

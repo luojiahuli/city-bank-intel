@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generated_at": "2026-11-08T10:36:01+00:00",
+ "generated_at": "2026-11-09T15:39:52+00:00",
  "registry_as_of": "2024-12-31",
  "registry_source": "https://www.nfra.gov.cn/chinese/docfile/2025/e80bc363856b4032901e40a79d6a8486.pdf",
  "total": 3811,
@@ -73,8 +73,8 @@
   "with_penalties": 149,
   "with_governance": 11,
   "with_opportunities": 3811,
-  "with_focus": 2,
-  "with_focus_confirmed": 2,
+  "with_focus": 28,
+  "with_focus_confirmed": 28,
   "with_website": 136,
   "with_site_profile": 136
  },
@@ -85,14 +85,14 @@
   "governance_banks": 11,
   "website_banks": 136,
   "site_profile_banks": 136,
-  "focus_banks": 2,
-  "focus_confirmed_banks": 2
+  "focus_banks": 28,
+  "focus_confirmed_banks": 28
  },
  "edges": {
-  "business": 15063,
-  "focus": 6411,
+  "business": 15062,
+  "focus": 2125,
   "it": 7622,
-  "huawei": 15343,
+  "huawei": 15350,
   "governance": 3,
   "similar": 29
  },

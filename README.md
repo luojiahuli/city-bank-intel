@@ -29,6 +29,7 @@ python3 -m cbi.news_agent --limit 20
 python3 -m cbi.financial_agent --limit 20 --group city
 python3 -m cbi.governance_agent --limit 10
 python3 -m cbi.website_agent --group city
+python3 -m cbi.wechat_agent --group city   # 公众号公开报道补充业务证据
 python3 -m cbi.nfra_penalty crawl --max-pages 10
 
 # LangGraph 编排（自动持久化 + 重建 + 校验）

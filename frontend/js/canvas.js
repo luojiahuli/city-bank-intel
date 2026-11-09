@@ -61,6 +61,8 @@ export class GraphCanvas {
     this._anim = null;
     this._drag = null;
     this._fitted = false;
+    this._map = null;
+    this._mapLayer = null;
 
     this._bindEvents();
     if (typeof ResizeObserver !== "undefined") {
@@ -73,6 +75,13 @@ export class GraphCanvas {
   }
 
   /* ---------------- data ---------------- */
+
+  setMap(geojson) {
+    if (!geojson || !geojson.features) return;
+    this._map = geojson;
+    this._mapLayer = null;
+    this._mark();
+  }
 
   setData(nodes, regionLinks = []) {
     this.nodes = nodes;
@@ -217,6 +226,7 @@ export class GraphCanvas {
     this.dpr = dpr;
     this.canvas.width = Math.round(w * dpr);
     this.canvas.height = Math.round(h * dpr);
+    this._mapLayer = null;
     if (!this._fitted) {
       this.fit();
       return;
@@ -544,6 +554,7 @@ export class GraphCanvas {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.fillStyle = "#070b14";
     ctx.fillRect(0, 0, w, h);
+    this._drawMap();
 
     const t = this.transform;
     const margin = 70;
@@ -565,6 +576,59 @@ export class GraphCanvas {
       if (n.type !== "bank" && this._visible(n)) this._drawHub(n, screen.get(n.id), k);
     }
     this._drawLabels(screen, k);
+  }
+
+  _drawMap() {
+    if (!this._map) return;
+    if (!this._mapLayer) this._buildMapLayer();
+    if (this._mapLayer) this.ctx.drawImage(this._mapLayer, 0, 0, this.w, this.h);
+  }
+
+  _buildMapLayer() {
+    if (typeof d3 === "undefined" || !d3.geoMercator || !d3.geoPath) return;
+    try {
+      const dpr = this.dpr;
+      const layer = document.createElement("canvas");
+      layer.width = Math.round(this.w * dpr);
+      layer.height = Math.round(this.h * dpr);
+      const c = layer.getContext("2d");
+      c.scale(dpr, dpr);
+      const pad = Math.min(this.w, this.h) * 0.06;
+      // Fit to the mainland bounding box: Hainan and the South China Sea
+      // features reach lat 3.4°, which would otherwise shrink and offset the map.
+      // Ring must run counter-clockwise for d3-geo's spherical winding, else
+      // the polygon is read as the world minus this box.
+      const mainlandBox = {
+        type: "Polygon",
+        coordinates: [[[73.4, 17.5], [73.4, 53.7], [135.2, 53.7], [135.2, 17.5], [73.4, 17.5]]],
+      };
+      const proj = d3.geoMercator()
+        .fitExtent([[pad, pad], [this.w - pad, this.h - pad]], mainlandBox);
+      const path = d3.geoPath(proj, c);
+      const provinces = {
+        type: "FeatureCollection",
+        features: this._map.features.filter((f) => f.properties?.adcode !== "100000_JD"),
+      };
+      c.fillStyle = "rgba(96,140,190,0.07)";
+      c.strokeStyle = "rgba(120,165,215,0.30)";
+      c.lineWidth = 0.8;
+      c.beginPath();
+      path(provinces);
+      c.fill();
+      c.stroke();
+      c.strokeStyle = "rgba(120,165,215,0.14)";
+      c.lineWidth = 0.5;
+      for (const feature of this._map.features) {
+        c.beginPath();
+        path(feature);
+        c.stroke();
+      }
+      this._mapLayer = layer;
+    } catch (err) {
+      console.error("map layer failed", err);
+      this._mapLayer = null;
+      this._map = null;
+    }
   }
 
   _drawEdges(screen, k) {
