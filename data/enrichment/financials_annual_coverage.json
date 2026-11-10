@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-11-10T13:53:15+00:00",
+  "source_file": "/Users/mac13/Desktop/副本【W87】银行财务数据（2023-2025年报）20260528.xlsx",
+  "excel_banks": {
+    "2023": 1343,
+    "2024": 1449,
+    "2025": 666
+  },
+  "matched_per_year": {
+    "2023": 1317,
+    "2024": 1442,
+    "2025": 661
+  },
+  "matched_banks": 1509,
+  "field_coverage": {
+    "asset": 1493,
+    "revenue": 1435,
+    "profit": 1473,
+    "deposits": 1333,
+    "loans": 1221
+  },
+  "dropped_values": {
+    "deposits": 12,
+    "loans": 10,
+    "revenue": 2
+  },
+  "unmatched": [
+    {
+      "name": "内蒙古农村商业银行股份有限公司",
+      "year": "2025"
+    },
+    {
+      "name": "威海银行股份有限公司",
+      "year": "2025"
+    },
+    {
+      "name": "宁波象山农村商业银行股份有限公司",
+      "year": "2025"
+    },
+    {
+      "name": "广东华润银行股份有限公司",
+      "year": "2025"
+    },
+    {
+      "name": "江西农村商业联合银行股份有限公司",
+      "year": "2025"
+    }
+  ]
+}

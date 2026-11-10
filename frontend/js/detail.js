@@ -71,6 +71,11 @@ function count(v, unit) {
   return c == null ? null : `${c}${unit}`;
 }
 
+function pct(v) {
+  if (v == null || Number.isNaN(Number(v))) return null;
+  return `${new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 2 }).format(Number(v))}%`;
+}
+
 function dateText(v) {
   if (!v) return "";
   return String(v).slice(0, 10);
@@ -472,6 +477,17 @@ export class DetailPanel {
       ["海外业务", d.overseas == null ? "未披露" : d.overseas ? "有" : "无"],
       ["上市板块", d.listed || "未上市"],
     ];
+    const riskRows = [
+      ["不良贷款率", pct(d.npl_ratio)],
+      ["拨备覆盖率", pct(d.provision_coverage)],
+      ["资本充足率", pct(d.capital_adequacy)],
+      ["一级资本充足率", pct(d.tier1_ratio)],
+      ["核心一级资本充足率", pct(d.core_tier1_ratio)],
+      ["净资产收益率", pct(d.roe)],
+      ["总资产回报率", pct(d.roaa)],
+      ["净息差", pct(d.nim)],
+    ].filter(([, v]) => v != null);
+    rows.push(...riskRows);
     const disclosed = rows.filter(([, v]) => v && v !== "未披露" && v !== "未采集").length;
     const body = rows
       .map(

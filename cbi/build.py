@@ -130,6 +130,44 @@ def _apply_seed(banks: list[dict]) -> int:
     return hit
 
 
+FINANCIAL_KEYS = (
+    "asset", "revenue", "profit", "employees", "branches", "customers",
+    "deposits", "loans", "overseas", "it_spend", "listed",
+    "npl_ratio", "provision_coverage", "capital_adequacy", "tier1_ratio",
+    "core_tier1_ratio", "roe", "roaa", "nim",
+)
+
+
+def _merge_financials(banks: list[dict], items: dict) -> int:
+    by_id = {b["id"]: b for b in banks}
+    hit = 0
+    for bank_id, item in items.items():
+        bank = by_id.get(bank_id)
+        if not bank:
+            continue
+        used = False
+        for key in FINANCIAL_KEYS:
+            if key == "asset":
+                continue
+            if item.get(key) is not None and bank.get(key) is None:
+                bank[key] = item[key]
+                used = True
+        if item.get("asset") is not None and bank.get("asset") is None:
+            bank["asset"] = item["asset"]
+            if item.get("asset_year"):
+                bank["asset_year"] = item["asset_year"]
+            used = True
+        if item.get("business_tags"):
+            bank["business_tags"] = item["business_tags"]
+            bank["business_inferred"] = False
+            used = True
+        if used:
+            hit += 1
+            for src in item.get("sources", []):
+                bank.setdefault("sources", []).append(src)
+    return hit
+
+
 def _merge_optional(banks: list[dict]) -> dict:
     """Merge outputs from later agents if present."""
     stats = {}
@@ -177,19 +215,12 @@ def _merge_optional(banks: list[dict]) -> dict:
     stats["news_banks"] = sum(1 for b in banks if b.get("news"))
 
     financials = _load_json(config.DATA_DIR / "enrichment" / "financials.json", {})
-    for bank_id, item in financials.items():
-        bank = by_id.get(bank_id)
-        if not bank:
-            continue
-        for key in ("asset", "revenue", "profit", "employees", "branches", "customers",
-                    "deposits", "loans", "overseas", "it_spend", "listed"):
-            if item.get(key) is not None and bank.get(key) is None:
-                bank[key] = item[key]
-        if item.get("business_tags"):
-            bank["business_tags"] = item["business_tags"]
-            bank["business_inferred"] = False
-        for src in item.get("sources", []):
-            bank.setdefault("sources", []).append(src)
+    annual = _load_json(config.DATA_DIR / "enrichment" / "financials_annual.json", {})
+    xlsx_financials = _load_json(config.DATA_DIR / "enrichment" / "financials_xlsx.json", {})
+    # Newer sources are merged first; each later source only fills gaps.
+    stats["financial_merged"] = _merge_financials(banks, financials)
+    stats["financial_merged_annual"] = _merge_financials(banks, annual)
+    stats["financial_merged_xlsx"] = _merge_financials(banks, xlsx_financials)
     stats["financial_banks"] = sum(1 for b in banks if b.get("revenue") or b.get("asset"))
 
     governance = _load_json(config.DATA_DIR / "governance" / "by_bank.json", {})
@@ -326,7 +357,7 @@ def _attach_ranks(banks: list[dict]) -> None:
 def _prepare(banks: list[dict]) -> list[dict]:
     _attach_ranks(banks)
     for bank in banks:
-        if not bank.get("asset_tier") or bank["asset_tier"] == "未披露":
+        if bank.get("asset") or not bank.get("asset_tier") or bank["asset_tier"] == "未披露":
             bank["asset_tier"] = _asset_tier(bank.get("asset"))
         if not bank.get("business_tags"):
             bank["business_tags"] = list(BUSINESS_INFER.get(bank.get("group"), []))

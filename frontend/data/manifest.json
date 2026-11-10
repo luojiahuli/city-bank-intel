@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generated_at": "2026-11-09T15:39:52+00:00",
+ "generated_at": "2026-11-10T13:53:54+00:00",
  "registry_as_of": "2024-12-31",
  "registry_source": "https://www.nfra.gov.cn/chinese/docfile/2025/e80bc363856b4032901e40a79d6a8486.pdf",
  "total": 3811,
@@ -63,12 +63,12 @@
   }
  },
  "coverage": {
-  "with_asset": 35,
-  "with_asset_tier": 41,
-  "with_revenue": 35,
-  "with_profit": 25,
-  "with_employees": 6,
-  "listed": 32,
+  "with_asset": 1530,
+  "with_asset_tier": 1530,
+  "with_revenue": 1476,
+  "with_profit": 1510,
+  "with_employees": 359,
+  "listed": 56,
   "with_news": 8,
   "with_penalties": 149,
   "with_governance": 11,
@@ -81,7 +81,10 @@
  "agent_stats": {
   "penalty_banks": 149,
   "news_banks": 8,
-  "financial_banks": 44,
+  "financial_merged": 30,
+  "financial_merged_annual": 1504,
+  "financial_merged_xlsx": 455,
+  "financial_banks": 1543,
   "governance_banks": 11,
   "website_banks": 136,
   "site_profile_banks": 136,
@@ -92,9 +95,9 @@
   "business": 15062,
   "focus": 2125,
   "it": 7622,
-  "huawei": 15350,
+  "huawei": 15356,
   "governance": 3,
-  "similar": 29
+  "similar": 2994
  },
  "files": {
   "graph": "graph.json",

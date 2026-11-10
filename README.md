@@ -27,6 +27,8 @@ python3 -m cbi.build
 # 单类采集（可轮换、可缓存）
 python3 -m cbi.news_agent --limit 20
 python3 -m cbi.financial_agent --limit 20 --group city
+python3 -m cbi.xlsx_financials --path /path/to/2007-2024年最新银行数据.xlsx  # 本地报表数据集导入
+python3 -m cbi.xlsx_annual --path /path/to/W87银行财务数据2023-2025年报.xlsx   # 2023-2025 年报数据导入
 python3 -m cbi.governance_agent --limit 10
 python3 -m cbi.website_agent --group city
 python3 -m cbi.wechat_agent --group city   # 公众号公开报道补充业务证据
