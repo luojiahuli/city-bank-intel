@@ -34,6 +34,41 @@ BUSINESS_INFER = {
 }
 
 
+def _apply_data_business_rules(bank: dict) -> None:
+    """Add business lines implied by disclosed ratios, labelled as inferred."""
+    if bank.get("group") not in ("city", "rural"):
+        return
+    if bank.get("business_inferred") is False:
+        return
+    tags = list(bank.get("business_tags") or [])
+    bases = dict(bank.get("business_data_basis") or {})
+    added = []
+
+    nim = bank.get("nim")
+    if nim is not None and nim >= 2.6 and "普惠小微" not in tags:
+        added.append("普惠小微")
+        bases["普惠小微"] = f"净息差 {nim:.2f}% 偏高，符合小微/零售信贷定价特征"
+    elif nim is not None and nim <= 1.7 and "金融市场" not in tags:
+        added.append("金融市场")
+        bases["金融市场"] = f"净息差 {nim:.2f}% 偏低，资产端偏向大型对公与同业业务"
+
+    ldr = bank.get("loan_deposit_ratio")
+    if ldr is not None and ldr <= 55 and "金融市场" not in tags and "金融市场" not in added:
+        added.append("金融市场")
+        bases["金融市场"] = f"存贷比 {ldr:.1f}% 偏低，资金运用中同业与债券占比相对更高"
+
+    if not added:
+        return
+    # Data-driven lines are more bank-specific than type defaults, so they lead
+    # unless an evidenced focus tag already anchors the classification.
+    if bank.get("business_evidence"):
+        bank["business_tags"] = tags + added
+    else:
+        bank["business_tags"] = added + tags
+    bank["business_inferred"] = True
+    bank["business_data_basis"] = bases
+
+
 def _load_json(path: Path, default):
     if path.exists():
         try:
@@ -328,13 +363,37 @@ def _merge_optional(banks: list[dict]) -> dict:
 
 
 RANK_KEYS = ("asset", "revenue", "profit", "employees", "it_spend",
-             "penalty_count", "deposits", "loans", "branches", "customers")
+             "penalty_count", "deposits", "loans", "branches", "customers",
+             "loan_deposit_ratio", "npl_ratio", "capital_adequacy")
+
+
+def _attach_ratios(banks: list[dict]) -> None:
+    """Derive ratios from disclosed statements; no value is imputed."""
+    for bank in banks:
+        deposits, loans = bank.get("deposits"), bank.get("loans")
+        # Bond-funded institutions (policy banks) have a meaningless loan/deposit
+        # ratio; only keep it when deposits fund a plausible share of loans.
+        if deposits and loans and deposits > 0:
+            ratio = loans / deposits * 100
+            if ratio <= 200:
+                bank["loan_deposit_ratio"] = round(ratio, 2)
+        npl = bank.get("npl_ratio")
+        if npl is None:
+            bank["risk_profile"] = "未披露"
+        elif npl < 1.5:
+            bank["risk_profile"] = "稳健"
+        elif npl < 2.5:
+            bank["risk_profile"] = "关注"
+        else:
+            bank["risk_profile"] = "承压"
 
 
 def _attach_ranks(banks: list[dict]) -> None:
     """Percentile ranks over the whole universe give each bank its own score."""
     defaults = {"penalty_count": 0.0, "profit": 0.5, "it_spend": 0.2,
-                "employees": 0.25, "branches": 0.2, "customers": 0.2}
+                "employees": 0.25, "branches": 0.2, "customers": 0.2,
+                "loan_deposit_ratio": 0.4, "npl_ratio": 0.35,
+                "capital_adequacy": 0.5}
     ranks: dict[str, dict[str, float]] = {}
     for key in RANK_KEYS:
         pairs = sorted((float(b[key]), b["id"]) for b in banks if b.get(key) is not None)
@@ -355,6 +414,7 @@ def _attach_ranks(banks: list[dict]) -> None:
 
 
 def _prepare(banks: list[dict]) -> list[dict]:
+    _attach_ratios(banks)
     _attach_ranks(banks)
     for bank in banks:
         if bank.get("asset") or not bank.get("asset_tier") or bank["asset_tier"] == "未披露":
@@ -364,6 +424,7 @@ def _prepare(banks: list[dict]) -> list[dict]:
             bank["business_inferred"] = True
         else:
             bank.setdefault("business_inferred", False)
+        _apply_data_business_rules(bank)
         if not bank.get("region_industries"):
             bank["region_industries"] = list(
                 config.PROVINCE_INDUSTRIES.get(bank.get("province") or "", []))
@@ -509,6 +570,9 @@ def _notes(bank: dict) -> list[str]:
         notes.append("资产规模未在已采集的公开资料中披露，节点大小仅按机构类型示意。")
     if bank.get("business_inferred"):
         notes.append("主要业务标签结合机构类型与所在省份产业结构推断，待年报/官网信息补充。")
+    if bank.get("business_data_basis"):
+        notes.append("业务条线含按财务指标推断项：" + "；".join(
+            f"{tag}（{reason}）" for tag, reason in bank["business_data_basis"].items()))
     if bank.get("business_focus") and not bank.get("focus_confirmed"):
         notes.append("重点产业为省级产业结构推断，尚未取得该行公开报道依据。")
     if bank.get("site_checked") and not bank.get("site_profile"):
@@ -537,6 +601,7 @@ def _business_links(banks: list[dict], ids: dict) -> list[dict]:
     seen = set()
     for bank in banks:
         evidence = bank.get("business_evidence") or {}
+        data_basis = bank.get("business_data_basis") or {}
         for tag in bank.get("business_tags", [])[:4]:
             bid = ids["business"].get(tag)
             if not bid or (bank["id"], bid) in seen:
@@ -546,12 +611,15 @@ def _business_links(banks: list[dict], ids: dict) -> list[dict]:
             row = {
                 "source": bank["id"], "target": bid, "tag": tag,
                 "relation": "主要业务（公开报道）" if ev else (
-                    "主要业务（推断）" if bank.get("business_inferred") else "主要业务"),
+                    "主要业务（财务指标推断）" if tag in data_basis else (
+                        "主要业务（推断）" if bank.get("business_inferred") else "主要业务")),
                 "inferred": not bool(ev),
             }
             if ev:
                 row.update({"quote": (ev.get("quote") or "")[:140],
                             "url": ev.get("url"), "basis": "公开报道"})
+            elif tag in data_basis:
+                row["basis"] = data_basis[tag]
             links.append(row)
     return _ensure_business_coverage(links, ids["business"], banks)
 

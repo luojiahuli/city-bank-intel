@@ -472,6 +472,8 @@ export class DetailPanel {
       ["客户数", count(d.customers, "户")],
       ["存款余额", money(d.deposits)],
       ["贷款余额", money(d.loans)],
+      ["存贷比", pct(d.loan_deposit_ratio)],
+      ["风险概况（不良率分档）", d.risk_profile || "未披露"],
       ["IT 投入", money(d.it_spend)],
       ["数字化活跃度", d.digital_tier || "未采集"],
       ["海外业务", d.overseas == null ? "未披露" : d.overseas ? "有" : "无"],

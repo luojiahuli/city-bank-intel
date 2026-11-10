@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generated_at": "2026-11-10T13:53:54+00:00",
+ "generated_at": "2026-11-10T14:19:02+00:00",
  "registry_as_of": "2024-12-31",
  "registry_source": "https://www.nfra.gov.cn/chinese/docfile/2025/e80bc363856b4032901e40a79d6a8486.pdf",
  "total": 3811,
@@ -92,10 +92,10 @@
   "focus_confirmed_banks": 28
  },
  "edges": {
-  "business": 15062,
+  "business": 15063,
   "focus": 2125,
   "it": 7622,
-  "huawei": 15356,
+  "huawei": 15358,
   "governance": 3,
   "similar": 2994
  },

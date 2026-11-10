@@ -35,7 +35,14 @@ GROUP_RANK_DEFAULT = {
     "deposits": {"city": 0.5, "rural": 0.3, "village": 0.14, "other": 0.42},
     "employees": {"city": 0.5, "rural": 0.3, "village": 0.15, "other": 0.4},
     "it_spend": {"city": 0.35, "rural": 0.2, "village": 0.1, "other": 0.3},
+    # Undisclosed ratios take a neutral fallback instead of implying low risk.
+    "npl_ratio": {"city": 0.45, "rural": 0.4, "village": 0.35, "other": 0.45},
+    "capital_adequacy": {"city": 0.5, "rural": 0.5, "village": 0.45, "other": 0.5},
+    "loan_deposit_ratio": {"city": 0.55, "rural": 0.5, "village": 0.45, "other": 0.5},
 }
+
+# Capabilities whose demand rises with credit exposure and asset quality pressure.
+RISK_CAPS = {"hw_credit", "hw_fraud", "hw_data", "hw_agentic_data"}
 
 # Capability suitability by licence type turns the ranking into a real shortlist
 # (rural → credit/mobile, city → core/data/AI) instead of one universal answer.
@@ -120,8 +127,17 @@ def score_bank(bank: dict, evidence: list[dict] | None = None,
     budget = 0.60 * rank("it_spend", 0.2) + 0.40 * (1.0 if bank.get("listed") else 0.0)
     digital = (0.65 * DIGITAL_VALUE.get(bank.get("digital_tier") or "", 0.15)
                + 0.35 * rank("news_count", 0.0))
-    risk = (0.75 * rank("penalty_count", 0.0)
-            + 0.25 * (1.0 if profit is not None and profit < 0 else 0.0))
+    # Risk pressure now also reflects disclosed asset quality and capital buffers.
+    npl = bank.get("npl_ratio")
+    car = bank.get("capital_adequacy")
+    ldr = bank.get("loan_deposit_ratio")
+    npl_pressure = rank("npl_ratio")
+    capital_pressure = 1.0 - rank("capital_adequacy", 0.5)
+    risk = (0.40 * rank("penalty_count", 0.0)
+            + 0.25 * npl_pressure
+            + 0.15 * capital_pressure
+            + 0.20 * (1.0 if profit is not None and profit < 0 else 0.0))
+    ldr_rank = rank("loan_deposit_ratio", 0.5)
 
     out = []
     for cap_id, cap in CAPS.items():
@@ -132,8 +148,13 @@ def score_bank(bank: dict, evidence: list[dict] | None = None,
         focus_hit = any(t in focus_tags for t in fit_def.get("focus", []))
         region_matches = sum(1 for t in fit_def.get("focus", []) if t in region_tags)
         region_hit = region_matches > 0
+        # High loan-to-deposit ratios mean more credit at risk, which raises the
+        # need for credit-risk, anti-fraud and risk-data tooling.
+        ldr_fit = 0.0
+        if ldr is not None and 20.0 <= ldr <= 150.0 and cap_id in RISK_CAPS:
+            ldr_fit = min(0.12, max(0.0, (ldr - 50.0) / 40.0 * 0.12))
         fit = min(1.0, (0.45 if biz_hit else 0.0) + (0.6 if focus_hit else 0.0)
-                  + min(0.5, 0.25 * region_matches))
+                  + min(0.5, 0.25 * region_matches) + ldr_fit)
         weighted = (weights["scale"] * scale + weights["budget"] * budget
                     + weights["digital"] * digital + weights["risk"] * risk
                     + weights["fit"] * fit)
@@ -163,6 +184,13 @@ def score_bank(bank: dict, evidence: list[dict] | None = None,
             factors.append("业务结构匹配")
         if affinity >= 3:
             factors.append("机构类型适配度高")
+        if weights["risk"] and npl is not None:
+            if npl_pressure >= 0.7:
+                factors.append(f"不良率 {npl:.2f}% 处于样本高位，风控类需求更强")
+            if car is not None and capital_pressure >= 0.7:
+                factors.append(f"资本充足率 {car:.2f}%，低于样本三成")
+        if ldr_fit >= 0.06:
+            factors.append(f"存贷比 {ldr:.1f}%，信贷资产敞口较高")
 
         ev = [e for e in evidence if e.get("capability_id") == cap_id]
         if ev:
