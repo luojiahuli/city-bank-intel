@@ -216,6 +216,7 @@ a:hover { text-decoration: underline; }
 
 .loading-screen {
   position: absolute; inset: 0; z-index: 40; display: grid; place-items: center;
+  pointer-events: none;
   background: radial-gradient(700px 500px at 50% 45%, #0c1526, #070b14 70%);
   transition: opacity 0.45s ease;
 }

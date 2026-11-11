@@ -114,20 +114,24 @@ async function boot() {
     $("loadingSub").textContent = "初始化画布与图谱索引…";
     initCanvas();
     initDetail();
-    initInsight();
     getJSON("data/china.json")
       .then((geo) => state.canvas.setMap(geo))
       .catch(() => {});
 
-    const searchItems = await getJSON("data/search.json");
-    state.searchBox = new BankSearch($("searchInput"), $("searchResults"), searchItems, (item) => {
-      const node = state.bankById.get(item.id);
-      if (node) focusBank(node, true);
-    }, (item) => state.filters.groups.has(item.group));
-
     applyFilters();
     showView("region", { initial: true });
     hideLoading();
+
+    // search.json is ~1.4 MB; loading it must not block the first paint.
+    // The search box activates on arrival instead.
+    getJSON("data/search.json")
+      .then((searchItems) => {
+        state.searchBox = new BankSearch($("searchInput"), $("searchResults"), searchItems, (item) => {
+          const node = state.bankById.get(item.id);
+          if (node) focusBank(node, true);
+        }, (item) => state.filters.groups.has(item.group));
+      })
+      .catch(() => {});
   } catch (err) {
     console.error(err);
     const title = document.querySelector(".loading-title");
@@ -140,6 +144,7 @@ async function boot() {
 function initInsight() {
   state.insight = new ConclusionModal();
   state.insight.bind();
+  state.insight.prefetch();
 }
 
 function initCanvas() {
@@ -613,4 +618,8 @@ function hideLoading() {
   window.setTimeout(() => el.remove(), 600);
 }
 
+// The conclusion modal is independent of the graph/search payloads, so bind it
+// immediately. The main boot() chain can be slow (search.json is ~1.4 MB and
+// must not gate the button), and users should be able to open it right away.
+initInsight();
 boot();

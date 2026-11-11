@@ -345,10 +345,27 @@ export class ConclusionModal {
 
   async load() {
     if (this.data) return this.data;
-    const res = await fetch("data/insight.json", { cache: "no-store" });
-    if (!res.ok) throw new Error(`insight.json → HTTP ${res.status}`);
-    this.data = await res.json();
-    return this.data;
+    if (this.pending) return this.pending;
+    this.pending = fetch("data/insight.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`insight.json → HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        this.data = data;
+        this.pending = null;
+        return data;
+      })
+      .catch((err) => {
+        this.pending = null;
+        throw err;
+      });
+    return this.pending;
+  }
+
+  // Warm the payload in the background so the first click opens instantly.
+  prefetch() {
+    this.load().catch(() => {});
   }
 
   async render() {
