@@ -3,6 +3,7 @@
 import { GraphCanvas } from "./canvas.js";
 import { DetailPanel } from "./detail.js";
 import { BankSearch } from "./search.js";
+import { ConclusionModal } from "./insight.js";
 
 const GROUPS = [
   { key: "city", label: "城商行", color: "#4cc9f0" },
@@ -113,6 +114,7 @@ async function boot() {
     $("loadingSub").textContent = "初始化画布与图谱索引…";
     initCanvas();
     initDetail();
+    initInsight();
     getJSON("data/china.json")
       .then((geo) => state.canvas.setMap(geo))
       .catch(() => {});
@@ -133,6 +135,11 @@ async function boot() {
     const sub = $("loadingSub");
     if (sub) sub.textContent = `${err.message}。请确认通过本地 HTTP 服务访问，并已运行数据构建脚本。`;
   }
+}
+
+function initInsight() {
+  state.insight = new ConclusionModal();
+  state.insight.bind();
 }
 
 function initCanvas() {

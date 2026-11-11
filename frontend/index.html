@@ -27,6 +27,9 @@
         <div class="search-results" id="searchResults"></div>
       </div>
       <button class="icon-btn mobile-only" id="filterBtn" title="筛选" aria-label="打开筛选">☰</button>
+      <button class="insight-btn" id="insightBtn" title="查看量化结论分析">
+        <span class="insight-btn-dot"></span><span class="insight-btn-text">结论</span>
+      </button>
       <button class="icon-btn" id="fitBtn" title="重置视图">⤢</button>
     </header>
 
@@ -138,6 +141,23 @@
       <span id="footerStamp"></span>
     </footer>
   </div>
+  <div class="insight-modal" id="insightModal" role="dialog" aria-modal="true" aria-labelledby="insightTitle">
+    <div class="insight-card">
+      <header class="insight-head">
+        <div>
+          <div class="insight-kicker">城商行 · 量化结论</div>
+          <h2 id="insightTitle">业务分布 · 华为机会 · 区域切入点</h2>
+          <p class="insight-sub">基于 NFRA 名录 124 家城商行的公开披露数据，所有数字可回溯</p>
+        </div>
+        <div class="insight-head-right">
+          <span class="insight-stamp" id="insightStamp"></span>
+          <button class="ic-close" title="关闭" aria-label="关闭">✕</button>
+        </div>
+      </header>
+      <div class="insight-body" id="insightBody"></div>
+    </div>
+  </div>
+
   <script src="d3.v7.min.js"></script>
   <script type="module" src="js/app.js"></script>
 </body>

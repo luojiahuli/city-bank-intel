@@ -1,0 +1,1687 @@
+{
+ "generated_at": "2026-11-10T14:19:02+00:00",
+ "registry_as_of": "2024-12-31",
+ "sample_note": "样本为 NFRA 法人名录中 124 家城市商业银行；指标缺失按「未披露」计入覆盖率，不做推算。",
+ "opportunity": {
+  "sample": {
+   "count": 124,
+   "asset_disclosed": 121,
+   "asset_total": 686822.0,
+   "asset_median": 3063.0,
+   "asset_p90": 10300,
+   "listed": 29,
+   "profitable": 116,
+   "loss_making": 4,
+   "business_disclosed": 18
+  },
+  "business": [
+   {
+    "name": "公司金融",
+    "count": 124,
+    "share": 100.0
+   },
+   {
+    "name": "零售金融",
+    "count": 123,
+    "share": 99.2
+   },
+   {
+    "name": "科技金融",
+    "count": 104,
+    "share": 83.9
+   },
+   {
+    "name": "金融市场",
+    "count": 101,
+    "share": 81.5
+   },
+   {
+    "name": "普惠小微",
+    "count": 82,
+    "share": 66.1
+   },
+   {
+    "name": "绿色金融",
+    "count": 31,
+    "share": 25.0
+   },
+   {
+    "name": "国际业务",
+    "count": 6,
+    "share": 4.8
+   },
+   {
+    "name": "财富管理",
+    "count": 2,
+    "share": 1.6
+   }
+  ],
+  "industries": [
+   {
+    "name": "制造",
+    "count": 100,
+    "share": 80.6
+   },
+   {
+    "name": "农业",
+    "count": 75,
+    "share": 60.5
+   },
+   {
+    "name": "能源化工",
+    "count": 61,
+    "share": 49.2
+   },
+   {
+    "name": "科技",
+    "count": 47,
+    "share": 37.9
+   },
+   {
+    "name": "跨境贸易",
+    "count": 37,
+    "share": 29.8
+   },
+   {
+    "name": "消费零售",
+    "count": 17,
+    "share": 13.7
+   },
+   {
+    "name": "小微普惠",
+    "count": 17,
+    "share": 13.7
+   },
+   {
+    "name": "绿色",
+    "count": 13,
+    "share": 10.5
+   },
+   {
+    "name": "文旅",
+    "count": 9,
+    "share": 7.3
+   },
+   {
+    "name": "供应链",
+    "count": 2,
+    "share": 1.6
+   },
+   {
+    "name": "医药健康",
+    "count": 1,
+    "share": 0.8
+   }
+  ],
+  "size_tiers": [
+   {
+    "name": "万亿以上",
+    "count": 14,
+    "share": 11.3
+   },
+   {
+    "name": "5000-10000",
+    "count": 25,
+    "share": 20.2
+   },
+   {
+    "name": "1000-5000",
+    "count": 68,
+    "share": 54.8
+   },
+   {
+    "name": "300-1000",
+    "count": 13,
+    "share": 10.5
+   },
+   {
+    "name": "300以下",
+    "count": 1,
+    "share": 0.8
+   },
+   {
+    "name": "未披露",
+    "count": 3,
+    "share": 2.4
+   }
+  ],
+  "metrics": [
+   {
+    "label": "不良贷款率",
+    "unit": "%",
+    "n": 108,
+    "coverage": 87.1,
+    "median": 1.67,
+    "mean": 1.93,
+    "p10": 0.91,
+    "p90": 2.74,
+    "min": 0.66,
+    "max": 13.89
+   },
+   {
+    "label": "拨备覆盖率",
+    "unit": "%",
+    "n": 101,
+    "coverage": 81.5,
+    "median": 184.0,
+    "mean": 223.0,
+    "p10": 137.0,
+    "p90": 354.0,
+    "min": 32.0,
+    "max": 584.0
+   },
+   {
+    "label": "净息差",
+    "unit": "%",
+    "n": 50,
+    "coverage": 40.3,
+    "median": 1.72,
+    "mean": 1.68,
+    "p10": 1.34,
+    "p90": 1.99,
+    "min": 0.96,
+    "max": 2.96
+   },
+   {
+    "label": "资本充足率",
+    "unit": "%",
+    "n": 111,
+    "coverage": 89.5,
+    "median": 13.06,
+    "mean": 12.93,
+    "p10": 11.38,
+    "p90": 14.87,
+    "min": 2.33,
+    "max": 20.77
+   }
+  ],
+  "pain_cohorts": [
+   {
+    "key": "npl",
+    "name": "资产质量承压（不良率 ≥ 2%）",
+    "desc": "拨备计提压力直接吞噬利润，是数字化风控投入的直接触发点",
+    "count": 31,
+    "share": 25.0,
+    "avg_score": 49.7,
+    "provinces": [
+     [
+      "辽宁省",
+      8
+     ],
+     [
+      "河北省",
+      5
+     ],
+     [
+      "广东省",
+      2
+     ],
+     [
+      "江西省",
+      2
+     ]
+    ]
+   },
+   {
+    "key": "prov",
+    "name": "拨备缓冲薄（拨备覆盖率 < 150%）",
+    "desc": "风险抵补余量不足，需要更高频、更精准的资产重分类与预警",
+    "count": 16,
+    "share": 12.9,
+    "avg_score": 48.6,
+    "provinces": [
+     [
+      "辽宁省",
+      4
+     ],
+     [
+      "山东省",
+      3
+     ],
+     [
+      "宁夏回族自治区",
+      2
+     ],
+     [
+      "甘肃省",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "nim",
+    "name": "息差收窄（净息差 < 1.5%）",
+    "desc": "利差空间压缩，倒逼低成本获客与自动化运营",
+    "count": 15,
+    "share": 12.1,
+    "avg_score": 54.8,
+    "provinces": [
+     [
+      "辽宁省",
+      2
+     ],
+     [
+      "甘肃省",
+      2
+     ],
+     [
+      "重庆市",
+      1
+     ],
+     [
+      "浙江省",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "cap",
+    "name": "资本偏紧（资本充足率 < 10.5%）",
+    "desc": "扩表受限，需在既有资本下提高单位资本产出",
+    "count": 3,
+    "share": 2.4,
+    "avg_score": 48.3,
+    "provinces": [
+     [
+      "辽宁省",
+      2
+     ],
+     [
+      "内蒙古自治区",
+      1
+     ]
+    ]
+   },
+   {
+    "key": "loss",
+    "name": "当期亏损",
+    "desc": "盈利已破位，任何降本增效项目都必须有可量化的 ROI",
+    "count": 4,
+    "share": 3.2,
+    "avg_score": 49.5,
+    "provinces": [
+     [
+      "辽宁省",
+      4
+     ]
+    ]
+   },
+   {
+    "key": "penalty",
+    "name": "监管处罚 ≥ 2 次",
+    "desc": "合规与反洗钱能力短板暴露在外，罚单是刚性预算的理由",
+    "count": 13,
+    "share": 10.5,
+    "avg_score": 53.2,
+    "provinces": [
+     [
+      "浙江省",
+      3
+     ],
+     [
+      "贵州省",
+      1
+     ],
+     [
+      "福建省",
+      1
+     ],
+     [
+      "宁夏回族自治区",
+      1
+     ]
+    ]
+   }
+  ],
+  "comparison": [
+   {
+    "label": "不良贷款率",
+    "unit": "%",
+    "city_median": 1.67,
+    "peer_median": 1.45,
+    "gap": 0.22,
+    "city_n": 108,
+    "peer_n": 373
+   },
+   {
+    "label": "拨备覆盖率",
+    "unit": "%",
+    "city_median": 184.06,
+    "peer_median": 257.07,
+    "gap": -73.01,
+    "city_n": 101,
+    "peer_n": 329
+   },
+   {
+    "label": "净息差",
+    "unit": "%",
+    "city_median": 1.72,
+    "peer_median": 2.0,
+    "gap": -0.28,
+    "city_n": 50,
+    "peer_n": 154
+   },
+   {
+    "label": "资本充足率",
+    "unit": "%",
+    "city_median": 13.06,
+    "peer_median": 13.8,
+    "gap": -0.74,
+    "city_n": 111,
+    "peer_n": 389
+   }
+  ],
+  "penalties": {
+   "banks_with_penalty": 36,
+   "total_records": 65,
+   "multi_penalty": 13
+  }
+ },
+ "huawei": {
+  "capabilities": [
+   {
+    "id": "hw_core",
+    "name": "分布式新核心",
+    "full_name": "金融数字核心 6.0",
+    "category": "核心系统",
+    "entry": "核心系统改造/信创替换",
+    "desc": "分布式新核心、单元化多活、跨 Region 容灾、高稳数据库，面向核心系统现代化。",
+    "count": 121,
+    "share": 97.6,
+    "avg_score": 49.4,
+    "avg_score_all": 49.5,
+    "lift": -0.0
+   },
+   {
+    "id": "hw_credit",
+    "name": "智慧信贷",
+    "full_name": "智慧信贷尽调",
+    "category": "业务场景",
+    "entry": "信贷尽调/智能风控",
+    "desc": "三层 Agent 协同的信贷尽调、文档解析与报告生成。",
+    "count": 91,
+    "share": 73.4,
+    "avg_score": 49.5,
+    "avg_score_all": 49.5,
+    "lift": 0.0
+   },
+   {
+    "id": "hw_cloud",
+    "name": "金融云",
+    "full_name": "华为云 Stack · 数据不出域",
+    "category": "基础设施",
+    "entry": "金融云/混合云",
+    "desc": "金融云底座、Landing Zone、数据不出域与安全基线。",
+    "count": 85,
+    "share": 68.5,
+    "avg_score": 49.1,
+    "avg_score_all": 49.5,
+    "lift": -0.4
+   },
+   {
+    "id": "hw_network",
+    "name": "金融网络",
+    "full_name": "星河 AI 金融数据中心网络",
+    "category": "基础设施",
+    "entry": "数据中心/灾备网络",
+    "desc": "高韧性金融数据中心网络、毫秒级故障切换与勒索防护。",
+    "count": 76,
+    "share": 61.3,
+    "avg_score": 48.6,
+    "avg_score_all": 49.5,
+    "lift": -0.8
+   },
+   {
+    "id": "hw_xinchuang",
+    "name": "信创底座",
+    "full_name": "鲲鹏 / 欧拉 / 信创底座",
+    "category": "基础设施",
+    "entry": "信创/国产化替代",
+    "desc": "鲲鹏算力、openEuler、GaussDB 等全栈信创适配。",
+    "count": 32,
+    "share": 25.8,
+    "avg_score": 48.3,
+    "avg_score_all": 49.5,
+    "lift": -1.2
+   },
+   {
+    "id": "hw_green",
+    "name": "绿色数据中心",
+    "full_name": "数字能源 / 绿色数据中心",
+    "category": "基础设施",
+    "entry": "绿色数据中心/能源",
+    "desc": "数据中心能源、绿色低碳与智能运维。",
+    "count": 31,
+    "share": 25.0,
+    "avg_score": 51.6,
+    "avg_score_all": 49.5,
+    "lift": 2.1
+   },
+   {
+    "id": "hw_data",
+    "name": "数据智能",
+    "full_name": "金融数据智能 6.0",
+    "category": "数据平台",
+    "entry": "数据中台/监管报送",
+    "desc": "数据中台、流批融合、实时数据架构、监管报送与数据治理。",
+    "count": 14,
+    "share": 11.3,
+    "avg_score": 52.6,
+    "avg_score_all": 49.5,
+    "lift": 3.1
+   },
+   {
+    "id": "hw_fraud",
+    "name": "反欺诈",
+    "full_name": "反欺诈智能体",
+    "category": "业务场景",
+    "entry": "反欺诈/反洗钱/合规",
+    "desc": "实时反欺诈、风险识别与误报压降，适配高频交易与账户风险。",
+    "count": 13,
+    "share": 10.5,
+    "avg_score": 50.6,
+    "avg_score_all": 49.5,
+    "lift": 1.2
+   },
+   {
+    "id": "hw_agent",
+    "name": "智能体工厂",
+    "full_name": "Fintelligent · openJiuwen 智能体工厂",
+    "category": "AI 平台",
+    "entry": "AI 原生应用/智能体平台",
+    "desc": "金融级多智能体开发、运行与治理平台，支持智能体规模化生产。",
+    "count": 12,
+    "share": 9.7,
+    "avg_score": 54.2,
+    "avg_score_all": 49.5,
+    "lift": 4.7
+   },
+   {
+    "id": "hw_aicc",
+    "name": "智能客服",
+    "full_name": "AICC 智能交互",
+    "category": "业务场景",
+    "entry": "智能客服/远程银行",
+    "desc": "智能客服、远程银行、语音交互，低时延、高分流。",
+    "count": 12,
+    "share": 9.7,
+    "avg_score": 45.5,
+    "avg_score_all": 49.5,
+    "lift": -4.0
+   },
+   {
+    "id": "hw_mobile",
+    "name": "移动金融",
+    "full_name": "鸿蒙 / 移动金融",
+    "category": "业务场景",
+    "entry": "移动银行/全渠道",
+    "desc": "鸿蒙生态、移动银行、适老化与全渠道体验。",
+    "count": 6,
+    "share": 4.8,
+    "avg_score": 46.5,
+    "avg_score_all": 49.5,
+    "lift": -3.0
+   },
+   {
+    "id": "hw_agentic_data",
+    "name": "数据知识工厂",
+    "full_name": "Financial Agentic Data",
+    "category": "数据平台",
+    "entry": "金融知识库/知识工程",
+    "desc": "数据产线 + 知识产线，把数据供给升级为面向智能体的知识供给。",
+    "count": 3,
+    "share": 2.4,
+    "avg_score": 56.0,
+    "avg_score_all": 49.5,
+    "lift": 6.5
+   },
+   {
+    "id": "hw_ascend",
+    "name": "AI 算力",
+    "full_name": "Atlas · 昇腾 AI 算力",
+    "category": "基础设施",
+    "entry": "AI 算力/智算中心",
+    "count": 0,
+    "share": 0.0,
+    "avg_score": null,
+    "avg_score_all": null,
+    "lift": null
+   },
+   {
+    "id": "hw_token",
+    "name": "Token 工厂",
+    "full_name": "Token 工厂 · TokeNexus",
+    "category": "AI 平台",
+    "entry": "大模型算力/推理运营",
+    "count": 0,
+    "share": 0.0,
+    "avg_score": null,
+    "avg_score_all": null,
+    "lift": null
+   }
+  ],
+  "matrix": [
+   {
+    "key": "npl",
+    "label": "不良率 ≥ 2%",
+    "count": 31,
+    "avg_score": 49.7,
+    "hits": {
+     "hw_core": 100.0,
+     "hw_data": 19.4,
+     "hw_agent": 6.5,
+     "hw_token": 0.0,
+     "hw_agentic_data": 0.0,
+     "hw_aicc": 6.5,
+     "hw_credit": 87.1,
+     "hw_fraud": 25.8,
+     "hw_cloud": 41.9,
+     "hw_ascend": 0.0,
+     "hw_network": 64.5,
+     "hw_xinchuang": 16.1,
+     "hw_mobile": 3.2,
+     "hw_green": 29.0
+    }
+   },
+   {
+    "key": "prov",
+    "label": "拨备 < 150%",
+    "count": 16,
+    "avg_score": 48.6,
+    "hits": {
+     "hw_core": 100.0,
+     "hw_data": 12.5,
+     "hw_agent": 6.2,
+     "hw_token": 0.0,
+     "hw_agentic_data": 0.0,
+     "hw_aicc": 6.2,
+     "hw_credit": 93.8,
+     "hw_fraud": 31.2,
+     "hw_cloud": 50.0,
+     "hw_ascend": 0.0,
+     "hw_network": 62.5,
+     "hw_xinchuang": 0.0,
+     "hw_mobile": 6.2,
+     "hw_green": 31.2
+    }
+   },
+   {
+    "key": "nim",
+    "label": "息差 < 1.5%",
+    "count": 15,
+    "avg_score": 54.8,
+    "hits": {
+     "hw_core": 93.3,
+     "hw_data": 13.3,
+     "hw_agent": 20.0,
+     "hw_token": 0.0,
+     "hw_agentic_data": 0.0,
+     "hw_aicc": 6.7,
+     "hw_credit": 66.7,
+     "hw_fraud": 6.7,
+     "hw_cloud": 40.0,
+     "hw_ascend": 0.0,
+     "hw_network": 60.0,
+     "hw_xinchuang": 33.3,
+     "hw_mobile": 6.7,
+     "hw_green": 53.3
+    }
+   },
+   {
+    "key": "penalty",
+    "label": "处罚 ≥ 2 次",
+    "count": 13,
+    "avg_score": 53.2,
+    "hits": {
+     "hw_core": 92.3,
+     "hw_data": 30.8,
+     "hw_agent": 15.4,
+     "hw_token": 0.0,
+     "hw_agentic_data": 0.0,
+     "hw_aicc": 7.7,
+     "hw_credit": 69.2,
+     "hw_fraud": 46.2,
+     "hw_cloud": 69.2,
+     "hw_ascend": 0.0,
+     "hw_network": 15.4,
+     "hw_xinchuang": 7.7,
+     "hw_mobile": 7.7,
+     "hw_green": 38.5
+    }
+   },
+   {
+    "key": "loss",
+    "label": "当期亏损",
+    "count": 4,
+    "avg_score": 49.5,
+    "hits": {
+     "hw_core": 100.0,
+     "hw_data": 0.0,
+     "hw_agent": 0.0,
+     "hw_token": 0.0,
+     "hw_agentic_data": 0.0,
+     "hw_aicc": 0.0,
+     "hw_credit": 100.0,
+     "hw_fraud": 25.0,
+     "hw_cloud": 50.0,
+     "hw_ascend": 0.0,
+     "hw_network": 100.0,
+     "hw_xinchuang": 0.0,
+     "hw_mobile": 0.0,
+     "hw_green": 25.0
+    }
+   }
+  ],
+  "segments": [
+   {
+    "name": "上市城商行",
+    "count": 29,
+    "avg_score": 55.6,
+    "median_score": 55,
+    "ge50": 29,
+    "ge60": 5,
+    "share_ge50": 100.0
+   },
+   {
+    "name": "非上市城商行",
+    "count": 95,
+    "avg_score": 47.6,
+    "median_score": 47,
+    "ge50": 16,
+    "ge60": 1,
+    "share_ge50": 16.8
+   },
+   {
+    "name": "资产 ≥ 5000 亿",
+    "count": 39,
+    "avg_score": 53.4,
+    "median_score": 52,
+    "ge50": 28,
+    "ge60": 5,
+    "share_ge50": 71.8
+   },
+   {
+    "name": "资产 < 5000 亿",
+    "count": 85,
+    "avg_score": 47.7,
+    "median_score": 47,
+    "ge50": 17,
+    "ge60": 1,
+    "share_ge50": 20.0
+   },
+   {
+    "name": "数字化活跃度高",
+    "count": 2,
+    "avg_score": 67.0,
+    "median_score": 67.0,
+    "ge50": 2,
+    "ge60": 2,
+    "share_ge50": 100.0
+   },
+   {
+    "name": "数字化活跃度中",
+    "count": 6,
+    "avg_score": 60.0,
+    "median_score": 60.5,
+    "ge50": 6,
+    "ge60": 4,
+    "share_ge50": 100.0
+   },
+   {
+    "name": "数字化未披露",
+    "count": 116,
+    "avg_score": 48.6,
+    "median_score": 48.0,
+    "ge50": 37,
+    "ge60": 0,
+    "share_ge50": 31.9
+   }
+  ],
+  "leaders": [
+   {
+    "name": "北京银行股份有限公司",
+    "province": "北京市",
+    "asset": 49400,
+    "score": 71,
+    "top_capability": "智能体工厂",
+    "business": [
+     "科技金融",
+     "公司金融",
+     "普惠小微",
+     "零售金融",
+     "财富管理",
+     "金融市场"
+    ],
+    "listed": true
+   },
+   {
+    "name": "上海银行股份有限公司",
+    "province": "上海市",
+    "asset": 33100,
+    "score": 67,
+    "top_capability": "智能体工厂",
+    "business": [
+     "科技金融",
+     "公司金融",
+     "绿色金融",
+     "普惠小微",
+     "零售金融"
+    ],
+    "listed": true
+   },
+   {
+    "name": "台州银行股份有限公司",
+    "province": "浙江省",
+    "asset": 4014.96,
+    "score": 63,
+    "top_capability": "智慧信贷",
+    "business": [
+     "普惠小微",
+     "公司金融",
+     "科技金融",
+     "零售金融",
+     "金融市场"
+    ],
+    "listed": false
+   },
+   {
+    "name": "兰州银行股份有限公司",
+    "province": "甘肃省",
+    "asset": 5348.17,
+    "score": 61,
+    "top_capability": "智慧信贷",
+    "business": [
+     "公司金融",
+     "绿色金融",
+     "普惠小微",
+     "零售金融",
+     "金融市场"
+    ],
+    "listed": true
+   },
+   {
+    "name": "南京银行股份有限公司",
+    "province": "江苏省",
+    "asset": 30200,
+    "score": 61,
+    "top_capability": "数据智能",
+    "business": [
+     "公司金融",
+     "科技金融",
+     "零售金融",
+     "金融市场"
+    ],
+    "listed": true
+   },
+   {
+    "name": "中原银行股份有限公司",
+    "province": "河南省",
+    "asset": 14142.93,
+    "score": 60,
+    "top_capability": "数据智能",
+    "business": [
+     "普惠小微",
+     "公司金融",
+     "科技金融",
+     "零售金融",
+     "金融市场"
+    ],
+    "listed": true
+   },
+   {
+    "name": "重庆银行股份有限公司",
+    "province": "重庆市",
+    "asset": 10300,
+    "score": 57,
+    "top_capability": "绿色数据中心",
+    "business": [
+     "普惠小微",
+     "零售金融",
+     "绿色金融",
+     "公司金融",
+     "科技金融",
+     "金融市场"
+    ],
+    "listed": true
+   },
+   {
+    "name": "贵州银行股份有限公司",
+    "province": "贵州省",
+    "asset": 6103.81,
+    "score": 57,
+    "top_capability": "绿色数据中心",
+    "business": [
+     "普惠小微",
+     "零售金融",
+     "绿色金融",
+     "公司金融",
+     "科技金融"
+    ],
+    "listed": true
+   },
+   {
+    "name": "齐鲁银行股份有限公司",
+    "province": "山东省",
+    "asset": 8043.81,
+    "score": 57,
+    "top_capability": "绿色数据中心",
+    "business": [
+     "普惠小微",
+     "零售金融",
+     "绿色金融",
+     "公司金融",
+     "科技金融"
+    ],
+    "listed": true
+   },
+   {
+    "name": "青岛银行股份有限公司",
+    "province": "山东省",
+    "asset": 8149.6,
+    "score": 57,
+    "top_capability": "绿色数据中心",
+    "business": [
+     "普惠小微",
+     "零售金融",
+     "科技金融",
+     "公司金融",
+     "绿色金融"
+    ],
+    "listed": true
+   },
+   {
+    "name": "宁波银行股份有限公司",
+    "province": "浙江省",
+    "asset": 36300,
+    "score": 57,
+    "top_capability": "绿色数据中心",
+    "business": [
+     "普惠小微",
+     "零售金融",
+     "科技金融",
+     "公司金融",
+     "绿色金融"
+    ],
+    "listed": true
+   },
+   {
+    "name": "贵阳银行股份有限公司",
+    "province": "贵州省",
+    "asset": 7434.62,
+    "score": 57,
+    "top_capability": "绿色数据中心",
+    "business": [
+     "普惠小微",
+     "零售金融",
+     "绿色金融",
+     "公司金融",
+     "科技金融"
+    ],
+    "listed": true
+   }
+  ],
+  "digital_tier": {
+   "未披露": 116,
+   "中": 6,
+   "高": 2
+  },
+  "scoring_note": "机会分 = 规则分（五因子加权 + 产业/类型适配 + 公开证据加分），口径见 docs/scoring-rules.md；无公开证据时标注「推断/待验证」。"
+ },
+ "regions": {
+  "regions": [
+   {
+    "name": "华东",
+    "count": 40,
+    "provinces": [
+     "上海市",
+     "安徽省",
+     "山东省",
+     "江苏省",
+     "江西省",
+     "浙江省",
+     "福建省"
+    ],
+    "asset_total": 316850.0,
+    "asset_median": 3356.0,
+    "npl_median": 1.21,
+    "npl_above_2": 3,
+    "prov_median": 225.0,
+    "prov_below_150": 4,
+    "nim_median": 1.8,
+    "cap_median": 13.21,
+    "avg_score": 50.0,
+    "penalty_total": 28,
+    "loss": 0,
+    "industries": [
+     {
+      "name": "制造",
+      "count": 39
+     },
+     {
+      "name": "科技",
+      "count": 23
+     },
+     {
+      "name": "跨境贸易",
+      "count": 22
+     },
+     {
+      "name": "农业",
+      "count": 18
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "分布式新核心",
+      "count": 21
+     },
+     {
+      "name": "智慧信贷",
+      "count": 13
+     },
+     {
+      "name": "绿色数据中心",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "name": "华北",
+    "count": 19,
+    "provinces": [
+     "内蒙古自治区",
+     "北京市",
+     "天津市",
+     "山西省",
+     "河北省"
+    ],
+    "asset_total": 103025.0,
+    "asset_median": 2609.0,
+    "npl_median": 1.97,
+    "npl_above_2": 7,
+    "prov_median": 171.0,
+    "prov_below_150": 2,
+    "nim_median": 1.53,
+    "cap_median": 13.12,
+    "avg_score": 49.6,
+    "penalty_total": 16,
+    "loss": 0,
+    "industries": [
+     {
+      "name": "能源化工",
+      "count": 18
+     },
+     {
+      "name": "农业",
+      "count": 15
+     },
+     {
+      "name": "制造",
+      "count": 14
+     },
+     {
+      "name": "绿色",
+      "count": 4
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "智慧信贷",
+      "count": 10
+     },
+     {
+      "name": "绿色数据中心",
+      "count": 5
+     },
+     {
+      "name": "分布式新核心",
+      "count": 3
+     }
+    ]
+   },
+   {
+    "name": "西南",
+    "count": 20,
+    "provinces": [
+     "云南省",
+     "四川省",
+     "西藏自治区",
+     "贵州省",
+     "重庆市"
+    ],
+    "asset_total": 72729.0,
+    "asset_median": 2120.0,
+    "npl_median": 1.6,
+    "npl_above_2": 3,
+    "prov_median": 257.0,
+    "prov_below_150": 1,
+    "nim_median": 1.73,
+    "cap_median": 13.41,
+    "avg_score": 49.9,
+    "penalty_total": 11,
+    "loss": 0,
+    "industries": [
+     {
+      "name": "科技",
+      "count": 14
+     },
+     {
+      "name": "制造",
+      "count": 14
+     },
+     {
+      "name": "消费零售",
+      "count": 14
+     },
+     {
+      "name": "农业",
+      "count": 6
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "分布式新核心",
+      "count": 7
+     },
+     {
+      "name": "智慧信贷",
+      "count": 7
+     },
+     {
+      "name": "绿色数据中心",
+      "count": 5
+     }
+    ]
+   },
+   {
+    "name": "东北",
+    "count": 17,
+    "provinces": [
+     "吉林省",
+     "辽宁省",
+     "黑龙江省"
+    ],
+    "asset_total": 60828.0,
+    "asset_median": 1701.0,
+    "npl_median": 2.73,
+    "npl_above_2": 10,
+    "prov_median": 163.0,
+    "prov_below_150": 4,
+    "nim_median": 1.43,
+    "cap_median": 12.45,
+    "avg_score": 48.6,
+    "penalty_total": 1,
+    "loss": 4,
+    "industries": [
+     {
+      "name": "制造",
+      "count": 17
+     },
+     {
+      "name": "农业",
+      "count": 17
+     },
+     {
+      "name": "能源化工",
+      "count": 16
+     },
+     {
+      "name": "医药健康",
+      "count": 1
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "智慧信贷",
+      "count": 14
+     },
+     {
+      "name": "分布式新核心",
+      "count": 2
+     },
+     {
+      "name": "绿色数据中心",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "华中",
+    "count": 6,
+    "provinces": [
+     "河南省",
+     "湖北省",
+     "湖南省"
+    ],
+    "asset_total": 52481.0,
+    "asset_median": 6827.0,
+    "npl_median": 1.88,
+    "npl_above_2": 2,
+    "prov_median": 174.0,
+    "prov_below_150": 0,
+    "nim_median": 1.73,
+    "cap_median": 12.13,
+    "avg_score": 52.0,
+    "penalty_total": 2,
+    "loss": 0,
+    "industries": [
+     {
+      "name": "农业",
+      "count": 6
+     },
+     {
+      "name": "制造",
+      "count": 6
+     },
+     {
+      "name": "供应链",
+      "count": 2
+     },
+     {
+      "name": "文旅",
+      "count": 2
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "分布式新核心",
+      "count": 4
+     },
+     {
+      "name": "智慧信贷",
+      "count": 1
+     },
+     {
+      "name": "数据智能",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "华南",
+    "count": 9,
+    "provinces": [
+     "广东省",
+     "广西壮族自治区",
+     "海南省"
+    ],
+    "asset_total": 43561.0,
+    "asset_median": 4655.0,
+    "npl_median": 1.67,
+    "npl_above_2": 2,
+    "prov_median": 165.0,
+    "prov_below_150": 2,
+    "nim_median": 1.61,
+    "cap_median": 13.62,
+    "avg_score": 47.8,
+    "penalty_total": 3,
+    "loss": 0,
+    "industries": [
+     {
+      "name": "跨境贸易",
+      "count": 9
+     },
+     {
+      "name": "制造",
+      "count": 8
+     },
+     {
+      "name": "科技",
+      "count": 5
+     },
+     {
+      "name": "农业",
+      "count": 3
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "分布式新核心",
+      "count": 5
+     },
+     {
+      "name": "智慧信贷",
+      "count": 3
+     },
+     {
+      "name": "智能客服",
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": "西北",
+    "count": 12,
+    "provinces": [
+     "宁夏回族自治区",
+     "新疆维吾尔自治区",
+     "甘肃省",
+     "陕西省",
+     "青海省"
+    ],
+    "asset_total": 34925.0,
+    "asset_median": 2565.0,
+    "npl_median": 1.83,
+    "npl_above_2": 4,
+    "prov_median": 184.0,
+    "prov_below_150": 3,
+    "nim_median": 1.43,
+    "cap_median": 12.25,
+    "avg_score": 48.2,
+    "penalty_total": 4,
+    "loss": 0,
+    "industries": [
+     {
+      "name": "能源化工",
+      "count": 12
+     },
+     {
+      "name": "农业",
+      "count": 10
+     },
+     {
+      "name": "跨境贸易",
+      "count": 5
+     },
+     {
+      "name": "绿色",
+      "count": 5
+     }
+    ],
+    "top_capabilities": [
+     {
+      "name": "智慧信贷",
+      "count": 7
+     },
+     {
+      "name": "绿色数据中心",
+      "count": 3
+     },
+     {
+      "name": "分布式新核心",
+      "count": 2
+     }
+    ]
+   },
+   {
+    "name": "其他",
+    "count": 1,
+    "provinces": [
+     "其他"
+    ],
+    "asset_total": 2422.0,
+    "asset_median": 2422.0,
+    "npl_median": 1.41,
+    "npl_above_2": 0,
+    "prov_median": 165.0,
+    "prov_below_150": 0,
+    "nim_median": null,
+    "cap_median": 12.36,
+    "avg_score": 43.0,
+    "penalty_total": 0,
+    "loss": 0,
+    "industries": [],
+    "top_capabilities": [
+     {
+      "name": "分布式新核心",
+      "count": 1
+     }
+    ]
+   }
+  ],
+  "provinces": [
+   {
+    "name": "浙江省",
+    "count": 13,
+    "region": "华东",
+    "asset_total": 91265.0,
+    "npl_median": 0.93,
+    "prov_median": 333.0,
+    "avg_score": 49.3,
+    "penalty_total": 9,
+    "loss": 0
+   },
+   {
+    "name": "江苏省",
+    "count": 4,
+    "region": "华东",
+    "asset_total": 87998.0,
+    "npl_median": 0.86,
+    "prov_median": 343.0,
+    "avg_score": 52.8,
+    "penalty_total": 1,
+    "loss": 0
+   },
+   {
+    "name": "北京市",
+    "count": 1,
+    "region": "华北",
+    "asset_total": 49400,
+    "npl_median": 1.31,
+    "prov_median": 209.0,
+    "avg_score": 71.0,
+    "penalty_total": 8,
+    "loss": 0
+   },
+   {
+    "name": "山东省",
+    "count": 13,
+    "region": "华东",
+    "asset_total": 42333.0,
+    "npl_median": 1.44,
+    "prov_median": 191.0,
+    "avg_score": 48.5,
+    "penalty_total": 2,
+    "loss": 0
+   },
+   {
+    "name": "辽宁省",
+    "count": 14,
+    "region": "东北",
+    "asset_total": 37962.0,
+    "npl_median": 2.71,
+    "prov_median": 160.0,
+    "avg_score": 48.3,
+    "penalty_total": 1,
+    "loss": 4
+   },
+   {
+    "name": "四川省",
+    "count": 12,
+    "region": "西南",
+    "asset_total": 37952.0,
+    "npl_median": 1.61,
+    "prov_median": 289.0,
+    "avg_score": 48.9,
+    "penalty_total": 3,
+    "loss": 0
+   },
+   {
+    "name": "上海市",
+    "count": 1,
+    "region": "华东",
+    "asset_total": 33100,
+    "npl_median": 1.18,
+    "prov_median": 270.0,
+    "avg_score": 67.0,
+    "penalty_total": 6,
+    "loss": 0
+   },
+   {
+    "name": "河北省",
+    "count": 11,
+    "region": "华北",
+    "asset_total": 30563.0,
+    "npl_median": 2.0,
+    "prov_median": 170.0,
+    "avg_score": 48.5,
+    "penalty_total": 2,
+    "loss": 0
+   },
+   {
+    "name": "广东省",
+    "count": 5,
+    "region": "华南",
+    "asset_total": 28166.0,
+    "npl_median": 1.73,
+    "prov_median": 169.0,
+    "avg_score": 47.8,
+    "penalty_total": 3,
+    "loss": 0
+   },
+   {
+    "name": "安徽省",
+    "count": 1,
+    "region": "华东",
+    "asset_total": 23261.0,
+    "npl_median": 1.26,
+    "prov_median": 272.0,
+    "avg_score": 53.0,
+    "penalty_total": 4,
+    "loss": 0
+   },
+   {
+    "name": "河南省",
+    "count": 2,
+    "region": "华中",
+    "asset_total": 21580.0,
+    "npl_median": 1.92,
+    "prov_median": 169.0,
+    "avg_score": 57.5,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "福建省",
+    "count": 4,
+    "region": "华东",
+    "asset_total": 21575.0,
+    "npl_median": 1.5,
+    "prov_median": 185.0,
+    "avg_score": 48.0,
+    "penalty_total": 2,
+    "loss": 0
+   },
+   {
+    "name": "湖南省",
+    "count": 2,
+    "region": "华中",
+    "asset_total": 18917.0,
+    "npl_median": 1.46,
+    "prov_median": 239.0,
+    "avg_score": 49.5,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "江西省",
+    "count": 4,
+    "region": "华东",
+    "asset_total": 17318.0,
+    "npl_median": 2.09,
+    "prov_median": 161.0,
+    "avg_score": 51.8,
+    "penalty_total": 4,
+    "loss": 0
+   },
+   {
+    "name": "黑龙江省",
+    "count": 2,
+    "region": "东北",
+    "asset_total": 14234.0,
+    "npl_median": 2.95,
+    "prov_median": 178.0,
+    "avg_score": 51.5,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "广西壮族自治区",
+    "count": 3,
+    "region": "华南",
+    "asset_total": 14152.0,
+    "npl_median": 1.65,
+    "prov_median": 161.0,
+    "avg_score": 48.3,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "重庆市",
+    "count": 2,
+    "region": "西南",
+    "asset_total": 14141.0,
+    "npl_median": 1.43,
+    "prov_median": 204.0,
+    "avg_score": 55.0,
+    "penalty_total": 2,
+    "loss": 0
+   },
+   {
+    "name": "贵州省",
+    "count": 2,
+    "region": "西南",
+    "asset_total": 13538.0,
+    "npl_median": 1.63,
+    "prov_median": 272.0,
+    "avg_score": 57.0,
+    "penalty_total": 3,
+    "loss": 0
+   },
+   {
+    "name": "湖北省",
+    "count": 2,
+    "region": "华中",
+    "asset_total": 11984.0,
+    "npl_median": 2.29,
+    "prov_median": 189.0,
+    "avg_score": 49.0,
+    "penalty_total": 2,
+    "loss": 0
+   },
+   {
+    "name": "陕西省",
+    "count": 2,
+    "region": "西北",
+    "asset_total": 11427.0,
+    "npl_median": 1.77,
+    "prov_median": 187.0,
+    "avg_score": 51.0,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "新疆维吾尔自治区",
+    "count": 5,
+    "region": "西北",
+    "asset_total": 9999.0,
+    "npl_median": 1.1,
+    "prov_median": 291.0,
+    "avg_score": 42.8,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "甘肃省",
+    "count": 2,
+    "region": "西北",
+    "asset_total": 9707.0,
+    "npl_median": 1.92,
+    "prov_median": 167.0,
+    "avg_score": 57.0,
+    "penalty_total": 1,
+    "loss": 0
+   },
+   {
+    "name": "天津市",
+    "count": 1,
+    "region": "华北",
+    "asset_total": 9458.0,
+    "npl_median": 1.84,
+    "prov_median": 159.0,
+    "avg_score": 51.0,
+    "penalty_total": 4,
+    "loss": 0
+   },
+   {
+    "name": "吉林省",
+    "count": 1,
+    "region": "东北",
+    "asset_total": 8633.0,
+    "npl_median": 1.39,
+    "prov_median": 168.0,
+    "avg_score": 48.0,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "山西省",
+    "count": 2,
+    "region": "华北",
+    "asset_total": 7551.0,
+    "npl_median": 1.78,
+    "prov_median": 199.0,
+    "avg_score": 47.5,
+    "penalty_total": 1,
+    "loss": 0
+   },
+   {
+    "name": "云南省",
+    "count": 3,
+    "region": "西南",
+    "asset_total": 6488.0,
+    "npl_median": 1.99,
+    "prov_median": 186.0,
+    "avg_score": 47.3,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "内蒙古自治区",
+    "count": 4,
+    "region": "华北",
+    "asset_total": 6053.0,
+    "npl_median": 5.41,
+    "prov_median": 115.0,
+    "avg_score": 48.0,
+    "penalty_total": 1,
+    "loss": 0
+   },
+   {
+    "name": "宁夏回族自治区",
+    "count": 2,
+    "region": "西北",
+    "asset_total": 2618.0,
+    "npl_median": 2.37,
+    "prov_median": 126.0,
+    "avg_score": 48.0,
+    "penalty_total": 2,
+    "loss": 0
+   },
+   {
+    "name": "其他",
+    "count": 1,
+    "region": "其他",
+    "asset_total": 2422.0,
+    "npl_median": 1.41,
+    "prov_median": 165.0,
+    "avg_score": 43.0,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "海南省",
+    "count": 1,
+    "region": "华南",
+    "asset_total": 1244.0,
+    "npl_median": null,
+    "prov_median": null,
+    "avg_score": 46.0,
+    "penalty_total": 0,
+    "loss": 0
+   },
+   {
+    "name": "青海省",
+    "count": 1,
+    "region": "西北",
+    "asset_total": 1174.0,
+    "npl_median": 2.25,
+    "prov_median": 154.0,
+    "avg_score": 53.0,
+    "penalty_total": 1,
+    "loss": 0
+   },
+   {
+    "name": "西藏自治区",
+    "count": 1,
+    "region": "西南",
+    "asset_total": 610.0,
+    "npl_median": null,
+    "prov_median": null,
+    "avg_score": 45.0,
+    "penalty_total": 3,
+    "loss": 0
+   }
+  ]
+ }
+}
