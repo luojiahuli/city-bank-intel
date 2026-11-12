@@ -36,6 +36,15 @@ function bar(share, color = "var(--cyan)") {
   return `<span class="ic-bar"><i style="width:${w}%;background:${color}"></i></span>`;
 }
 
+function safeUrl(url) {
+  try {
+    const parsed = new URL(String(url));
+    return ["http:", "https:"].includes(parsed.protocol) ? parsed.href : null;
+  } catch {
+    return null;
+  }
+}
+
 function metricCard(m) {
   const digits = m.label === "拨备覆盖率" ? 0 : 2;
   return `<div class="ic-metric">
@@ -247,6 +256,58 @@ function renderHuawei(data) {
     <p class="ic-note ic-foot">${esc(data.scoring_note)}</p>`;
 }
 
+function renderTrends(data) {
+  if (!data || !(data.cases || []).length) {
+    return `<p class="ic-note">尚未整理公开趋势与案例。</p>`;
+  }
+
+  const trends = data.trends.map((t) => `
+    <div class="ic-trend">
+      <div class="ic-trend-title">${esc(t.title)}</div>
+      <div class="ic-trend-detail">${esc(t.detail)}</div>
+      <div class="ic-trend-evidence">${esc(t.evidence)}</div>
+    </div>`).join("");
+
+  const cases = data.cases.map((c) => {
+    const url = safeUrl((c.source || {}).url);
+    const src = c.source
+      ? `${url ? `<a class="ic-case-src" href="${esc(url)}" target="_blank" rel="noopener">来源：${esc(c.source.title)}</a>`
+        : `来源：${esc(c.source.title)}`}${c.source.date ? `<span class="ic-case-date"> · ${esc(c.source.date)}</span>` : ""}`
+      : "";
+    return `<div class="ic-case">
+      <div class="ic-case-head"><b>${esc(c.bank)}</b>
+        <span class="ic-chip">${esc(c.type)}</span>
+        <span class="ic-chip alt">${esc(c.deployment)}</span>
+      </div>
+      <div class="ic-case-line"><span>模型基座</span>${esc(c.model)}</div>
+      <div class="ic-case-line"><span>知识库/RAG</span>${esc(c.knowledge)}</div>
+      <div class="ic-case-line"><span>落地场景</span>${esc(c.scenario)}</div>
+      <div class="ic-case-line"><span>公开效果</span>${esc(c.result)}</div>
+      <div class="ic-case-line"><span>成本/底座</span>${esc(c.cost)}</div>
+      ${src}
+    </div>`;
+  }).join("");
+
+  const steps = (data.playbook || []).map((s) => `
+    <div class="ic-step"><b>${esc(s.step)}</b><div>${esc(s.detail)}</div></div>`).join("");
+
+  const caveats = (data.caveats || []).map((c) => `<li>${esc(c)}</li>`).join("");
+
+  return `
+    <h4 class="ic-h4">4.1 行业趋势：轻量化、私有化、嵌入存量系统</h4>
+    <p class="ic-note">${esc(data.intro)}</p>
+    <div class="ic-trends">${trends}</div>
+
+    <h4 class="ic-h4">4.2 公开落地案例（本地化部署 + 智能体 + 知识库）</h4>
+    <div class="ic-cases">${cases}</div>
+
+    <h4 class="ic-h4">4.3 可复制的轻量化落地路径</h4>
+    <div class="ic-steps">${steps}</div>
+
+    ${caveats ? `<p class="ic-note ic-foot"><b>口径与风险提示</b></p><ul class="ic-caveats">${caveats}</ul>` : ""}
+    <p class="ic-note ic-foot">${esc(data.note || "")}${data.as_of ? ` 资料整理截至 ${esc(data.as_of)}。` : ""}</p>`;
+}
+
 function renderRegions(data) {
   const regions = data.regions.map((r) => `
     <tr>
@@ -381,10 +442,12 @@ export class ConclusionModal {
           <button class="ic-tab active" data-sec="op">① 业务分布与痛点</button>
           <button class="ic-tab" data-sec="hw">② 华为能力机会</button>
           <button class="ic-tab" data-sec="rg">③ 区域切入点</button>
+          <button class="ic-tab" data-sec="tr">④ 最新业务趋势</button>
         </nav>
         <div class="ic-panel" data-panel="op">${renderOpportunity(data.opportunity)}</div>
         <div class="ic-panel" data-panel="hw" hidden>${renderHuawei(data.huawei)}</div>
         <div class="ic-panel" data-panel="rg" hidden>${renderRegions(data.regions)}</div>
+        <div class="ic-panel" data-panel="tr" hidden>${renderTrends(data.trends)}</div>
         <p class="ic-note ic-foot">${esc(data.sample_note)}</p>`;
 
       this.body.querySelectorAll(".ic-tab").forEach((tab) => {

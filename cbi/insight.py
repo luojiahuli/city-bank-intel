@@ -403,6 +403,15 @@ def build_regions(banks):
     return {"regions": regions, "provinces": provinces}
 
 
+def build_trends():
+    """Latest public deployment cases and trends, curated under data/enrichment."""
+    path = ROOT / "data" / "enrichment" / "trends.json"
+    if not path.exists():
+        return {"as_of": None, "trends": [], "cases": [], "playbook": [], "caveats": []}
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
 def main():
     banks = load_banks()
     if not banks:
@@ -427,6 +436,7 @@ def main():
         "opportunity": build_opportunity(banks, peers),
         "huawei": build_huawei(banks),
         "regions": build_regions(banks),
+        "trends": build_trends(),
     }
     out = FRONTEND / "insight.json"
     with open(out, "w", encoding="utf-8") as fh:

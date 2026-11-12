@@ -23,6 +23,7 @@ cp .env.example .env   # 填入 TAVILY_API_KEY / DEEPSEEK_API_KEY
 # 机构名录与静态图谱（首次/名录变更后）
 python3 -m cbi.registry
 python3 -m cbi.build
+python3 -m cbi.insight   # 生成结论弹窗数据（含「最新业务趋势」公开案例，源 data/enrichment/trends.json）
 
 # 单类采集（可轮换、可缓存）
 python3 -m cbi.news_agent --limit 20
