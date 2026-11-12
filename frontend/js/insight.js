@@ -256,10 +256,13 @@ function renderHuawei(data) {
     <p class="ic-note ic-foot">${esc(data.scoring_note)}</p>`;
 }
 
-function renderTrends(data) {
-  if (!data || !(data.cases || []).length) {
+function renderTrends(insight) {
+  const data = insight.trends || {};
+  if (!(data.cases || []).length) {
     return `<p class="ic-note">尚未整理公开趋势与案例。</p>`;
   }
+  const cohorts = (insight.opportunity || {}).pain_cohorts || [];
+  const cohortOf = (key) => cohorts.find((c) => c.key === key);
 
   const trends = data.trends.map((t) => `
     <div class="ic-trend">
@@ -291,6 +294,24 @@ function renderTrends(data) {
   const steps = (data.playbook || []).map((s) => `
     <div class="ic-step"><b>${esc(s.step)}</b><div>${esc(s.detail)}</div></div>`).join("");
 
+  const loopData = data.closed_loop || {};
+  const flow = (loopData.flow || []).map((s, i) =>
+    `${i ? "<i>→</i>" : ""}<span>${esc(s)}</span>`).join("");
+  const loops = (loopData.loops || []).map((l) => {
+    const cohort = cohortOf(l.cohort);
+    const sample = cohort
+      ? `<div class="ic-sub ic-loop-sample">本站城商行样本 ${cohort.count} 家（${pct(cohort.share)}）</div>`
+      : "";
+    const tech = (l.tech || []).map((t) => `<span class="ic-tech-chip">${esc(t)}</span>`).join("");
+    return `<tr>
+      <td><b>${esc(l.pain)}</b><div class="ic-sub">${esc(l.pain_desc)}</div>${sample}</td>
+      <td>${tech}</td>
+      <td>${esc(l.action)}</td>
+      <td>${esc(l.value)}<div class="ic-sub">参考：${esc(l.case)}</div></td>
+      <td>${esc(l.metrics)}</td>
+    </tr>`;
+  }).join("");
+
   const caveats = (data.caveats || []).map((c) => `<li>${esc(c)}</li>`).join("");
 
   return `
@@ -298,10 +319,20 @@ function renderTrends(data) {
     <p class="ic-note">${esc(data.intro)}</p>
     <div class="ic-trends">${trends}</div>
 
-    <h4 class="ic-h4">4.2 公开落地案例（本地化部署 + 智能体 + 知识库）</h4>
+    <h4 class="ic-h4">4.2 技术 → 业务闭环：先有痛点，再谈技术</h4>
+    <p class="ic-note">${esc(loopData.principle || "")}</p>
+    <div class="ic-loop-flow">${flow}</div>
+    <div class="ic-tablewrap">
+      <table class="ic-table ic-loop">
+        <thead><tr><th>业务痛点</th><th>对应技术模块</th><th>业务动作</th><th>预计价值产出</th><th>验收指标</th></tr></thead>
+        <tbody>${loops}</tbody>
+      </table>
+    </div>
+
+    <h4 class="ic-h4">4.3 公开落地案例（本地化部署 + 智能体 + 知识库）</h4>
     <div class="ic-cases">${cases}</div>
 
-    <h4 class="ic-h4">4.3 可复制的轻量化落地路径</h4>
+    <h4 class="ic-h4">4.4 可复制的轻量化落地路径</h4>
     <div class="ic-steps">${steps}</div>
 
     ${caveats ? `<p class="ic-note ic-foot"><b>口径与风险提示</b></p><ul class="ic-caveats">${caveats}</ul>` : ""}
@@ -447,7 +478,7 @@ export class ConclusionModal {
         <div class="ic-panel" data-panel="op">${renderOpportunity(data.opportunity)}</div>
         <div class="ic-panel" data-panel="hw" hidden>${renderHuawei(data.huawei)}</div>
         <div class="ic-panel" data-panel="rg" hidden>${renderRegions(data.regions)}</div>
-        <div class="ic-panel" data-panel="tr" hidden>${renderTrends(data.trends)}</div>
+        <div class="ic-panel" data-panel="tr" hidden>${renderTrends(data)}</div>
         <p class="ic-note ic-foot">${esc(data.sample_note)}</p>`;
 
       this.body.querySelectorAll(".ic-tab").forEach((tab) => {
