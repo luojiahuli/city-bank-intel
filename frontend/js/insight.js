@@ -438,7 +438,7 @@ export class ConclusionModal {
   async load() {
     if (this.data) return this.data;
     if (this.pending) return this.pending;
-    this.pending = fetch("data/insight.json")
+    this.pending = fetch("data/insight.json", { cache: "no-cache" })
       .then((res) => {
         if (!res.ok) throw new Error(`insight.json → HTTP ${res.status}`);
         return res.json();
