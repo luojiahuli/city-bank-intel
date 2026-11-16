@@ -1,0 +1,119 @@
+{
+ "as_of": "2026-11-16",
+ "started_at": "2026-11-16T00:21:42+00:00",
+ "searched_now": 61,
+ "searched": 124,
+ "with_items": 113,
+ "with_amount": 58,
+ "items": 556,
+ "by_group": {
+  "city": {
+   "searched": 124,
+   "with_items": 113,
+   "with_amount": 58,
+   "items": 556
+  }
+ },
+ "no_result": [
+  {
+   "id": "bk_b0347h332120001",
+   "name": "江苏长江商业银行"
+  },
+  {
+   "id": "bk_b0210h251050001",
+   "name": "泸州银行"
+  },
+  {
+   "id": "bk_b0158h233070001",
+   "name": "浙江稠州商业银行"
+  },
+  {
+   "id": "bk_b0131h321110001",
+   "name": "盘锦银行"
+  },
+  {
+   "id": "bk_b0156h233060001",
+   "name": "绍兴银行"
+  },
+  {
+   "id": "bk_b0331h313040001",
+   "name": "邯郸银行"
+  },
+  {
+   "id": "bk_b0205h250000001",
+   "name": "重庆三峡银行"
+  },
+  {
+   "id": "bk_b0267h321120001",
+   "name": "铁岭银行"
+  },
+  {
+   "id": "bk_b0211h251060002",
+   "name": "长城华西银行"
+  },
+  {
+   "id": "bk_b0223h263010002",
+   "name": "青海银行"
+  },
+  {
+   "id": "bk_b0171h337030001",
+   "name": "齐商银行"
+  }
+ ],
+ "errors": [
+  {
+   "id": "bk_b0243h232010001",
+   "errors": [
+    {
+     "query": "江苏银行 中标公告 系统 信创",
+     "error": "ReadTimeout"
+    }
+   ]
+  },
+  {
+   "id": "bk_b0349h245010001",
+   "errors": [
+    {
+     "query": "广西北部湾银行 中标公告 系统 信创",
+     "error": "ConnectionError"
+    }
+   ]
+  },
+  {
+   "id": "bk_b0330h321130001",
+   "errors": [
+    {
+     "query": "朝阳银行 中标公告 系统 信创",
+     "error": "ConnectionError"
+    }
+   ]
+  },
+  {
+   "id": "bk_b1087h245020001",
+   "errors": [
+    {
+     "query": "柳州银行 中标公告 系统 信创",
+     "error": "ReadTimeout"
+    }
+   ]
+  },
+  {
+   "id": "bk_b1018h313090001",
+   "errors": [
+    {
+     "query": "沧州银行 中标公告 系统 信创",
+     "error": "ConnectionError"
+    }
+   ]
+  },
+  {
+   "id": "bk_b0206h250000001",
+   "errors": [
+    {
+     "query": "重庆银行 中标 信息科技 采购",
+     "error": "ConnectionError"
+    }
+   ]
+  }
+ ]
+}

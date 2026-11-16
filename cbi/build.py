@@ -122,6 +122,8 @@ def _completeness(bank: dict) -> int:
         score += 5
     if bank.get("it_spend"):
         score += 5
+    if bank.get("it_tenders"):
+        score += 5
     if bank.get("digital_tier"):
         score += 5
     if bank.get("news"):
@@ -357,14 +359,62 @@ def _merge_optional(banks: list[dict]) -> dict:
     stats["website_banks"] = sum(1 for b in banks if b.get("website"))
     stats["site_profile_banks"] = sum(1 for b in banks if b.get("site_profile"))
 
+    tenders = _load_json(config.DATA_DIR / "tenders" / "by_bank.json", {}).get("banks", {})
+    tender_hits = 0
+    tender_items = 0
+    tender_amounts = 0
+    for bank_id, item in tenders.items():
+        bank = by_id.get(bank_id)
+        if not bank:
+            continue
+        bank["it_tender_checked"] = True
+        rows = item.get("items") or []
+        if not rows:
+            continue
+        tender_hits += 1
+        tender_items += len(rows)
+        if item.get("it_tender_with_amount"):
+            tender_amounts += 1
+        bank["it_tenders"] = [{
+            "title": row.get("title"),
+            "url": row.get("url"),
+            "date": row.get("date"),
+            "stage": row.get("stage"),
+            "category": row.get("category"),
+            "amount_wan": row.get("amount_wan"),
+            "source_domain": row.get("source_domain"),
+            "source_type": row.get("source_type"),
+        } for row in rows[:8]]
+        bank["it_tender_12m_wan"] = item.get("it_tender_12m_wan")
+        bank["it_tender_24m_wan"] = item.get("it_tender_24m_wan")
+        bank["it_tender_count"] = item.get("it_tender_count")
+        bank["it_tender_with_amount"] = item.get("it_tender_with_amount")
+        bank["it_tender_latest"] = item.get("it_tender_latest")
+        bank["it_tender_categories"] = [
+            {"label": label, "count": count}
+            for label, count in sorted((item.get("by_category") or {}).items(),
+                                       key=lambda x: -x[1])
+        ]
+        for row in rows[:5]:
+            bank.setdefault("sources", []).append({
+                "kind": "tender",
+                "title": f"{row.get('date') or ''} {row.get('title') or ''}".strip(),
+                "url": row.get("url") or "",
+                "as_of": row.get("date"),
+            })
+    stats["tender_banks"] = tender_hits
+    stats["tender_items"] = tender_items
+    stats["tender_with_amount"] = tender_amounts
+
     stats["focus_banks"] = sum(1 for b in banks if b.get("business_focus"))
     stats["focus_confirmed_banks"] = sum(1 for b in banks if b.get("focus_confirmed"))
     return stats
 
 
 RANK_KEYS = ("asset", "revenue", "profit", "employees", "it_spend",
-             "penalty_count", "deposits", "loans", "branches", "customers",
-             "loan_deposit_ratio", "npl_ratio", "capital_adequacy")
+             "it_tender_12m_wan", "penalty_count", "deposits", "loans",
+             "branches", "customers", "loan_deposit_ratio", "npl_ratio",
+             "capital_adequacy")
 
 
 def _attach_ratios(banks: list[dict]) -> None:
@@ -391,8 +441,8 @@ def _attach_ratios(banks: list[dict]) -> None:
 def _attach_ranks(banks: list[dict]) -> None:
     """Percentile ranks over the whole universe give each bank its own score."""
     defaults = {"penalty_count": 0.0, "profit": 0.5, "it_spend": 0.2,
-                "employees": 0.25, "branches": 0.2, "customers": 0.2,
-                "loan_deposit_ratio": 0.4, "npl_ratio": 0.35,
+                "it_tender_12m_wan": 0.1, "employees": 0.25, "branches": 0.2,
+                "customers": 0.2, "loan_deposit_ratio": 0.4, "npl_ratio": 0.35,
                 "capital_adequacy": 0.5}
     ranks: dict[str, dict[str, float]] = {}
     for key in RANK_KEYS:
@@ -579,6 +629,8 @@ def _notes(bank: dict) -> list[str]:
         notes.append("未能取得可直接访问的官网文本，官网画像暂缺。")
     if not bank.get("news"):
         notes.append("尚未采集到近期 AI/数字化公开报道。")
+    if bank.get("it_tender_checked") and not bank.get("it_tenders"):
+        notes.append("未检索到该行公开 IT 招投标记录（不代表没有采购）。")
     if not bank.get("penalty_checked"):
         notes.append("行政处罚记录尚未完成采集，不代表该机构无处罚。")
     return notes
@@ -943,6 +995,7 @@ def build() -> dict:
         "with_revenue": sum(1 for b in banks if b.get("revenue")),
         "with_profit": sum(1 for b in banks if b.get("profit") is not None),
         "with_employees": sum(1 for b in banks if b.get("employees")),
+        "with_it_tenders": sum(1 for b in banks if b.get("it_tenders")),
         "listed": sum(1 for b in banks if b.get("listed")),
         "with_news": sum(1 for b in banks if b.get("news")),
         "with_penalties": sum(1 for b in banks if b.get("penalty_checked")),

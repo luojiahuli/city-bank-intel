@@ -33,6 +33,8 @@ python3 -m cbi.xlsx_annual --path /path/to/W87银行财务数据2023-2025年报.
 python3 -m cbi.governance_agent --limit 10
 python3 -m cbi.website_agent --group city
 python3 -m cbi.wechat_agent --group city   # 公众号公开报道补充业务证据
+python3 -m cbi.tender_agent --group city --limit 124   # 公开 IT 招投标/中标公告（缓存 data/cache/tender）
+python3 -m cbi.tender_agent --group city --retry-failed --sleep 5   # 仅重试上次无记录的银行
 python3 -m cbi.nfra_penalty crawl --max-pages 10
 
 # LangGraph 编排（自动持久化 + 重建 + 校验）

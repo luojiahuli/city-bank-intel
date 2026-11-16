@@ -35,6 +35,8 @@ GROUP_RANK_DEFAULT = {
     "deposits": {"city": 0.5, "rural": 0.3, "village": 0.14, "other": 0.42},
     "employees": {"city": 0.5, "rural": 0.3, "village": 0.15, "other": 0.4},
     "it_spend": {"city": 0.35, "rural": 0.2, "village": 0.1, "other": 0.3},
+    # No public record ranks below most disclosing banks, whatever the licence.
+    "it_tender_12m_wan": {"city": 0.1, "rural": 0.1, "village": 0.1, "other": 0.1},
     # Undisclosed ratios take a neutral fallback instead of implying low risk.
     "npl_ratio": {"city": 0.45, "rural": 0.4, "village": 0.35, "other": 0.45},
     "capital_adequacy": {"city": 0.5, "rural": 0.5, "village": 0.45, "other": 0.5},
@@ -124,9 +126,11 @@ def score_bank(bank: dict, evidence: list[dict] | None = None,
 
     scale = (0.50 * rank("asset") + 0.25 * rank("revenue")
              + 0.15 * rank("deposits") + 0.10 * rank("employees"))
-    budget = 0.60 * rank("it_spend", 0.2) + 0.40 * (1.0 if bank.get("listed") else 0.0)
-    digital = (0.65 * DIGITAL_VALUE.get(bank.get("digital_tier") or "", 0.15)
-               + 0.35 * rank("news_count", 0.0))
+    tender_rank = rank("it_tender_12m_wan")
+    budget = (0.45 * rank("it_spend", 0.2) + 0.30 * tender_rank
+              + 0.25 * (1.0 if bank.get("listed") else 0.0))
+    digital = (0.55 * DIGITAL_VALUE.get(bank.get("digital_tier") or "", 0.15)
+               + 0.25 * rank("news_count", 0.0) + 0.20 * tender_rank)
     # Risk pressure now also reflects disclosed asset quality and capital buffers.
     npl = bank.get("npl_ratio")
     car = bank.get("capital_adequacy")
@@ -191,6 +195,12 @@ def score_bank(bank: dict, evidence: list[dict] | None = None,
                 factors.append(f"资本充足率 {car:.2f}%，低于样本三成")
         if ldr_fit >= 0.06:
             factors.append(f"存贷比 {ldr:.1f}%，信贷资产敞口较高")
+        tender_wan = bank.get("it_tender_12m_wan")
+        if tender_wan and weights["budget"] >= 0.2:
+            factors.append(
+                f"近12个月公开 IT 中标采购 {tender_wan:,.0f} 万元"
+                f"（{bank.get('it_tender_with_amount') or 0} 项有金额）"
+            )
 
         ev = [e for e in evidence if e.get("capability_id") == cap_id]
         if ev:

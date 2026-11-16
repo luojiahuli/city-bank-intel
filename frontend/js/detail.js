@@ -30,6 +30,7 @@ const KIND_LABEL = {
   penalty: "行政处罚",
   governance: "董监高",
   report: "财报",
+  tender: "招投标",
   other: "其他",
 };
 
@@ -461,6 +462,16 @@ export class DetailPanel {
   }
 
   _financeHtml(d) {
+    const tenderWan = d.it_tender_12m_wan != null
+      ? `${nf.format(d.it_tender_12m_wan)} 万元` : null;
+    const tender24Wan = d.it_tender_24m_wan != null
+      ? `${nf.format(d.it_tender_24m_wan)} 万元` : null;
+    const tenderCount = d.it_tender_count
+      ? `${d.it_tender_count} 条${d.it_tender_with_amount ? `（${d.it_tender_with_amount} 条有金额）` : ""}`
+      : null;
+    const tenderDirs = (d.it_tender_categories || [])
+      .map((c) => `${c.label} ${c.count}`).join("、") || null;
+    const tenderNoAmount = d.it_tender_count ? "无披露金额" : "未检索到";
     const rows = [
       ["总资产", money(d.asset), d.asset_year ? `截至 ${d.asset_year}` : ""],
       ["营业收入", money(d.revenue)],
@@ -475,6 +486,12 @@ export class DetailPanel {
       ["存贷比", pct(d.loan_deposit_ratio)],
       ["风险概况（不良率分档）", d.risk_profile || "未披露"],
       ["IT 投入", money(d.it_spend)],
+      ...(d.it_tender_checked ? [
+        ["IT 采购（近12个月中标）", tenderWan || tenderNoAmount],
+        ["IT 采购（近24个月）", tender24Wan || tenderNoAmount],
+        ["IT 采购记录数", tenderCount || "未检索到"],
+        ["主要采购方向", tenderDirs || "未检索到"],
+      ] : []),
       ["数字化活跃度", d.digital_tier || "未采集"],
       ["海外业务", d.overseas == null ? "未披露" : d.overseas ? "有" : "无"],
       ["上市板块", d.listed || "未上市"],
@@ -490,13 +507,17 @@ export class DetailPanel {
       ["净息差", pct(d.nim)],
     ].filter(([, v]) => v != null);
     rows.push(...riskRows);
-    const disclosed = rows.filter(([, v]) => v && v !== "未披露" && v !== "未采集").length;
+    const unknown = new Set(["未披露", "未采集", "未检索到", "无披露金额"]);
+    const known = (v) => v != null && !unknown.has(v);
+    const disclosed = rows.filter(([, v]) => known(v)).length;
     const body = rows
       .map(
-        ([k, v, noteText]) =>
-          `<dt>${esc(k)}</dt><dd>${v && v !== "未披露" && v !== "未采集" ? esc(v) : '<span style="color:#4e5b70">未披露</span>'}${
+        ([k, v, noteText]) => {
+          const shown = v == null ? "未披露" : v;
+          return `<dt>${esc(k)}</dt><dd>${known(v) ? esc(shown) : `<span style="color:#4e5b70">${esc(shown)}</span>`}${
             noteText ? `<span style="color:#5a6a82;font-size:10px"> · ${esc(noteText)}</span>` : ""
-          }</dd>`
+          }</dd>`;
+        }
       )
       .join("");
     const financialSources = (d.sources || []).filter((s) =>
@@ -514,9 +535,35 @@ export class DetailPanel {
         }</div>`;
       })
       .join("");
+    const tenderItems = (d.it_tenders || []).map((t) => {
+      const url = safeUrl(t.url);
+      const title = url
+        ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(t.title || "未命名项目")}</a>`
+        : esc(t.title || "未命名项目");
+      const meta = [
+        dateText(t.date),
+        t.stage,
+        t.category,
+        t.amount_wan ? `${nf.format(t.amount_wan)} 万元` : null,
+        t.source_domain,
+      ].filter(Boolean);
+      return `<div class="news-item">${title}
+        <div class="news-meta">${meta.map((m) => `<span>${esc(m)}</span>`).join("")}</div>
+      </div>`;
+    }).join("");
+    const tenderBlock = d.it_tender_checked
+      ? block(
+          "近期 IT 招投标（公开中标/采购公告）",
+          (tenderItems || `<div class="note">未检索到该行公开 IT 招投标记录。</div>`) +
+            (tenderItems
+              ? `<div class="side-note" style="margin-top:8px">来自公开招标/中标公告，金额为不完全统计，不等同于年度 IT 投入。</div>`
+              : "")
+        )
+      : "";
     return `
       <div class="note">已披露 ${disclosed} / ${rows.length} 项。未在公开资料中确认的字段一律标注“未披露”，不做推算。</div>
       <div class="kv" style="margin-top:14px">${body}</div>
+      ${tenderBlock}
       ${src ? block("财务来源", src) : ""}
     `;
   }
