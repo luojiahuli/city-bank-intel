@@ -77,6 +77,13 @@ RESULT_WORDS = ("中标", "成交", "结果公示", "结果公告", "候选人")
 BLOCK_TITLES = ("短视频大全", "360图片", "图片", "视频", "百科", "贴吧",
                 "问答", "文库", "地图", "最新招标采购公告", "招标采购公告_第",
                 "采购公告_第", "招标信息_第", "最新招标公告", "采购动态")
+# Company-profile and portal-listing pages match the bank name but not a tender.
+JUNK_TITLES = ("企查查", "启信宝", "水滴信用", "水滴标讯", "工商信息", "公司简介",
+               "企业简介", "经营信息", "招投标信息", "中标信息", "门户网站",
+               "首页", "相关消息", "成交额", "股价", "注册资本")
+INTENT_WORDS = STAGE_WORDS + ("采购", "定向采购", "大单", "项目", "改造")
+BAD_AMOUNT_CONTEXT = ("成交额", "交易额", "营业收入", "营收", "净利润", "注册资本",
+                      "市值", "基金", "股价", "总资产", "资产规模")
 NON_IT_WORDS = ("物业", "装修", "食堂", "保洁", "安保", "押运", "审计", "评估",
                 "保险", "存款", "开户", "账户", "基金", "托管", "现金管理",
                 "绿植", "车辆", "印刷", "广告", "家具", "空调")
@@ -124,6 +131,8 @@ def _amount(text: str) -> float | None:
         if not 1.0 <= wan <= 5_000_000.0:
             continue
         ctx = (text or "")[max(0, m.start() - 24):m.start()]
+        if any(word in ctx for word in BAD_AMOUNT_CONTEXT):
+            continue
         score = 2 if re.search(
             r"(中标金额|成交金额|中标价|中标总价|预算金额|采购预算|项目金额|总金额)", ctx
         ) else 1
@@ -359,11 +368,21 @@ def _fetch_amount(url: str) -> float | None:
     return amount
 
 
+def _title_ok(bank: dict, title: str) -> bool:
+    flat = re.sub(r"\s+", "", title or "")
+    if any(word in flat for word in BLOCK_TITLES + JUNK_TITLES):
+        return False
+    tokens = _bank_tokens(bank)
+    if not any(tok in flat for tok in tokens):
+        return False
+    return any(word in flat for word in INTENT_WORDS)
+
+
 def _bank_item(bank: dict, row: dict) -> dict | None:
     title = row["title"]
     body = row["text"]
     flat = re.sub(r"\s+", "", f"{title}{body}")
-    if any(word in flat for word in BLOCK_TITLES):
+    if not _title_ok(bank, title):
         return None
     tokens = _bank_tokens(bank)
     if not tokens or not any(tok in flat for tok in tokens):

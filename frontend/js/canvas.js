@@ -17,6 +17,10 @@ const EDGE_STYLE = {
   similar: { color: "rgba(56,189,248,0.45)", width: 0.9 },
   it: { color: "rgba(96,165,250,0.15)", width: 0.65 },
   digital: { color: "rgba(167,139,250,0.13)", width: 0.65 },
+  tender_high: { color: "rgba(45,212,191,0.42)", width: 1.05 },
+  tender_mid: { color: "rgba(45,212,191,0.3)", width: 0.9 },
+  tender_low: { color: "rgba(45,212,191,0.22)", width: 0.78 },
+  tender_record: { color: "rgba(45,212,191,0.14)", width: 0.65 },
   huawei: { color: "rgba(255,138,76,0.14)", width: 0.7 },
   huaweiHigh: { color: "rgba(255,138,76,0.24)", width: 0.85 },
   governance: { color: "rgba(226,232,240,0.3)", width: 0.9 },
@@ -120,6 +124,9 @@ export class GraphCanvas {
       }
       this._similarIds = ids;
     }
+    if (view === "it") {
+      this._itIds = new Set(this.edges[view].map((link) => link.source));
+    }
     if (view === this.activeView) {
       this._rebuildQuad();
       this._mark();
@@ -166,6 +173,9 @@ export class GraphCanvas {
       if (!this.visible || this.visible.has(node.id)) {
         if (this.activeView === "similar" && this._similarIds) {
           return this._similarIds.has(node.id);
+        }
+        if (this.activeView === "it" && this._itIds) {
+          return this._itIds.has(node.id);
         }
         return true;
       }
@@ -644,7 +654,9 @@ export class GraphCanvas {
       if (!a || !b) continue;
       let styleKey = this.activeView;
       if (this.activeView === "it") {
-        styleKey = String(link.target).startsWith("dig_") ? "digital" : "it";
+        const target = String(link.target);
+        styleKey = target.startsWith("dig_") ? "digital"
+          : target.startsWith("tender_") ? target : "it";
       }
       let style = EDGE_STYLE[styleKey] || EDGE_STYLE.region;
       if (isHuawei && (link.score || 0) >= 62) style = EDGE_STYLE.huaweiHigh;

@@ -243,17 +243,6 @@
       "group": "city",
       "items": [
         {
-          "title": "上饶银行",
-          "date": "2026-11-06",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.srbank.cn/srbank/",
-          "source_domain": "srbank.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:49:17+00:00"
-        },
-        {
           "title": "[省本级] 上饶银行 桌面云服务器 采购 项目 中标 结果公示",
           "date": "2026-09-30",
           "category": "信创与硬件",
@@ -287,17 +276,6 @@
           "fetched_at": "2026-11-15T14:49:17+00:00"
         },
         {
-          "title": "上饶银行 股份有限公司企业发展 - 企查查",
-          "date": "2026-03-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/creport/358817987cf9c624021511dbfac4a698.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:49:17+00:00"
-        },
-        {
           "title": "95万元! 上饶银行 国产数据库TDSQL许可扩容采购项目,华云中盛科技 中标 -资金_ 天眼查新闻",
           "date": "2026-01-23",
           "category": "信创与硬件",
@@ -323,16 +301,16 @@
       "errors": [],
       "it_tender_12m_wan": 147.0,
       "it_tender_24m_wan": 147.0,
-      "it_tender_count": 7,
+      "it_tender_count": 5,
       "it_tender_with_amount": 2,
-      "it_tender_latest": "2026-11-06",
+      "it_tender_latest": "2026-09-30",
       "by_year": {
-        "2026": 6,
+        "2026": 4,
         "2024": 1
       },
       "by_category": {
-        "其他 IT": 3,
-        "信创与硬件": 4
+        "信创与硬件": 3,
+        "其他 IT": 2
       },
       "updated_at": "2026-11-15T14:49:17+00:00"
     },
@@ -596,17 +574,6 @@
       "group": "city",
       "items": [
         {
-          "title": "临商银行 股份有限公司 - 企查查",
-          "date": "2026-11-05",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/firm/2a54fee051c15b8a70ac2205bf4c012c.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:49:56+00:00"
-        },
-        {
           "title": "兰山区 临商银行 信创集中式数据库 采购 项目B包-结果公示-山东招标网",
           "date": "2026-04-28",
           "category": "信创与硬件",
@@ -720,15 +687,15 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 11,
+      "it_tender_count": 10,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-05",
+      "it_tender_latest": "2026-04-28",
       "by_year": {
-        "2026": 8,
+        "2026": 7,
         "2025": 3
       },
       "by_category": {
-        "信创与硬件": 11
+        "信创与硬件": 10
       },
       "updated_at": "2026-11-15T14:49:56+00:00"
     },
@@ -1026,17 +993,6 @@
       "group": "city",
       "items": [
         {
-          "title": "四川省 乐山市信息 技术 中标 公告招投标 信息 查询-水滴标讯",
-          "date": "2026-11-09",
-          "category": "人工智能",
-          "stage": "中标/结果",
-          "amount_wan": 28.66,
-          "url": "https://biaoxun.shuidi.cn/search/p510000_c511100_n2_i8.html",
-          "source_domain": "biaoxun.shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:50:42+00:00"
-        },
-        {
           "title": "长亮 科技 (300348): 中标乐山市商业银行 股份有限公司 采购 项目, 中标 金额为885.00万元_新浪财经_新浪网",
           "date": "2026-09-30",
           "category": "核心系统",
@@ -1044,17 +1000,6 @@
           "amount_wan": 885.0,
           "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-09-30/doc-initrftc2556869.shtml",
           "source_domain": "finance.sina.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:50:42+00:00"
-        },
-        {
-          "title": "乐山商业银行 核心 系统 全栈 信创 适配改造项目采购结果 公告",
-          "date": "2026-09-30",
-          "category": "核心系统",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.so.com/link?m=bN0VBik2BWJZht153hjsq0OP79JS%2FWnLqIRYqyYI80r%2FXztACHFZLYzx%2Bhq%2BCQ%2BlcTaS5FvVuJM1A3lZ%2BbZyxRWll1flu%2FFnt%2BH1IgGM5siUobftb4gZI87EoLkZYx1Tkj6PjQ%2Fgl1GDcSFZ06F2CVcS7DzBzqUhRfX62rXV47O%2FAAQb%2Fz6Q2qEt2LrRlRT04482gIQ%2Bs8RttBnB1sKnYCtL%2BrCgREAKxVd2uvL9IOjrGDWWQmm3A795r6CufhVB4IMFM5RDSwjPmxDc%2FTzVXjVht34rS1xCvs6T3r1Z6gHB9ie5pD%2BE7S8uJvLg6ly6JYWKQjauYCVHyE%2FNgjfMK2ppDwURRRm0ix1sdikBeMr0zi4bzq723oYXeXSFL5xIGprLJkQ%3D%3D",
-          "source_domain": "so.com",
           "source_type": "media",
           "fetched_at": "2026-11-15T14:50:42+00:00"
         },
@@ -1104,18 +1049,17 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 1114.66,
-      "it_tender_24m_wan": 1114.66,
-      "it_tender_count": 7,
-      "it_tender_with_amount": 4,
-      "it_tender_latest": "2026-11-09",
+      "it_tender_12m_wan": 1086.0,
+      "it_tender_24m_wan": 1086.0,
+      "it_tender_count": 5,
+      "it_tender_with_amount": 3,
+      "it_tender_latest": "2026-09-30",
       "by_year": {
-        "2026": 6,
+        "2026": 4,
         "2025": 1
       },
       "by_category": {
-        "人工智能": 1,
-        "核心系统": 2,
+        "核心系统": 1,
         "信创与硬件": 3,
         "其他 IT": 1
       },
@@ -1559,17 +1503,6 @@
       "group": "city",
       "items": [
         {
-          "title": "内蒙古银行 中标 信息科技 采购 的最新相关消息",
-          "date": "2026-11-10",
-          "category": "人工智能",
-          "stage": "中标/结果",
-          "amount_wan": 70000.0,
-          "url": "http://news.so.com/ns?q=%e5%86%85%e8%92%99%e5%8f%a4%e9%93%b6%e8%a1%8c%20%e4%b8%ad%e6%a0%87%20%e4%bf%a1%e6%81%af%e7%a7%91%e6%8a%80%20%e9%87%87%e8%b4%ad&src=onebox",
-          "source_domain": "news.so.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:51:27+00:00"
-        },
-        {
           "title": "银信 科技 (300231): 中标内蒙古银行 股份有限公司 采购 项目, 中标 金额为168.85万元",
           "date": "2026-05-28",
           "category": "信创与硬件",
@@ -1670,17 +1603,16 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 70358.85,
-      "it_tender_24m_wan": 70358.85,
-      "it_tender_count": 10,
-      "it_tender_with_amount": 3,
-      "it_tender_latest": "2026-11-10",
+      "it_tender_12m_wan": 358.85,
+      "it_tender_24m_wan": 358.85,
+      "it_tender_count": 9,
+      "it_tender_with_amount": 2,
+      "it_tender_latest": "2026-05-28",
       "by_year": {
-        "2026": 6,
+        "2026": 5,
         "2025": 4
       },
       "by_category": {
-        "人工智能": 1,
         "信创与硬件": 8,
         "运维服务": 1
       },
@@ -2020,31 +1952,15 @@
       "name": "台州银行股份有限公司",
       "short_name": "台州银行",
       "group": "city",
-      "items": [
-        {
-          "title": "2025年智慧城管综合管理平台 信创 改造项目招标 公告",
-          "date": "2025-09-05",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "http://www.zjxc.gov.cn/col/col1229425309/art/2025/art_94aca70c808a49548360d90518b99de4.html",
-          "source_domain": "zjxc.gov.cn",
-          "source_type": "official",
-          "fetched_at": "2026-11-16T00:21:55+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 1,
+      "it_tender_count": 0,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2025-09-05",
-      "by_year": {
-        "2025": 1
-      },
-      "by_category": {
-        "信创与硬件": 1
-      },
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:21:55+00:00"
     },
     "bk_b0302h222010001": {
@@ -2064,17 +1980,6 @@
           "fetched_at": "2026-11-15T14:52:49+00:00"
         },
         {
-          "title": "数据要素招标中标项目动态(11月)|服务|金额|预算|产业|中国电信_手机新浪网",
-          "date": "2024-12-07",
-          "category": "网络安全",
-          "stage": "中标/结果",
-          "amount_wan": 368.0,
-          "url": "https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.cn%2F2024-12-07%2Fdetail-incyrrrn7716814.d.html",
-          "source_domain": "cj.sina.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T14:52:49+00:00"
-        },
-        {
           "title": "新项目@吉林银行适配性改造基础软件采购项目招标公告_搜狐网",
           "date": "2024-09-13",
           "category": "其他 IT",
@@ -2088,17 +1993,16 @@
       ],
       "errors": [],
       "it_tender_12m_wan": 1.8,
-      "it_tender_24m_wan": 369.8,
-      "it_tender_count": 3,
-      "it_tender_with_amount": 2,
+      "it_tender_24m_wan": 1.8,
+      "it_tender_count": 2,
+      "it_tender_with_amount": 1,
       "it_tender_latest": "2025-12-17",
       "by_year": {
         "2025": 1,
-        "2024": 2
+        "2024": 1
       },
       "by_category": {
         "人工智能": 1,
-        "网络安全": 1,
         "其他 IT": 1
       },
       "updated_at": "2026-11-15T14:52:49+00:00"
@@ -2221,17 +2125,6 @@
           "fetched_at": "2026-11-16T00:22:41+00:00"
         },
         {
-          "title": "黑龙江公共资源交易网",
-          "date": "2024-07-02",
-          "category": "网络安全",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://ggzyjyw.hlj.gov.cn/jyfwdt/003002/003002002/003002002004/20240702/2c9087bb9068efc7019072b8263b2391.html",
-          "source_domain": "ggzyjyw.hlj.gov.cn",
-          "source_type": "official",
-          "fetched_at": "2026-11-16T00:22:41+00:00"
-        },
-        {
           "title": "哈尔滨市哈尔滨银行 2023年关键系统光纤存储 采购 项目- 中标 公示-黑龙江招标网",
           "date": "2024-02-29",
           "category": "信创与硬件",
@@ -2246,15 +2139,15 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 5,
+      "it_tender_count": 4,
       "it_tender_with_amount": 0,
       "it_tender_latest": "2025-07-29",
       "by_year": {
         "2025": 1,
-        "2024": 4
+        "2024": 3
       },
       "by_category": {
-        "网络安全": 2,
+        "网络安全": 1,
         "信创与硬件": 3
       },
       "updated_at": "2026-11-16T00:22:41+00:00"
@@ -2442,17 +2335,6 @@
       "group": "city",
       "items": [
         {
-          "title": "四川天府银行 中标公告 系统 信创 的最新相关消息",
-          "date": "2026-11-10",
-          "category": "人工智能",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "http://news.so.com/ns?q=%e5%9b%9b%e5%b7%9d%e5%a4%a9%e5%ba%9c%e9%93%b6%e8%a1%8c%20%e4%b8%ad%e6%a0%87%e5%85%ac%e5%91%8a%20%e7%b3%bb%e7%bb%9f%20%e4%bf%a1%e5%88%9b&src=onebox",
-          "source_domain": "news.so.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:23:30+00:00"
-        },
-        {
           "title": "四川天府银行 2026年智能网点设备供应商入围招标项目(包件1- 信创 CRS) 中标 结果 公告 -千里马招标网",
           "date": "2026-10-08",
           "category": "信创与硬件",
@@ -2522,15 +2404,14 @@
       "errors": [],
       "it_tender_12m_wan": 315.0,
       "it_tender_24m_wan": 315.0,
-      "it_tender_count": 7,
+      "it_tender_count": 6,
       "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-10",
+      "it_tender_latest": "2026-10-08",
       "by_year": {
-        "2026": 5,
+        "2026": 4,
         "2025": 2
       },
       "by_category": {
-        "人工智能": 1,
         "信创与硬件": 3,
         "其他 IT": 1,
         "运维服务": 1,
@@ -2871,17 +2752,6 @@
           "fetched_at": "2026-11-16T00:25:19+00:00"
         },
         {
-          "title": "宁波东海银行 股份有限公司 - 企查查",
-          "date": "2026-09-29",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/firm/6a09c0f2ea4b336ddac1a86c32974cb0.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:25:19+00:00"
-        },
-        {
           "title": "宁波东海银行 股份有限公司招标 采购信息 -剑鱼标讯",
           "date": "2026-05-29",
           "category": "其他 IT",
@@ -2929,14 +2799,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 6,
+      "it_tender_count": 5,
       "it_tender_with_amount": 0,
       "it_tender_latest": "2026-11-15",
       "by_year": {
-        "2026": 6
+        "2026": 5
       },
       "by_category": {
-        "其他 IT": 5,
+        "其他 IT": 4,
         "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:25:19+00:00"
@@ -2947,17 +2817,6 @@
       "group": "city",
       "items": [
         {
-          "title": "宁波通商银行 门户网站-首页",
-          "date": "2026-10-26",
-          "category": "运维服务",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.ncbank.cn/",
-          "source_domain": "ncbank.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:25:45+00:00"
-        },
-        {
           "title": "宁波通商银行 2026年终端浏览器国产化替代 采购 项目 中标 (成交)结果公告-千里马招标网",
           "date": "2026-09-10",
           "category": "信创与硬件",
@@ -2965,28 +2824,6 @@
           "amount_wan": null,
           "url": "https://www.qianlima.com/bid-629937420.html",
           "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:25:45+00:00"
-        },
-        {
-          "title": "宁波通商银行 门户网站- 宁波通商银行 精准测试管理 系统 建设采购项目 中标 (成交)结果 公告",
-          "date": "2026-06-24",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.ncbank.cn/ncbank/2026-06/24/article_2026062410214723166.shtml",
-          "source_domain": "ncbank.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:25:45+00:00"
-        },
-        {
-          "title": "宁波通商银行 门户网站- 宁波通商银行 2026年纸币冠字号管理系统重建 采购 项目 中标 (成交)结果公告",
-          "date": "2026-06-04",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.ncbank.cn/ncbank/2026-06/04/article_2026060413532211947.shtml",
-          "source_domain": "ncbank.cn",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:25:45+00:00"
         },
@@ -3049,17 +2886,16 @@
       "errors": [],
       "it_tender_12m_wan": 3.8,
       "it_tender_24m_wan": 3.8,
-      "it_tender_count": 9,
+      "it_tender_count": 6,
       "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-10-26",
+      "it_tender_latest": "2026-09-10",
       "by_year": {
-        "2026": 7,
+        "2026": 4,
         "2025": 2
       },
       "by_category": {
-        "运维服务": 1,
         "信创与硬件": 5,
-        "其他 IT": 3
+        "其他 IT": 1
       },
       "updated_at": "2026-11-16T00:25:45+00:00"
     },
@@ -3299,28 +3135,6 @@
       "group": "city",
       "items": [
         {
-          "title": "广州第三方调查招标采购-广东招标网",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://gd.bidcenter.com.cn/zhaobiao/zbkeyw-28118-440100-0-3.html",
-          "source_domain": "gd.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:29:52+00:00"
-        },
-        {
-          "title": "广州大幅面招标采购-广东招标网",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://gd.bidcenter.com.cn/zhaobiao/zbkeyw-3093-440100-0-0.html",
-          "source_domain": "gd.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:29:52+00:00"
-        },
-        {
           "title": "广东华兴银行_广东华兴银行股份有限公司采购信创打印机并与供应商签署框架协议采购项目招标预审公告",
           "date": "2025-11-05",
           "category": "信创与硬件",
@@ -3346,15 +3160,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 4,
+      "it_tender_count": 2,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_latest": "2025-11-05",
       "by_year": {
-        "2026": 2,
         "2025": 2
       },
       "by_category": {
-        "信创与硬件": 4
+        "信创与硬件": 2
       },
       "updated_at": "2026-11-15T15:29:52+00:00"
     },
@@ -3363,39 +3176,6 @@
       "short_name": "广东南粤银行",
       "group": "city",
       "items": [
-        {
-          "title": "上海星耀蓝图信息科技有限公司-水滴信用",
-          "date": "2026-11-12",
-          "category": "核心系统",
-          "stage": "中标/结果",
-          "amount_wan": 860.0,
-          "url": "https://shuidi.cn/company-c7886aaaa9a9f2b811680aacc59f0b08.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:30:02+00:00"
-        },
-        {
-          "title": "广东南粤银行新核心系统群工程之基础设施第一批pc服务器项…-采招网",
-          "date": "2026-11-12",
-          "category": "核心系统",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://m.bidcenter.com.cn/news-1-453166275.html",
-          "source_domain": "m.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:30:02+00:00"
-        },
-        {
-          "title": "广东南粤银行股份有限公司_招投标信息-企查查",
-          "date": "2026-11-07",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/ctenderlist/fb73cc328583666756ed645b1cae4c5f",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:30:02+00:00"
-        },
         {
           "title": "连下两城!gbase数据库中标广东南粤银行、梅州客商银行_搜狐网",
           "date": "2025-09-16",
@@ -3442,20 +3222,18 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 860.0,
-      "it_tender_24m_wan": 860.0,
-      "it_tender_count": 7,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 4,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": "2025-09-16",
       "by_year": {
-        "2026": 3,
         "2025": 2,
         "2024": 2
       },
       "by_category": {
-        "核心系统": 2,
-        "其他 IT": 2,
-        "信创与硬件": 3
+        "信创与硬件": 3,
+        "其他 IT": 1
       },
       "updated_at": "2026-11-15T15:30:02+00:00"
     },
@@ -3742,94 +3520,6 @@
       "group": "city",
       "items": [
         {
-          "title": "河北信创中标结果",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/508619/index_9_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "北京怡和天润科技有限公司-水滴信用",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 388.0,
-          "url": "https://shuidi.cn/company-7f6eaedeabc1b4fe7816c952554de38f.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "河北私有云招标采购",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/507941/index_9.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "河北便携式中标结果",
-          "date": "2026-11-10",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/214120/index_9_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "桥东区公共资源交易中心招标网",
-          "date": "2026-11-09",
-          "category": "人工智能",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://m.chinabidding.cn/dwzb_482/ggzyjyzxzbw/",
-          "source_domain": "m.chinabidding.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "河北国软中标结果",
-          "date": "2026-11-06",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/364916/index_9_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "桥东区采购与信息招标网_桥东区采购和招标",
-          "date": "2026-11-04",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.chinabidding.cn/dw_482_zbtbzhw/8.html",
-          "source_domain": "chinabidding.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "河北云平台招标采购",
-          "date": "2026-11-03",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/506401/index_9.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
           "title": "海量数据中标:张家口银行股份有限公司2025年虚拟化维保服务采购项目中标候选人公示_搜狐网",
           "date": "2025-11-14",
           "category": "信创与硬件",
@@ -3838,17 +3528,6 @@
           "url": "https://m.sohu.com/a/954265541_121319643/",
           "source_domain": "m.sohu.com",
           "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:22+00:00"
-        },
-        {
-          "title": "沽源县科学技术和商务局新质生产力数字应用项目公开招标公告",
-          "date": "2025-11-11",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "http://www.ccgp.gov.cn/cggg/dfgg/gkzb/202511/t20251111_25670210.htm",
-          "source_domain": "ccgp.gov.cn",
-          "source_type": "official",
           "fetched_at": "2026-11-15T15:46:22+00:00"
         },
         {
@@ -3864,19 +3543,17 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 388.0,
-      "it_tender_24m_wan": 789.0,
-      "it_tender_count": 11,
-      "it_tender_with_amount": 2,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": 401.0,
+      "it_tender_count": 2,
+      "it_tender_with_amount": 1,
+      "it_tender_latest": "2025-11-14",
       "by_year": {
-        "2026": 8,
-        "2025": 3
+        "2025": 2
       },
       "by_category": {
-        "信创与硬件": 8,
-        "人工智能": 1,
-        "其他 IT": 2
+        "信创与硬件": 1,
+        "其他 IT": 1
       },
       "updated_at": "2026-11-15T15:46:22+00:00"
     },
@@ -3885,50 +3562,6 @@
       "short_name": "德州银行",
       "group": "city",
       "items": [
-        {
-          "title": "德州银行股份有限公司招标中标信息-启信宝",
-          "date": "2026-11-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/29df409b-acd8-43ab-a436-42f668d51d33",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:33+00:00"
-        },
-        {
-          "title": "山东阳光工程网",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/hot3910021/",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:33+00:00"
-        },
-        {
-          "title": "康旭科技有限公司-康旭科技",
-          "date": "2026-10-14",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.bidizhaobiao.com/company_215578042129403904.html",
-          "source_domain": "m.bidizhaobiao.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:33+00:00"
-        },
-        {
-          "title": "德州银行股份有限公司经营信息-企查查",
-          "date": "2026-10-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/crun/9cfa2d95937f0b8798e059fc3bb6511c.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:33+00:00"
-        },
         {
           "title": "德州银行采购信创版邮件系统项目中标结果公示-采招网",
           "date": "2025-12-22",
@@ -3939,43 +3572,19 @@
           "source_domain": "m.bidcenter.com.cn",
           "source_type": "media",
           "fetched_at": "2026-11-15T15:46:33+00:00"
-        },
-        {
-          "title": "顶点软件中标:办公系统信创升级改造项目成交结果公示_天眼_信息",
-          "date": "2025-11-23",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.sohu.com/a/957489437_121319643",
-          "source_domain": "sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:33+00:00"
-        },
-        {
-          "title": "百万信创项目!!总金额超过五千万!_搜狐网",
-          "date": "2024-04-17",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.sohu.com/a/772283976_121932604/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T15:46:33+00:00"
         }
       ],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 7,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-13",
+      "it_tender_latest": "2025-12-22",
       "by_year": {
-        "2026": 4,
-        "2025": 2,
-        "2024": 1
+        "2025": 1
       },
       "by_category": {
-        "信创与硬件": 7
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-15T15:46:33+00:00"
     },
@@ -4161,31 +3770,19 @@
           "source_domain": "sohu.com",
           "source_type": "media",
           "fetched_at": "2026-11-15T16:05:06+00:00"
-        },
-        {
-          "title": "成都银行",
-          "date": "2024-09-03",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.bocd.com.cn/cggg-zonghang-cgjggg/list7.html",
-          "source_domain": "bocd.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T16:05:06+00:00"
         }
       ],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": 3400.0,
-      "it_tender_count": 4,
+      "it_tender_count": 3,
       "it_tender_with_amount": 1,
       "it_tender_latest": "2025-09-27",
       "by_year": {
-        "2025": 3,
-        "2024": 1
+        "2025": 3
       },
       "by_category": {
-        "其他 IT": 2,
+        "其他 IT": 1,
         "信创与硬件": 2
       },
       "updated_at": "2026-11-15T16:05:06+00:00"
@@ -4195,28 +3792,6 @@
       "short_name": "承德银行",
       "group": "city",
       "items": [
-        {
-          "title": "上海星耀蓝图信息科技有限公司-水滴信用",
-          "date": "2026-11-12",
-          "category": "核心系统",
-          "stage": "中标/结果",
-          "amount_wan": 960.0,
-          "url": "https://shuidi.cn/company-c7886aaaa9a9f2b811680aacc59f0b08.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T16:05:18+00:00"
-        },
-        {
-          "title": "承德系统建设招标采购-河北招标网",
-          "date": "2026-09-07",
-          "category": "核心系统",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://hbs.bidcenter.com.cn/zhaobiao/zbkeyw-20920-130800-4-0.html",
-          "source_domain": "hbs.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T16:05:18+00:00"
-        },
         {
           "title": "承德银行监管一表通系统信创服务器采购项目评审结果公示-移动支付网",
           "date": "2025-12-10",
@@ -4249,32 +3824,19 @@
           "source_domain": "m.mpaypass.com.cn",
           "source_type": "media",
           "fetched_at": "2026-11-15T16:05:18+00:00"
-        },
-        {
-          "title": "企业动态_移动支付手机支付企业新闻资讯_移动支付网",
-          "date": "2025-11-03",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.mpaypass.com.cn/news/?page=86&id=5",
-          "source_domain": "mpaypass.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T16:05:18+00:00"
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 1286.12,
-      "it_tender_24m_wan": 1286.12,
-      "it_tender_count": 6,
-      "it_tender_with_amount": 3,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_12m_wan": 326.12,
+      "it_tender_24m_wan": 326.12,
+      "it_tender_count": 3,
+      "it_tender_with_amount": 2,
+      "it_tender_latest": "2025-12-10",
       "by_year": {
-        "2026": 2,
-        "2025": 4
+        "2025": 3
       },
       "by_category": {
-        "核心系统": 2,
-        "信创与硬件": 2,
+        "信创与硬件": 1,
         "其他 IT": 2
       },
       "updated_at": "2026-11-15T16:05:18+00:00"
@@ -4360,33 +3922,22 @@
           "source_domain": "zhiliaobiaoxun.com",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:27:59+00:00"
-        },
-        {
-          "title": "辽宁软硬件产品招标 公告 _辽宁软硬件产品采购信息-比地招标网",
-          "date": "2025-09-08",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.bidizhaobiao.com/clsbzb/36_6901_01.html",
-          "source_domain": "bidizhaobiao.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:27:59+00:00"
         }
       ],
       "errors": [],
       "it_tender_12m_wan": 135.0,
       "it_tender_24m_wan": 305.0,
-      "it_tender_count": 8,
+      "it_tender_count": 7,
       "it_tender_with_amount": 2,
       "it_tender_latest": "2026-01-15",
       "by_year": {
         "2026": 1,
-        "2025": 7
+        "2025": 6
       },
       "by_category": {
         "其他 IT": 1,
         "运维服务": 1,
-        "信创与硬件": 6
+        "信创与硬件": 5
       },
       "updated_at": "2026-11-16T00:27:59+00:00"
     },
@@ -4591,39 +4142,6 @@
       "group": "city",
       "items": [
         {
-          "title": "昆仑银行股份有限公司_股东信息-企查查",
-          "date": "2026-11-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/cpartner/e593bd3f9b7eeefb9175fe8ab59d78c3",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:20+00:00"
-        },
-        {
-          "title": "昆仑银行_标签_网易出品",
-          "date": "2026-10-12",
-          "category": "人工智能",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "http://bj.news.163.com/keywords/6/0/66064ed194f6884c/1.html",
-          "source_domain": "bj.news.163.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:20+00:00"
-        },
-        {
-          "title": "北京浪潮计算机招标采购",
-          "date": "2026-09-24",
-          "category": "人工智能",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/169965/index_2.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:20+00:00"
-        },
-        {
           "title": "宇信科技中标:2025年-2026年昆仑银行信息科技驻场外包项目(七批次)-2025年-2026年昆仑银行信息科技驻场外包项目(七批次)-移动柜面系统、运营风险预警系统和绩效考核系统_搜狐网",
           "date": "2025-09-26",
           "category": "运维服务",
@@ -4671,17 +4189,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 7,
+      "it_tender_count": 4,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-13",
+      "it_tender_latest": "2025-09-26",
       "by_year": {
-        "2026": 3,
         "2025": 2,
         "2024": 2
       },
       "by_category": {
-        "信创与硬件": 1,
-        "人工智能": 2,
         "运维服务": 1,
         "数据平台": 2,
         "其他 IT": 1
@@ -4693,17 +4208,6 @@
       "short_name": "晋商银行",
       "group": "city",
       "items": [
-        {
-          "title": "晋商银行-晋商银行",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.bidizhaobiao.com/company_212326365722394624.html",
-          "source_domain": "bidizhaobiao.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:32+00:00"
-        },
         {
           "title": "晋商银行547万大单:飞致云、软通动力、南天(中)|代理商投资平台|北京|南天|技术有限公司|晋商银行|神州数码|软通动力|飞致云_手机网易网",
           "date": "2025-01-15",
@@ -4727,17 +4231,6 @@
           "fetched_at": "2026-11-15T17:21:32+00:00"
         },
         {
-          "title": "【一周观察】银行金融科技子公司再添2家，多家银行涉数据问题被罚-移动支付网",
-          "date": "2025-01-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 1577.16,
-          "url": "https://m.mpaypass.com.cn/news/202501/13110038.html",
-          "source_domain": "m.mpaypass.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:32+00:00"
-        },
-        {
           "title": "科大讯飞中标结果:晋商银行人工智能及知识库平台采购项目中标结果公示_招投标_数据解析_股票_证券之星",
           "date": "2024-11-06",
           "category": "人工智能",
@@ -4751,17 +4244,16 @@
       ],
       "errors": [],
       "it_tender_12m_wan": null,
-      "it_tender_24m_wan": 4224.16,
-      "it_tender_count": 5,
-      "it_tender_with_amount": 3,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_24m_wan": 2647.0,
+      "it_tender_count": 3,
+      "it_tender_with_amount": 2,
+      "it_tender_latest": "2025-01-15",
       "by_year": {
-        "2026": 1,
-        "2025": 3,
+        "2025": 2,
         "2024": 1
       },
       "by_category": {
-        "信创与硬件": 4,
+        "信创与硬件": 2,
         "人工智能": 1
       },
       "updated_at": "2026-11-15T17:21:32+00:00"
@@ -4771,39 +4263,6 @@
       "short_name": "曲靖市商业银行",
       "group": "city",
       "items": [
-        {
-          "title": "云南德远信息技术有限公司-水滴信用",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 121.57,
-          "url": "https://shuidi.cn/company-42aafa5974508ffcff6823dc5a256f3b.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:43+00:00"
-        },
-        {
-          "title": "云南信贷招标采购",
-          "date": "2026-11-12",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/507446/index_29.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:43+00:00"
-        },
-        {
-          "title": "云南点控科技有限公司知识产权-企查查",
-          "date": "2026-04-21",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/cassets/6161dc7a03c447e04d2f64b3a2d153aa.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T17:21:43+00:00"
-        },
         {
           "title": "南天信息中标曲靖市商业银行信息系统测评项目，服务期至2026年_信息化_信息安全_未来的",
           "date": "2025-10-24",
@@ -4828,19 +4287,17 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 121.57,
-      "it_tender_24m_wan": 121.57,
-      "it_tender_count": 5,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 2,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": "2025-10-24",
       "by_year": {
-        "2026": 3,
         "2025": 2
       },
       "by_category": {
-        "信创与硬件": 2,
-        "其他 IT": 2,
-        "网络安全": 1
+        "网络安全": 1,
+        "其他 IT": 1
       },
       "updated_at": "2026-11-15T17:21:43+00:00"
     },
@@ -5051,36 +4508,20 @@
       "name": "柳州银行股份有限公司",
       "short_name": "柳州银行",
       "group": "city",
-      "items": [
-        {
-          "title": "柳州银行股份有限公司_经营信息-启信宝",
-          "date": "2026-01-07",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": 359.0,
-          "url": "https://www.qixin.com/operation/a95e68f5-efc2-427b-a61d-51f9fdff2f14?section=pawneeInfo",
-          "source_domain": "qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:15+00:00"
-        }
-      ],
+      "items": [],
       "errors": [
         {
           "query": "柳州银行 中标公告 系统 信创",
           "error": "ReadTimeout"
         }
       ],
-      "it_tender_12m_wan": 359.0,
-      "it_tender_24m_wan": 359.0,
-      "it_tender_count": 1,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-01-07",
-      "by_year": {
-        "2026": 1
-      },
-      "by_category": {
-        "其他 IT": 1
-      },
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 0,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-15T19:57:15+00:00"
     },
     "bk_b1105h245030001": {
@@ -5088,61 +4529,6 @@
       "short_name": "桂林银行",
       "group": "city",
       "items": [
-        {
-          "title": "广西萃取塔中标结果",
-          "date": "2026-11-14",
-          "category": "网络安全",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/195928/index_6_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:27+00:00"
-        },
-        {
-          "title": "广西郧西网中标结果",
-          "date": "2026-11-10",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/196668/index_6_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:27+00:00"
-        },
-        {
-          "title": "桂林监察部",
-          "date": "2026-07-19",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/hot2110419/",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:27+00:00"
-        },
-        {
-          "title": "广西防伪招标采购",
-          "date": "2026-07-15",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/507822/index_6.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:27+00:00"
-        },
-        {
-          "title": "集采专栏-桂林银行",
-          "date": "2026-03-09",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.guilinbank.com.cn/api-portal/page-home/website/page/info/10000202",
-          "source_domain": "guilinbank.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:27+00:00"
-        },
         {
           "title": "宇信科技中标:桂林银行采购2026年智能客服系统开发服务项目(呼叫中心和知识库系统)(gyjc2022025139)采购结果公告_天眼_信息_整理",
           "date": "2025-12-21",
@@ -5202,19 +4588,17 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": 858.0,
-      "it_tender_count": 10,
+      "it_tender_count": 5,
       "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-14",
+      "it_tender_latest": "2025-12-21",
       "by_year": {
-        "2026": 5,
         "2025": 5
       },
       "by_category": {
-        "网络安全": 1,
-        "其他 IT": 2,
-        "信创与硬件": 4,
         "人工智能": 2,
-        "信贷风控": 1
+        "信创与硬件": 1,
+        "信贷风控": 1,
+        "其他 IT": 1
       },
       "updated_at": "2026-11-15T19:57:27+00:00"
     },
@@ -5223,39 +4607,6 @@
       "short_name": "汉口银行",
       "group": "city",
       "items": [
-        {
-          "title": "武汉汉达瑞科技有限公司招标中标信息-启信宝",
-          "date": "2026-11-06",
-          "category": "运维服务",
-          "stage": "中标/结果",
-          "amount_wan": 78.8,
-          "url": "https://m.qixin.com/bidding/212fa3e2-d6c5-418e-8ed0-01e398f75035",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:37+00:00"
-        },
-        {
-          "title": "湖北操作系统中标结果",
-          "date": "2026-10-23",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/507503/index_12_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:37+00:00"
-        },
-        {
-          "title": "深圳市银之杰科技股份有限公司_招投标信息-企查查",
-          "date": "2026-06-02",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 79.0,
-          "url": "https://www.qcc.com/ctenderlist/bd935059967274e2819ea3c9789221cf",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-15T19:57:37+00:00"
-        },
         {
           "title": "恒生电子中标结果:汉口银行中间业务平台信创改造升级一期项目成交结果公告_搜狐网",
           "date": "2025-06-04",
@@ -5269,18 +4620,16 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 157.8,
-      "it_tender_24m_wan": 157.8,
-      "it_tender_count": 4,
-      "it_tender_with_amount": 2,
-      "it_tender_latest": "2026-11-06",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 1,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": "2025-06-04",
       "by_year": {
-        "2026": 3,
         "2025": 1
       },
       "by_category": {
-        "运维服务": 1,
-        "信创与硬件": 3
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-15T19:57:37+00:00"
     },
@@ -5559,50 +4908,6 @@
           "fetched_at": "2026-11-16T00:30:27+00:00"
         },
         {
-          "title": "柜员机招标采购-招标公告-中标结果-比地招标网",
-          "date": "2026-11-12",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.bidizhaobiao.com/clsbzb/juyuanji",
-          "source_domain": "m.bidizhaobiao.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:30:27+00:00"
-        },
-        {
-          "title": "柜员机采购网",
-          "date": "2026-11-11",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/zb/hy_126903_1/",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:30:27+00:00"
-        },
-        {
-          "title": "山东银弘电子科技有限公司-水滴信用",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 139.4,
-          "url": "https://shuidi.cn/company-f2c576de599f6020949e7f37f5643813.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:30:27+00:00"
-        },
-        {
-          "title": "信创dhr项目为什么要属地交付?夏谷软件24城网点布局与落地案例_操作系统_服务_公告",
-          "date": "2026-08-27",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 9.66,
-          "url": "https://m.sohu.com/a/1099219081_121484862/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:30:27+00:00"
-        },
-        {
           "title": "泰安银行数字化营销平台建设项目中标结果公告_评审_采购_项目名称",
           "date": "2025-07-28",
           "category": "其他 IT",
@@ -5626,18 +4931,18 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 149.06,
-      "it_tender_24m_wan": 847.06,
-      "it_tender_count": 7,
-      "it_tender_with_amount": 3,
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": 698.0,
+      "it_tender_count": 3,
+      "it_tender_with_amount": 1,
       "it_tender_latest": "2026-11-12",
       "by_year": {
-        "2026": 5,
+        "2026": 1,
         "2025": 2
       },
       "by_category": {
-        "其他 IT": 4,
-        "信创与硬件": 3
+        "其他 IT": 2,
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:30:27+00:00"
     },
@@ -5660,31 +4965,15 @@
       "name": "济宁银行股份有限公司",
       "short_name": "济宁银行",
       "group": "city",
-      "items": [
-        {
-          "title": "信创办公打印机采购入围项目竞争性磋商公告-采招网",
-          "date": "2026-11-13",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://m.bidcenter.com.cn/news-1-453474165.html",
-          "source_domain": "m.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:31:36+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 1,
+      "it_tender_count": 0,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-13",
-      "by_year": {
-        "2026": 1
-      },
-      "by_category": {
-        "信创与硬件": 1
-      },
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:31:36+00:00"
     },
     "bk_b0161h233100001": {
@@ -5692,17 +4981,6 @@
       "short_name": "浙江民泰商业银行",
       "group": "city",
       "items": [
-        {
-          "title": "舟山市卓航信息咨询有限公司关于舟山市公共数据平台运维服务采购项目中标(成交)结果公告",
-          "date": "2025-09-23",
-          "category": "数据平台",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202509/t20250923_25401440.htm",
-          "source_domain": "ccgp.gov.cn",
-          "source_type": "official",
-          "fetched_at": "2026-11-16T00:07:09+00:00"
-        },
         {
           "title": "中国电信中标结果:浙江民泰商业银行股份有限公司算力集群建设租赁项目_搜狐网",
           "date": "2025-06-05",
@@ -5718,14 +4996,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 2,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2025-09-23",
+      "it_tender_latest": "2025-06-05",
       "by_year": {
-        "2025": 2
+        "2025": 1
       },
       "by_category": {
-        "数据平台": 1,
         "人工智能": 1
       },
       "updated_at": "2026-11-16T00:07:09+00:00"
@@ -5734,42 +5011,15 @@
       "name": "浙江泰隆商业银行股份有限公司",
       "short_name": "浙江泰隆商业银行",
       "group": "city",
-      "items": [
-        {
-          "title": "[华能资本公司永诚保险2026-2027年度机房基础硬件维保项目招标]候选人公示-交易公开-全国公共资源交易平台",
-          "date": "2025-11-10",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.ggzy.gov.cn/information/deal/html/a/0067/0104/20261103/0067e40ecbfad7f34e9b9b0b52678baa6424.html",
-          "source_domain": "ggzy.gov.cn",
-          "source_type": "official",
-          "fetched_at": "2026-11-16T00:07:21+00:00"
-        },
-        {
-          "title": "浙江五石中正工程咨询有限公司关于分布式存储采购项目(台州医院本部病房改造项目)中标(成交)结果公告",
-          "date": "2025-10-23",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202510/t20251023_25562761.htm",
-          "source_domain": "ccgp.gov.cn",
-          "source_type": "official",
-          "fetched_at": "2026-11-16T00:07:21+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 2,
+      "it_tender_count": 0,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2025-11-10",
-      "by_year": {
-        "2025": 2
-      },
-      "by_category": {
-        "信创与硬件": 2
-      },
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:07:21+00:00"
     },
     "bk_b0158h233070001": {
@@ -5892,39 +5142,6 @@
           "fetched_at": "2026-11-16T00:08:00+00:00"
         },
         {
-          "title": "温州市工业节能改造项目",
-          "date": "2026-11-11",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/etdzn1402664/",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:08:00+00:00"
-        },
-        {
-          "title": "浙江邦盛科技股份有限公司-浙江邦盛",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.bidizhaobiao.com/company_242774916878290944.html",
-          "source_domain": "m.bidizhaobiao.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:08:00+00:00"
-        },
-        {
-          "title": "浙江ic卡招标采购",
-          "date": "2026-07-22",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/506647/index_30.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:08:00+00:00"
-        },
-        {
           "title": "中亦科技中标:温州银行股份有限公司关于中间件与开源软件维保采购项目的中标(成交)结果公告_搜狐网",
           "date": "2025-11-21",
           "category": "运维服务",
@@ -5950,17 +5167,17 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 6,
+      "it_tender_count": 3,
       "it_tender_with_amount": 0,
       "it_tender_latest": "2026-11-12",
       "by_year": {
-        "2026": 4,
+        "2026": 1,
         "2025": 2
       },
       "by_category": {
-        "其他 IT": 2,
-        "信创与硬件": 3,
-        "运维服务": 1
+        "其他 IT": 1,
+        "运维服务": 1,
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:08:00+00:00"
     },
@@ -5969,17 +5186,6 @@
       "short_name": "湖北银行",
       "group": "city",
       "items": [
-        {
-          "title": "湖北银行股份有限公司",
-          "date": "2026-11-13",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/common/agents_info.jsp?id=95059",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:08:11+00:00"
-        },
         {
           "title": "湖北银行2025年第二次系统设备和软件采购项目公开招标公告",
           "date": "2025-07-04",
@@ -6006,15 +5212,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 3,
+      "it_tender_count": 2,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-13",
+      "it_tender_latest": "2025-07-04",
       "by_year": {
-        "2026": 1,
         "2025": 2
       },
       "by_category": {
-        "其他 IT": 3
+        "其他 IT": 2
       },
       "updated_at": "2026-11-16T00:08:11+00:00"
     },
@@ -6024,17 +5229,6 @@
       "group": "city",
       "items": [
         {
-          "title": "东方通信涨1.55%，成交额8.88亿元，后市是否有机会?_手机新浪网",
-          "date": "2026-11-10",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 88800.0,
-          "url": "https://cj.sina.cn/article/norm_detail?url=http%3A%2F%2Ffinance.sina.cn%2F2026-11-10%2Fdetail-iniyfuyz2609921.d.html",
-          "source_domain": "cj.sina.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:08:23+00:00"
-        },
-        {
           "title": "湖南银行2026年关联交易管理系统研发项目(第二次)中标候选人公示-采购与招标网(www.chinabidding.cn)",
           "date": "2026-11-06",
           "category": "其他 IT",
@@ -6042,17 +5236,6 @@
           "amount_wan": null,
           "url": "https://www.bid360.com.cn/zbgs/U-vz0S6AY.html",
           "source_domain": "bid360.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:08:23+00:00"
-        },
-        {
-          "title": "湖南crm招标采购",
-          "date": "2026-10-23",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/506639/index_13.html",
-          "source_domain": "wap.qianlima.com",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:08:23+00:00"
         },
@@ -6102,18 +5285,18 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 88905.0,
-      "it_tender_24m_wan": 88905.0,
-      "it_tender_count": 7,
-      "it_tender_with_amount": 2,
-      "it_tender_latest": "2026-11-10",
+      "it_tender_12m_wan": 105.0,
+      "it_tender_24m_wan": 105.0,
+      "it_tender_count": 5,
+      "it_tender_with_amount": 1,
+      "it_tender_latest": "2026-11-06",
       "by_year": {
-        "2026": 4,
+        "2026": 2,
         "2025": 3
       },
       "by_category": {
-        "信创与硬件": 3,
-        "其他 IT": 4
+        "其他 IT": 3,
+        "信创与硬件": 2
       },
       "updated_at": "2026-11-16T00:08:23+00:00"
     },
@@ -6213,17 +5396,6 @@
       "group": "city",
       "items": [
         {
-          "title": "山东银弘电子科技有限公司-水滴信用",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": 176.58,
-          "url": "https://shuidi.cn/company-f2c576de599f6020949e7f37f5643813.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:19+00:00"
-        },
-        {
           "title": "潍坊银行2026年信创c86服务器采购项目中标结果公告-采招网",
           "date": "2026-11-10",
           "category": "信创与硬件",
@@ -6244,41 +5416,19 @@
           "source_domain": "m.bidcenter.com.cn",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:32:19+00:00"
-        },
-        {
-          "title": "山东接地模块降阻剂中标结果",
-          "date": "2026-11-06",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/147741/index_21_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:19+00:00"
-        },
-        {
-          "title": "取款机储蓄罐招标采购",
-          "date": "2026-11-06",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/122581/index.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:19+00:00"
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 176.58,
-      "it_tender_24m_wan": 176.58,
-      "it_tender_count": 5,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-11",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 2,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": "2026-11-10",
       "by_year": {
-        "2026": 5
+        "2026": 2
       },
       "by_category": {
-        "信创与硬件": 5
+        "信创与硬件": 2
       },
       "updated_at": "2026-11-16T00:32:19+00:00"
     },
@@ -6286,66 +5436,15 @@
       "name": "烟台银行股份有限公司",
       "short_name": "烟台银行",
       "group": "city",
-      "items": [
-        {
-          "title": "北京易联达金信科技有限公司招标中标信息-启信宝",
-          "date": "2026-11-11",
-          "category": "人工智能",
-          "stage": "中标/结果",
-          "amount_wan": 268.0,
-          "url": "https://m.qixin.com/bidding/6379e606-0a71-45c8-93a7-85817dd27262",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:36+00:00"
-        },
-        {
-          "title": "山东银弘电子科技有限公司-水滴信用",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://shuidi.cn/company-f2c576de599f6020949e7f37f5643813.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:36+00:00"
-        },
-        {
-          "title": "北京信创中标结果",
-          "date": "2026-11-07",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/508619/index_2_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:36+00:00"
-        },
-        {
-          "title": "信创国产数据库:崛起与创新的力量0108-墨天轮",
-          "date": "2025-01-08",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.modb.pro/db/1877169072257908736",
-          "source_domain": "modb.pro",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:32:36+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
-      "it_tender_12m_wan": 268.0,
-      "it_tender_24m_wan": 268.0,
-      "it_tender_count": 4,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-11",
-      "by_year": {
-        "2026": 3,
-        "2025": 1
-      },
-      "by_category": {
-        "人工智能": 1,
-        "信创与硬件": 3
-      },
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 0,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:32:36+00:00"
     },
     "bk_b0199h244040001": {
@@ -6397,17 +5496,6 @@
       "group": "city",
       "items": [
         {
-          "title": "甘肃银行股份有限公司经营信息-企查查",
-          "date": "2026-11-05",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/crun/41322951eecc644155f32ba6f05f478d.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:33:30+00:00"
-        },
-        {
           "title": "先进数通中标:甘肃银行大数据平台维保采购项目成交公示_天眼_信息_查大",
           "date": "2025-09-21",
           "category": "数据平台",
@@ -6433,15 +5521,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 3,
+      "it_tender_count": 2,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-05",
+      "it_tender_latest": "2025-09-21",
       "by_year": {
-        "2026": 1,
         "2025": 2
       },
       "by_category": {
-        "信创与硬件": 1,
         "数据平台": 1,
         "运维服务": 1
       },
@@ -6467,17 +5553,6 @@
       "short_name": "盛京银行",
       "group": "city",
       "items": [
-        {
-          "title": "百万级项目频现!银行业密集启动科技招标，数字化转型驶入深水区_搜狐网",
-          "date": "2025-11-18",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": 475.18,
-          "url": "https://m.sohu.com/a/955551684_639898/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:34:34+00:00"
-        },
         {
           "title": "盛京银行相关公司新增一项150.00万元的招标项目|银行相关基金|银行股|股权|中标|预算_手机新浪网",
           "date": "2025-07-10",
@@ -6524,18 +5599,18 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 475.18,
-      "it_tender_24m_wan": 872.18,
-      "it_tender_count": 5,
-      "it_tender_with_amount": 3,
-      "it_tender_latest": "2025-11-18",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": 397.0,
+      "it_tender_count": 4,
+      "it_tender_with_amount": 2,
+      "it_tender_latest": "2025-07-10",
       "by_year": {
-        "2025": 4,
+        "2025": 3,
         "2024": 1
       },
       "by_category": {
-        "信创与硬件": 3,
-        "其他 IT": 2
+        "其他 IT": 2,
+        "信创与硬件": 2
       },
       "updated_at": "2026-11-16T00:34:34+00:00"
     },
@@ -6544,17 +5619,6 @@
       "short_name": "石嘴山银行",
       "group": "city",
       "items": [
-        {
-          "title": "石嘴山招标公告",
-          "date": "2026-11-06",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/hot5311663/",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:00+00:00"
-        },
         {
           "title": "中科金财中标结果:石嘴山银行专用设备采购项目(一标段:石嘴山银行应用系统签名验签服务器采购项目)中标公示_招标_信息",
           "date": "2025-06-04",
@@ -6570,15 +5634,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 2,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-06",
+      "it_tender_latest": "2025-06-04",
       "by_year": {
-        "2026": 1,
         "2025": 1
       },
       "by_category": {
-        "其他 IT": 1,
         "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:35:00+00:00"
@@ -6588,72 +5650,6 @@
       "short_name": "福建海峡银行",
       "group": "city",
       "items": [
-        {
-          "title": "福建海峡银行股份有限公司企业发展-企查查",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/creport/5ee175d42fd18552f8c1275daeacaee1.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:23+00:00"
-        },
-        {
-          "title": "福建信创中标结果",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/508619/index_3_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:23+00:00"
-        },
-        {
-          "title": "福建条形码打印机耗材中标结果",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/263914/index_3_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:23+00:00"
-        },
-        {
-          "title": "福建数码照片打印机招标采购",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/139850/index_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:23+00:00"
-        },
-        {
-          "title": "福建电脑多媒体耳机中标结果",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/303599/index_3_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:23+00:00"
-        },
-        {
-          "title": "信创版协同办公oa系统项目结果公告(采购包1)_投标人_福建_审查",
-          "date": "2025-08-29",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.sohu.com/a/930084030_122434053/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:35:23+00:00"
-        },
         {
           "title": "长亮科技中标结果:福建海峡银行股份有限公司2025-2028年信息科技人力外协服务及外包业务测试人员项目(数据中台类)(结果公示)_搜狐网",
           "date": "2025-06-10",
@@ -6680,15 +5676,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 8,
+      "it_tender_count": 2,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_latest": "2025-06-10",
       "by_year": {
-        "2026": 5,
-        "2025": 3
+        "2025": 2
       },
       "by_category": {
-        "信创与硬件": 6,
         "数据平台": 2
       },
       "updated_at": "2026-11-16T00:35:23+00:00"
@@ -6780,39 +5774,6 @@
       "group": "city",
       "items": [
         {
-          "title": "绵阳市商业银行股份有限公司企业发展-企查查",
-          "date": "2026-11-14",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/creport/e620db94c7e9373be46e006334da44c4.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:36:36+00:00"
-        },
-        {
-          "title": "江苏万佳科技开发股份有限公司-水滴信用",
-          "date": "2026-11-06",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://shuidi.cn/company-163604d50baef683084a7dffcbef597b.html",
-          "source_domain": "shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:36:36+00:00"
-        },
-        {
-          "title": "信雅达中标:审计系统改造项目单一来源公示_天眼_信息_整理",
-          "date": "2025-09-12",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.sohu.com/a/934214725_121319643/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:36:36+00:00"
-        },
-        {
           "title": "致远互联中标绵阳市商业银行“合同管理系统建设项目”_企业_信息化_新发展",
           "date": "2024-12-25",
           "category": "其他 IT",
@@ -6827,17 +5788,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 4,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-14",
+      "it_tender_latest": "2024-12-25",
       "by_year": {
-        "2026": 2,
-        "2025": 1,
         "2024": 1
       },
       "by_category": {
-        "信创与硬件": 1,
-        "其他 IT": 3
+        "其他 IT": 1
       },
       "updated_at": "2026-11-16T00:36:36+00:00"
     },
@@ -6968,72 +5926,6 @@
       "group": "city",
       "items": [
         {
-          "title": "莱商银行股份有限公司招标中标信息-启信宝",
-          "date": "2026-11-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/800794cd-3ac8-4981-9cdb-28eeeb40d7a7",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:37:44+00:00"
-        },
-        {
-          "title": "山东九州信泰信息科技股份有限公司招标中标信息-启信宝",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/e2edefdc-987c-4f9c-9a7b-d44934bad197",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:37:44+00:00"
-        },
-        {
-          "title": "莱商银行股份有限公司经营信息-企查查",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/crun/ad59d73a8c8e47230d97cb91d0aa8045.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:37:44+00:00"
-        },
-        {
-          "title": "山东信创中标结果",
-          "date": "2026-11-05",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/508619/index_21_3.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:37:44+00:00"
-        },
-        {
-          "title": "山东恒安智能工程有限责任公司行业信息-企查查",
-          "date": "2026-09-29",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/cindustry/d6542ba4912a65404f69075149e65189.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:37:44+00:00"
-        },
-        {
-          "title": "数据报送系统招标公告-中国电力招标网|2026年数据报送系统项目查询",
-          "date": "2026-07-10",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://m.dlzb.com/23-pshujubaosongxitong.html",
-          "source_domain": "m.dlzb.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:37:44+00:00"
-        },
-        {
           "title": "广电运通中标:莱商银行纸币流转追踪管理系统信创改造项目成交公示_搜狐网",
           "date": "2025-10-31",
           "category": "信创与硬件",
@@ -7048,15 +5940,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 7,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-13",
+      "it_tender_latest": "2025-10-31",
       "by_year": {
-        "2026": 6,
         "2025": 1
       },
       "by_category": {
-        "信创与硬件": 7
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:37:44+00:00"
     },
@@ -7064,53 +5955,15 @@
       "name": "营口银行股份有限公司",
       "short_name": "营口银行",
       "group": "city",
-      "items": [
-        {
-          "title": "北京宏远贵德科技有限公司_招投标信息-企查查",
-          "date": "2026-11-15",
-          "category": "数据平台",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/ctenderlist/ef9ecb915edc24230eb133f90af8b825",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:03+00:00"
-        },
-        {
-          "title": "北京宏远贵德科技有限公司简介_工商信息详情-比地招标网",
-          "date": "2026-10-27",
-          "category": "数据平台",
-          "stage": "招标/采购",
-          "amount_wan": 27116.0,
-          "url": "http://www.bidizhaobiao.com/gongsi_212176279126093824.html",
-          "source_domain": "bidizhaobiao.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:03+00:00"
-        },
-        {
-          "title": "营口银行股份有限公司_招投标信息-企查查",
-          "date": "2026-09-29",
-          "category": "数据平台",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/ctenderlist/17505cfd1865326315e0072c3082b882",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:03+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
-      "it_tender_12m_wan": 27116.0,
-      "it_tender_24m_wan": 27116.0,
-      "it_tender_count": 3,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-15",
-      "by_year": {
-        "2026": 3
-      },
-      "by_category": {
-        "数据平台": 3
-      },
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": null,
+      "it_tender_count": 0,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:38:03+00:00"
     },
     "bk_b0132h321140001": {
@@ -7118,17 +5971,6 @@
       "short_name": "葫芦岛银行",
       "group": "city",
       "items": [
-        {
-          "title": "锌业股份相关公司新增一项200.00万元的招标项目|银行相关基金|银行股|中标|预算|数据_手机新浪网",
-          "date": "2025-08-25",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": 200.0,
-          "url": "https://cj.sina.cn/article/norm_detail?url=http%3A%2F%2Ffinance.sina.cn%2F2025-08-25%2Fdetail-infnfawz9015184.d.html",
-          "source_domain": "cj.sina.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:18+00:00"
-        },
         {
           "title": "2024年葫芦岛银行短信平台改造服务采购项目(二次)招标公告",
           "date": "2024-11-18",
@@ -7139,32 +5981,19 @@
           "source_domain": "chinabidding.com",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:38:18+00:00"
-        },
-        {
-          "title": "反欺诈系统建设项目中标结果公告-采招网",
-          "date": "2024-10-29",
-          "category": "信贷风控",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.bidcenter.com.cn/newsrili-4-317948174.html",
-          "source_domain": "m.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:18+00:00"
         }
       ],
       "errors": [],
       "it_tender_12m_wan": null,
-      "it_tender_24m_wan": 200.0,
-      "it_tender_count": 3,
-      "it_tender_with_amount": 1,
-      "it_tender_latest": "2025-08-25",
+      "it_tender_24m_wan": null,
+      "it_tender_count": 1,
+      "it_tender_with_amount": 0,
+      "it_tender_latest": "2024-11-18",
       "by_year": {
-        "2025": 1,
-        "2024": 2
+        "2024": 1
       },
       "by_category": {
-        "其他 IT": 2,
-        "信贷风控": 1
+        "其他 IT": 1
       },
       "updated_at": "2026-11-16T00:38:18+00:00"
     },
@@ -7173,94 +6002,6 @@
       "short_name": "蒙商银行",
       "group": "city",
       "items": [
-        {
-          "title": "椹木雅人-中电金融设备系统(深圳)有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-15",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=397e616f12700275f6f9f5ae8043837f",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "颜青-中电金融设备系统(深圳)有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-15",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=ab2e13ac9cd60a3baf639fbd0e5f23ce",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "李继奎-江苏国光信息产业股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-15",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=ffcac93f45d277037bef4059d909263f&subtab=personal-allenterprises",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "黄福平-中电金融设备系统(深圳)有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-14",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=278ab3655dcc7f1a19a7a53f061d94bf",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "国政通科技有限公司招标中标信息-启信宝",
-          "date": "2026-11-13",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/751211e3-4d0d-4c87-ae7e-545804d1a91d",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "蒋帆-江苏国光信息产业股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=f0c8ce858634fd84df4ed989809d16ca&subtab=personal-allenterprises",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "胡宁-江苏国光信息产业股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-13",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=9f235fa47e72b73ae16f23fa052175be&subtab=personal-allenterprises",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
-        {
-          "title": "胡单-中电金融设备系统(深圳)有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=4834cd514c50dbd806e5b0584fb6a096&subtab=personal-allenterprises",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:38:38+00:00"
-        },
         {
           "title": "东华软件中标结果:蒙商银行2024年至2026年微信公众号运营服务项目(三次)成交公示证券之星消息，根据天眼查app信息整理，9月3日公布的《蒙商银行2024年至2026年微信公众号运营服务项目(三次)成交...",
           "date": "2024-09-03",
@@ -7276,16 +6017,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 9,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-15",
+      "it_tender_latest": "2024-09-03",
       "by_year": {
-        "2026": 8,
         "2024": 1
       },
       "by_category": {
-        "信创与硬件": 7,
-        "其他 IT": 2
+        "其他 IT": 1
       },
       "updated_at": "2026-11-16T00:38:38+00:00"
     },
@@ -7436,43 +6175,19 @@
           "source_domain": "bidizhaobiao.com",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:39:55+00:00"
-        },
-        {
-          "title": "西藏银行股份有限公司法律风险-企查查",
-          "date": "2026-02-03",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/csusong/af00be4e827b2eaf2dc97ccd0e42e345.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:39:55+00:00"
-        },
-        {
-          "title": "西藏银行股份有限公司",
-          "date": "2025-12-14",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://seo.shuidi.cn/company-e722ace2a4c3c70da6ccbfdf723d7be6.html",
-          "source_domain": "seo.shuidi.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:39:55+00:00"
         }
       ],
       "errors": [],
       "it_tender_12m_wan": 1600.0,
       "it_tender_24m_wan": 1600.0,
-      "it_tender_count": 3,
+      "it_tender_count": 1,
       "it_tender_with_amount": 1,
       "it_tender_latest": "2026-11-15",
       "by_year": {
-        "2026": 2,
-        "2025": 1
+        "2026": 1
       },
       "by_category": {
-        "其他 IT": 1,
-        "信创与硬件": 2
+        "其他 IT": 1
       },
       "updated_at": "2026-11-16T00:39:55+00:00"
     },
@@ -7677,17 +6392,6 @@
       "group": "city",
       "items": [
         {
-          "title": "中电金融设备系统(深圳)有限公司招标中标信息-启信宝",
-          "date": "2026-11-13",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/ac26cace-36ae-466e-bdde-ac4113dfe443",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:41:36+00:00"
-        },
-        {
           "title": "辽沈银行2275万项目招标结果公示，某企业报价1160万仍落榜|信贷|公共资源|招标|辽沈银行|高伟达_手机网易网",
           "date": "2025-11-13",
           "category": "信贷风控",
@@ -7735,15 +6439,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": 2275.0,
-      "it_tender_count": 5,
+      "it_tender_count": 4,
       "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-11-13",
+      "it_tender_latest": "2025-11-13",
       "by_year": {
-        "2026": 1,
         "2025": 4
       },
       "by_category": {
-        "其他 IT": 1,
         "信贷风控": 3,
         "信创与硬件": 1
       },
@@ -7784,31 +6486,15 @@
       "name": "遂宁银行股份有限公司",
       "short_name": "遂宁银行",
       "group": "city",
-      "items": [
-        {
-          "title": "四川oa系统招标采购",
-          "date": "2026-10-12",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/508564/index_25.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:42:35+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 1,
+      "it_tender_count": 0,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-10-12",
-      "by_year": {
-        "2026": 1
-      },
-      "by_category": {
-        "其他 IT": 1
-      },
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:42:35+00:00"
     },
     "bk_b0301h313050001": {
@@ -7816,61 +6502,6 @@
       "short_name": "邢台银行",
       "group": "city",
       "items": [
-        {
-          "title": "叶晖-信雅达科技股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-09-02",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=5a1f6ed30915adbd5ec8452aecbe5b0b",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:42:55+00:00"
-        },
-        {
-          "title": "耿俊岭-信雅达科技股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-09-02",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=919a181253aa1f3a7ebaf3710df4a118&subtab=personal-allenterprises",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:42:55+00:00"
-        },
-        {
-          "title": "郭华强-信雅达科技股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-09-02",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?entry=2115&personId=2d795007c4b42d1c32afc39902ff0ad3",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:42:55+00:00"
-        },
-        {
-          "title": "李峰-信雅达科技股份有限公司-法定代表人/高管/股东-爱企查",
-          "date": "2026-09-02",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.aiqicha.com/person?personId=29047f36f32ec1fab369e8c177fee5ee",
-          "source_domain": "aiqicha.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:42:55+00:00"
-        },
-        {
-          "title": "邢台利明招标采购-河北招标网",
-          "date": "2026-08-24",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://hbs.bidcenter.com.cn/zhaobiao/zbkeyw-12309-130500-0-90.html",
-          "source_domain": "hbs.bidcenter.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:42:55+00:00"
-        },
         {
           "title": "广电运通中标:邢台银行关联交易系统项目中标结果公告_天眼_信息_查大",
           "date": "2025-09-04",
@@ -7897,17 +6528,15 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 7,
+      "it_tender_count": 2,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-09-02",
+      "it_tender_latest": "2025-09-04",
       "by_year": {
-        "2026": 5,
         "2025": 1,
         "2024": 1
       },
       "by_category": {
-        "其他 IT": 6,
-        "信创与硬件": 1
+        "其他 IT": 2
       },
       "updated_at": "2026-11-16T00:42:55+00:00"
     },
@@ -8079,28 +6708,6 @@
       "group": "city",
       "items": [
         {
-          "title": "2025年电子商务支付平台信创改造中标结果公布，赞同科技领跑_银行_重庆_项目",
-          "date": "2026-01-09",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.sohu.com/a/974403992_121956424/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:14:34+00:00"
-        },
-        {
-          "title": "安硕信息中标:单一来源采购方式公示表《数字信贷智能决策平台2025年信创改造及人力服务》_天眼_上海",
-          "date": "2025-11-08",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.sohu.com/a/952216906_121319643/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:14:34+00:00"
-        },
-        {
           "title": "重庆银行招标结果:综合柜面系统信创改造技术测试(第二次)的中标候选人公示_搜狐网",
           "date": "2025-09-18",
           "category": "信创与硬件",
@@ -8120,15 +6727,14 @@
       ],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 3,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-01-09",
+      "it_tender_latest": "2025-09-18",
       "by_year": {
-        "2026": 1,
-        "2025": 2
+        "2025": 1
       },
       "by_category": {
-        "信创与硬件": 3
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:14:34+00:00"
     },
@@ -8202,43 +6808,20 @@
           "source_domain": "sohu.com",
           "source_type": "media",
           "fetched_at": "2026-11-16T00:14:44+00:00"
-        },
-        {
-          "title": "金华银行门户网站本行公告金华银行杀毒软件授权许可采购项目询价公告",
-          "date": "2024-12-23",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.jhccb.com.cn/art/2024/12/23/art_67_4000474.html",
-          "source_domain": "jhccb.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:14:44+00:00"
-        },
-        {
-          "title": "金华银行门户网站本行公告金华银行统一消息平台国产化项目单一来源采购公示",
-          "date": "2024-10-30",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.jhccb.com.cn/art/2024/10/30/art_67_4000290.html",
-          "source_domain": "jhccb.com.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:14:44+00:00"
         }
       ],
       "errors": [],
       "it_tender_12m_wan": 208.0,
       "it_tender_24m_wan": 446.0,
-      "it_tender_count": 8,
+      "it_tender_count": 6,
       "it_tender_with_amount": 2,
       "it_tender_latest": "2025-12-23",
       "by_year": {
-        "2025": 6,
-        "2024": 2
+        "2025": 6
       },
       "by_category": {
-        "信创与硬件": 3,
-        "其他 IT": 5
+        "信创与硬件": 2,
+        "其他 IT": 4
       },
       "updated_at": "2026-11-16T00:14:44+00:00"
     },
@@ -8263,17 +6846,6 @@
       "group": "city",
       "items": [
         {
-          "title": "虎林市职业教育中心学校职业教育中心学校人工智能设备采购中标(成交)结果公告_搜狐网",
-          "date": "2025-09-27",
-          "category": "人工智能",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.sohu.com/a/939265286_122434053/",
-          "source_domain": "m.sohu.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:15:25+00:00"
-        },
-        {
           "title": "锦州银行信息安全服务项目潜在供应商招募公告-招标文件-招标网",
           "date": "2024-03-16",
           "category": "网络安全",
@@ -8288,15 +6860,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 2,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2025-09-27",
+      "it_tender_latest": "2024-03-16",
       "by_year": {
-        "2025": 1,
         "2024": 1
       },
       "by_category": {
-        "人工智能": 1,
         "网络安全": 1
       },
       "updated_at": "2026-11-16T00:15:25+00:00"
@@ -8333,17 +6903,6 @@
           "fetched_at": "2026-11-16T00:16:02+00:00"
         },
         {
-          "title": "陕西华瑞信息系统科技有限公司-启信宝",
-          "date": "2025-09-23",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/22a7236a-4d27-43bd-a714-014c90cdc64a",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:02+00:00"
-        },
-        {
           "title": "宇信科技(300674):中标长安银行股份有限公司采购项目，中标金额为150.00万元-和讯网",
           "date": "2025-09-23",
           "category": "其他 IT",
@@ -8358,14 +6917,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": 150.0,
-      "it_tender_count": 3,
+      "it_tender_count": 2,
       "it_tender_with_amount": 1,
       "it_tender_latest": "2025-09-25",
       "by_year": {
-        "2025": 3
+        "2025": 2
       },
       "by_category": {
-        "其他 IT": 3
+        "其他 IT": 2
       },
       "updated_at": "2026-11-16T00:16:02+00:00"
     },
@@ -8374,17 +6933,6 @@
       "short_name": "长沙银行",
       "group": "city",
       "items": [
-        {
-          "title": "湖南联凯科技股份有限公司招标中标信息-启信宝",
-          "date": "2026-11-12",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://m.qixin.com/bidding/d78d6617-448b-4bef-868a-a47c882123c0",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:18+00:00"
-        },
         {
           "title": "长沙银行招标结果:长沙银行2025年云平台软件授权采购项目中标候选人公示_搜狐网",
           "date": "2025-09-25",
@@ -8400,15 +6948,14 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 2,
+      "it_tender_count": 1,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-12",
+      "it_tender_latest": "2025-09-25",
       "by_year": {
-        "2026": 1,
         "2025": 1
       },
       "by_category": {
-        "信创与硬件": 2
+        "信创与硬件": 1
       },
       "updated_at": "2026-11-16T00:16:18+00:00"
     },
@@ -8416,109 +6963,30 @@
       "name": "阜新银行股份有限公司",
       "short_name": "阜新银行",
       "group": "city",
-      "items": [
-        {
-          "title": "阜新招投标系统-阜新采购与招标网|招投标",
-          "date": "2026-11-13",
-          "category": "其他 IT",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.chinabidding.cn/dwxzb_79_ztbxt/",
-          "source_domain": "chinabidding.cn",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:33+00:00"
-        },
-        {
-          "title": "安徽防火墙设备招标采购",
-          "date": "2026-11-12",
-          "category": "网络安全",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/243726/index_1.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:33+00:00"
-        },
-        {
-          "title": "辽宁国产招标预告",
-          "date": "2026-11-11",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://wap.qianlima.com/gjxx/1105/index_17_1.html",
-          "source_domain": "wap.qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:33+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 3,
+      "it_tender_count": 0,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-13",
-      "by_year": {
-        "2026": 3
-      },
-      "by_category": {
-        "其他 IT": 1,
-        "网络安全": 1,
-        "信创与硬件": 1
-      },
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:16:33+00:00"
     },
     "bk_b0343h251180001": {
       "name": "雅安市商业银行股份有限公司",
       "short_name": "雅安市商业银行",
       "group": "city",
-      "items": [
-        {
-          "title": "雅安市商业银行股份有限公司经营信息-企查查",
-          "date": "2026-11-14",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/crun/43ef1ec8750d353ba3c112a473a85a70.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:49+00:00"
-        },
-        {
-          "title": "雅安市商业银行股份有限公司_主要人员-企查查",
-          "date": "2026-11-09",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/cmainmember/43ef1ec8750d353ba3c112a473a85a70",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:49+00:00"
-        },
-        {
-          "title": "巡检柜采购-千里马招标网",
-          "date": "2026-10-08",
-          "category": "信创与硬件",
-          "stage": "招标/采购",
-          "amount_wan": null,
-          "url": "https://www.qianlima.com/semg601/",
-          "source_domain": "qianlima.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:16:49+00:00"
-        }
-      ],
+      "items": [],
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 3,
+      "it_tender_count": 0,
       "it_tender_with_amount": 0,
-      "it_tender_latest": "2026-11-14",
-      "by_year": {
-        "2026": 3
-      },
-      "by_category": {
-        "信创与硬件": 2,
-        "其他 IT": 1
-      },
+      "it_tender_latest": null,
+      "by_year": {},
+      "by_category": {},
       "updated_at": "2026-11-16T00:16:49+00:00"
     },
     "bk_b0170h237020001": {
@@ -8597,28 +7065,6 @@
       "group": "city",
       "items": [
         {
-          "title": "金电云(深圳)数字科技有限公司企业发展-企查查",
-          "date": "2026-08-03",
-          "category": "核心系统",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/creport/be62374b8f221a6adab6ea983aa79b1d.html",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:17:52+00:00"
-        },
-        {
-          "title": "北京藜麦信息技术有限责任公司_招投标信息-企查查",
-          "date": "2025-12-26",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/ctenderlist/bffcc3b8461f2227c4b2c0949b8cb0ce",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:17:52+00:00"
-        },
-        {
           "title": "鞍山银行监管报送系统采购55万元成交，连续四年未公布年报",
           "date": "2024-08-20",
           "category": "数据平台",
@@ -8633,17 +7079,13 @@
       "errors": [],
       "it_tender_12m_wan": null,
       "it_tender_24m_wan": null,
-      "it_tender_count": 3,
+      "it_tender_count": 1,
       "it_tender_with_amount": 1,
-      "it_tender_latest": "2026-08-03",
+      "it_tender_latest": "2024-08-20",
       "by_year": {
-        "2026": 1,
-        "2025": 1,
         "2024": 1
       },
       "by_category": {
-        "核心系统": 1,
-        "其他 IT": 1,
         "数据平台": 1
       },
       "updated_at": "2026-11-16T00:17:52+00:00"
@@ -8668,28 +7110,6 @@
       "short_name": "齐鲁银行",
       "group": "city",
       "items": [
-        {
-          "title": "同智伟业软件股份有限公司招标中标信息-启信宝",
-          "date": "2026-11-05",
-          "category": "其他 IT",
-          "stage": "中标/结果",
-          "amount_wan": 16.9,
-          "url": "https://m.qixin.com/bidding/73467fe9-7807-4947-ad59-51117ebd1873",
-          "source_domain": "m.qixin.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:18:33+00:00"
-        },
-        {
-          "title": "山东万佳云计算信息科技有限公司_招投标信息-企查查",
-          "date": "2026-09-01",
-          "category": "信创与硬件",
-          "stage": "中标/结果",
-          "amount_wan": null,
-          "url": "https://www.qcc.com/ctenderlist/ed07f99dbefa92e40205ad627bb33095",
-          "source_domain": "qcc.com",
-          "source_type": "media",
-          "fetched_at": "2026-11-16T00:18:33+00:00"
-        },
         {
           "title": "齐鲁银行2025年应用系统信创改造国库集中支付系统信创改造、理财代销系统信创改造招标公告-采招网",
           "date": "2025-10-29",
@@ -8725,19 +7145,17 @@
         }
       ],
       "errors": [],
-      "it_tender_12m_wan": 16.9,
-      "it_tender_24m_wan": 735.9,
-      "it_tender_count": 5,
-      "it_tender_with_amount": 2,
-      "it_tender_latest": "2026-11-05",
+      "it_tender_12m_wan": null,
+      "it_tender_24m_wan": 719.0,
+      "it_tender_count": 3,
+      "it_tender_with_amount": 1,
+      "it_tender_latest": "2025-10-29",
       "by_year": {
-        "2026": 2,
         "2025": 2,
         "2024": 1
       },
       "by_category": {
-        "其他 IT": 1,
-        "信创与硬件": 4
+        "信创与硬件": 3
       },
       "updated_at": "2026-11-16T00:18:33+00:00"
     },

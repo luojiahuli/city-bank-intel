@@ -1,9 +1,9 @@
 /* App orchestration: data loading, filters, views, search and panel wiring. */
 
-import { GraphCanvas } from "./canvas.js?v=20261116a";
-import { DetailPanel } from "./detail.js?v=20261116a";
-import { BankSearch } from "./search.js?v=20261116a";
-import { ConclusionModal } from "./insight.js?v=20261116a";
+import { GraphCanvas } from "./canvas.js?v=20261116b";
+import { DetailPanel } from "./detail.js?v=20261116b";
+import { BankSearch } from "./search.js?v=20261116b";
+import { ConclusionModal } from "./insight.js?v=20261116b";
 
 const GROUPS = [
   { key: "city", label: "城商行", color: "#4cc9f0" },
@@ -26,7 +26,7 @@ const VIEW_NOTE = {
   region: "按省份聚合的机构分布；节点大小表示资产规模，未披露时按机构类型示意。",
   business: "业务边为按机构类型的结构性推断，待年报与官网披露补充后替换。",
   focus: "重点产业优先采用该行公开报道原文；无报道时按所在省份产业结构推断并标注“区域推断”。",
-  it: "IT 投入与 AI 活跃度均来自公开披露；未披露的银行归入对应“未披露”分组。",
+  it: "只显示有公开数据的银行：IT 投入为年报披露的科技投入，IT 采购为近 12 个月公开的中标/采购金额（仅覆盖已检索的城商行，金额为不完全统计），AI 活跃度按公开报道分级；无披露的银行不连线，也不在视图中显示。",
   huawei: "华为机会评分由规则分与公开证据组成；无公开证据时标注“推断/待验证”。",
   governance: "董监高名单与“共享董监高”关系线正在采集，计划优先覆盖 123 家城商行。",
   similar: "仅连接同时披露资产与营收、且至少两项财务指标可比的银行；规模比 0.05–20，近似度≥0.93。",
@@ -520,18 +520,26 @@ function handleSelect(node) {
 function sortConnections(hub, neighbors) {
   const links = state.canvas.edges[state.view] || [];
   const scores = new Map();
-  if (hub.type === "huawei") {
+  if (hub.type === "huawei" || hub.kind === "tender") {
     for (const link of links) {
       if (link.target === hub.id) scores.set(link.source, link);
     }
   }
   const decorated = neighbors.map((n) => {
     let meta = [n.type_label, n.city || n.province].filter(Boolean).join(" · ");
-    if (hub.type === "huawei" && scores.has(n.id)) {
-      const link = scores.get(n.id);
+    const link = scores.get(n.id);
+    if (hub.type === "huawei" && link) {
       meta = `机会分 ${link.score} · ${link.confidence || "推断/待验证"}`;
+    } else if (hub.kind === "tender" && link) {
+      const amount = link.amount_wan
+        ? `近 12 个月公开中标 ${Number(link.amount_wan).toLocaleString("zh-CN", { maximumFractionDigits: 1 })} 万元`
+        : "有公开采购记录，未披露金额";
+      meta = `${amount} · ${link.count || 0} 条记录`;
     }
-    return { node: n, meta, weight: scores.get(n.id)?.score || n.asset || n.size || 0 };
+    return {
+      node: n, meta,
+      weight: link?.score || link?.amount_wan || n.asset || n.size || 0,
+    };
   });
   decorated.sort((a, b) => b.weight - a.weight);
   return decorated;
@@ -593,9 +601,9 @@ function updateHud() {
   if (!hud) return;
   const total = state.manifest ? state.manifest.total : state.banks.length;
   let visible = state.visible ? state.visible.size : total;
-  if (state.view === "similar") {
+  if (state.view === "similar" || state.view === "it") {
     const ids = new Set();
-    for (const link of state.edges.similar || []) {
+    for (const link of state.edges[state.view] || []) {
       ids.add(link.source);
       ids.add(link.target);
     }

@@ -499,6 +499,27 @@ def _hub_id(prefix: str, name: str) -> str:
     return prefix + "_" + hashlib.md5(name.encode("utf-8")).hexdigest()[:8]
 
 
+TENDER_BUCKETS = (
+    ("tender_high", "IT采购 ≥1000万", 16),
+    ("tender_mid", "IT采购 300-1000万", 14),
+    ("tender_low", "IT采购 <300万", 12),
+    ("tender_record", "IT采购·金额未披露", 12),
+)
+
+
+def _tender_bucket(bank: dict) -> str | None:
+    if not bank.get("it_tender_checked") or not bank.get("it_tender_count"):
+        return None
+    amount = bank.get("it_tender_12m_wan") or 0
+    if not amount:
+        return "tender_record"
+    if amount >= 1000:
+        return "tender_high"
+    if amount >= 300:
+        return "tender_mid"
+    return "tender_low"
+
+
 def _graph_nodes(banks: list[dict], pos: dict, hubs_pos: dict) -> tuple[list[dict], dict]:
     counts = Counter(b.get("province") or "其他" for b in banks)
     province_nodes = []
@@ -543,23 +564,46 @@ def _graph_nodes(banks: list[dict], pos: dict, hubs_pos: dict) -> tuple[list[dic
             "color": COLORS["focus"], "layer": 1,
         })
 
-    it_defs = [
+    spend_counts = Counter()
+    for bank in banks:
+        spend = bank.get("it_spend")
+        if not spend:
+            continue
+        spend_counts["it_high" if spend >= 5 else "it_mid" if spend >= 1 else "it_low"] += 1
+    it_defs = [d for d in (
         ("it_high", "IT投入 >5亿", 16), ("it_mid", "IT投入 1-5亿", 14),
-        ("it_low", "IT投入 <1亿", 12), ("it_unknown", "IT投入未披露", 14),
-    ]
+        ("it_low", "IT投入 <1亿", 12),
+    ) if spend_counts[d[0]]]
     it_nodes = [{
-        "id": i, "name": n, "type": "it", "group": "it", "size": s,
+        "id": i, "name": n, "type": "it", "group": "it", "kind": "spend", "size": s,
         "x": 54, "y": 300 + idx * 120, "color": COLORS["it"], "layer": 1,
     } for idx, (i, n, s) in enumerate(it_defs)]
 
+    digital_counts = Counter(bank.get("digital_tier") for bank in banks)
     digital_defs = [
-        ("dig_high", "AI活跃度高", 15), ("dig_mid", "AI活跃度中", 13),
-        ("dig_low", "AI活跃度低", 11), ("dig_unknown", "AI活跃度未采集", 13),
+        (i, n, s) for tier, i, n, s in (
+            ("高", "dig_high", "AI活跃度高", 15),
+            ("中", "dig_mid", "AI活跃度中", 13),
+            ("低", "dig_low", "AI活跃度低", 11),
+        ) if digital_counts.get(tier)
     ]
     digital_nodes = [{
         "id": i, "name": n, "type": "digital", "group": "digital", "size": s,
         "x": 54, "y": 820 + idx * 110, "color": COLORS["digital"], "layer": 1,
     } for idx, (i, n, s) in enumerate(digital_defs)]
+
+    tender_counts = Counter()
+    for bank in banks:
+        bucket = _tender_bucket(bank)
+        if bucket:
+            tender_counts[bucket] += 1
+    tender_x = 176 if it_nodes else 54
+    tender_nodes = [{
+        "id": i, "name": n, "type": "it", "group": "it", "kind": "tender", "size": s,
+        "x": tender_x, "y": 300 + idx * 115, "color": "#2dd4bf", "layer": 1,
+    } for idx, (i, n, s) in enumerate(
+        [d for d in TENDER_BUCKETS if tender_counts[d[0]]]
+    )]
 
     huawei_nodes = []
     for i, cap in enumerate(config.HUAWEI_CAPABILITIES):
@@ -595,7 +639,7 @@ def _graph_nodes(banks: list[dict], pos: dict, hubs_pos: dict) -> tuple[list[dic
             "focus_confirmed": bool(bank.get("focus_confirmed")),
         })
     return (bank_nodes + province_nodes + business_nodes + focus_nodes
-            + it_nodes + digital_nodes + huawei_nodes,
+            + it_nodes + tender_nodes + digital_nodes + huawei_nodes,
             {"province": province_ids, "business": business_ids, "focus": focus_ids})
 
 
@@ -874,23 +918,28 @@ def _attach_similar(banks: list[dict], links: list[dict]) -> None:
 def _write_edges(banks: list[dict], ids: dict, similar: list[dict] | None = None) -> dict:
     it_links = []
     digital_links = []
+    tender_links = []
     for bank in banks:
-        if bank.get("it_spend"):
-            if bank["it_spend"] >= 5:
-                tid = "it_high"
-            elif bank["it_spend"] >= 1:
-                tid = "it_mid"
-            else:
-                tid = "it_low"
-        else:
-            tid = "it_unknown"
-        it_links.append({"source": bank["id"], "target": tid, "relation": "IT投入"})
-        digital_links.append({
-            "source": bank["id"],
-            "target": {"高": "dig_high", "中": "dig_mid", "低": "dig_low"}.get(
-                bank.get("digital_tier") or "", "dig_unknown"),
-            "relation": "数字化活跃度",
-        })
+        spend = bank.get("it_spend")
+        if spend:
+            tid = "it_high" if spend >= 5 else "it_mid" if spend >= 1 else "it_low"
+            it_links.append({"source": bank["id"], "target": tid, "relation": "IT投入"})
+        tier = {"高": "dig_high", "中": "dig_mid", "低": "dig_low"}.get(
+            bank.get("digital_tier") or "")
+        if tier:
+            digital_links.append({
+                "source": bank["id"], "target": tier, "relation": "数字化活跃度",
+            })
+        bucket = _tender_bucket(bank)
+        if bucket:
+            tender_links.append({
+                "source": bank["id"], "target": bucket,
+                "relation": "IT采购（近12个月公开中标）",
+                "amount_wan": bank.get("it_tender_12m_wan"),
+                "count": bank.get("it_tender_count"),
+                "with_amount": bank.get("it_tender_with_amount"),
+                "latest": bank.get("it_tender_latest"),
+            })
 
     bank_ids = {b["id"] for b in banks}
     governance_links = []
@@ -918,7 +967,7 @@ def _write_edges(banks: list[dict], ids: dict, similar: list[dict] | None = None
     out = {
         "business": _business_links(banks, ids),
         "focus": _focus_links(banks, ids),
-        "it": it_links + digital_links,
+        "it": it_links + digital_links + tender_links,
         "huawei": _huawei_links(banks),
         "governance": governance_links,
         "similar": similar if similar is not None else _similar_links(banks),
