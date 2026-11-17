@@ -68,7 +68,7 @@ python3 -m http.server 8000
 
 ## 部署
 
-GitHub：本仓库源码。
+GitHub：源码位于 `luojiahuli/city-bank-intel` 仓库的 `huawei-finance-intel` 分支、`huawei-finance-intel/` 子目录（本机无 GitHub API token，暂未建独立仓库）。
 
 Cloudflare Pages：
 
