@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#05070d" />
+  <title>华为金融合作图谱 · 公开案例看板</title>
+  <meta name="description" content="按体量、痛点、案例阶段梳理华为在金融行业的公开合作：被点名的机构、可回溯的案例、交付生态。" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css?v=20261117a" />
+</head>
+<body>
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <strong>华为金融合作图谱</strong>
+        <em>公开案例 · 体量 · 痛点 · 生态</em>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="页面导航">
+      <a href="#scale">体量</a>
+      <a href="#pains">痛点</a>
+      <a href="#caps">能力</a>
+      <a href="#timeline">时间线</a>
+      <a href="#cases">机构与案例</a>
+      <a href="#eco">生态</a>
+      <a href="#method">口径</a>
+    </nav>
+    <div class="top-meta">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span>数据基准 <b id="stamp">—</b></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-kicker">
+        <span class="kicker-tag">HUAWEI · FINANCIAL INDUSTRY</span>
+        <span class="kicker-line"></span>
+        <span class="kicker-note">公开信息梳理</span>
+      </div>
+      <h1>华为在金融行业<br /><span class="accent">已经走到了哪一步</span></h1>
+      <p class="hero-lead" id="heroLead">正在加载公开案例数据…</p>
+
+      <div class="kpi-grid" id="kpiGrid"></div>
+      <p class="source-line" id="globalSource"></p>
+
+      <div class="hero-scroll">
+        <a href="#scale">开始浏览</a>
+        <span aria-hidden="true">↓</span>
+      </div>
+    </section>
+
+    <section class="section" id="scale">
+      <header class="sec-head">
+        <div class="sec-index">01</div>
+        <div class="sec-copy">
+          <h2>体量分层：谁在合作，走到哪一步</h2>
+          <p>把收录机构按体量分为 7 层，条段颜色表示该机构在所有公开案例中达到的<strong>最高阶段</strong>（生产上线 &gt; 试点 / 建设 &gt; 联合创新 &gt; 生态适配）。条长按机构数量缩放，右侧为该层案例数。点击任一层可筛选下方机构卡片。</p>
+        </div>
+      </header>
+      <div class="legend" id="stageLegend"></div>
+      <div class="panel tier-panel" id="tierChart"></div>
+      <div class="insight-row" id="keyReadings"></div>
+    </section>
+
+    <section class="section" id="pains">
+      <header class="sec-head">
+        <div class="sec-index">02</div>
+        <div class="sec-copy">
+          <h2>痛点 × 体量：钱花在哪里</h2>
+          <p>按公开案例中披露的建设内容归类。<strong>单元格数字为案例数</strong>，行列合计即该痛点 / 该体量层被公开提及的次数。点击任意单元格可同时按痛点与体量筛选下方机构；点击行名或列名单独筛选。</p>
+        </div>
+      </header>
+      <div class="pain-layout">
+        <div class="panel heat-panel" id="heatMap"></div>
+        <div class="panel rank-panel">
+          <div class="panel-title">痛点热度</div>
+          <div id="painRank"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="caps">
+      <header class="sec-head">
+        <div class="sec-index">03</div>
+        <div class="sec-copy">
+          <h2>能力覆盖：哪些产品被点名</h2>
+          <p>案例正文中被明确提到的华为能力与产品，按案例数统计。同一案例可能涉及多项能力，因此合计大于案例总数。点击任一条可筛选使用该能力的机构。</p>
+        </div>
+      </header>
+      <div class="panel cap-panel" id="capChart"></div>
+    </section>
+
+    <section class="section" id="timeline">
+      <header class="sec-head">
+        <div class="sec-index">04</div>
+        <div class="sec-copy">
+          <h2>案例时间线：从核心下移到智能体</h2>
+          <p>按首次公开披露年份排列，堆叠颜色为案例阶段。2025 年的条目集中在鸿蒙生态适配与 AI 平台，核心系统类项目仍是主干。点击年份可筛选该年有披露的机构。</p>
+        </div>
+      </header>
+      <div class="panel tl-panel">
+        <div class="scroll-hint">左右滑动查看 2018–2025 全部年份 →</div>
+        <div class="tl-scroll">
+          <div class="timeline" id="timelineChart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <header class="sec-head">
+        <div class="sec-index">05</div>
+        <div class="sec-copy">
+          <h2>机构与公开案例</h2>
+          <p>每张卡片对应一家被公开点名的机构。点击卡片查看案例明细、关键指标与原文来源。筛选条件可组合：不同维度之间为「且」，同一维度内为「或」。</p>
+        </div>
+      </header>
+
+      <div class="filter-bar">
+        <label class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="搜索机构、案例关键词（如：核心、鸿蒙、存算分离）" autocomplete="off" />
+        </label>
+        <div class="filter-group">
+          <span class="filter-label">体量</span>
+          <div class="chip-row" id="tierChips"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">阶段</span>
+          <div class="chip-row" id="stageChips"></div>
+        </div>
+      </div>
+
+      <div class="active-filters" id="activeFilters" hidden></div>
+      <div class="grid-meta" id="gridMeta"></div>
+      <div class="inst-grid" id="instGrid"></div>
+      <div class="grid-empty" id="gridEmpty" hidden>没有符合当前筛选条件的机构，试试移除部分筛选。</div>
+    </section>
+
+    <section class="section" id="eco">
+      <header class="sec-head">
+        <div class="sec-index">06</div>
+        <div class="sec-copy">
+          <h2>生态伙伴：案例由谁交付</h2>
+          <p>华为在金融行业的多数核心与数据项目由生态伙伴联合交付。以下伙伴在公开信息中被与华为方案一同点名，并附公开来源。</p>
+        </div>
+      </header>
+      <div class="eco-grid" id="ecoGrid"></div>
+    </section>
+
+    <section class="section method" id="method">
+      <header class="sec-head">
+        <div class="sec-index">07</div>
+        <div class="sec-copy">
+          <h2>方法与口径</h2>
+          <p>这份看板如何选择条目、判定阶段，以及哪些信息<strong>没有</strong>被收录。</p>
+        </div>
+      </header>
+      <div class="method-grid">
+        <div class="method-card">
+          <h3>收录范围</h3>
+          <ul>
+            <li>以 2020–2025 年公开报道与华为 / 伙伴官方案例为主，少量 2018–2021 年条目用于呈现演进。</li>
+            <li>只收录公开信息中<strong>同时点名该机构与华为（或华为方案 / 产品）</strong>的合作事件。</li>
+            <li>华为未公开点名的客户、未披露的项目不纳入，也不做推断补全。</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>阶段判定</h3>
+          <ul>
+            <li><b>生产上线</b>：系统已投产、切换或规模运行。</li>
+            <li><b>试点 / 建设</b>：试点、验证、样板点或建设中。</li>
+            <li><b>联合创新 / 战略合作</b>：联合实验室、战略签约、方案共建。</li>
+            <li><b>生态适配</b>：鸿蒙上架、应用适配、认证等生态层合作。</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>体量口径</h3>
+          <ul>
+            <li>银行按总资产分层；证券、保险按行业分类，不参与资产排序。</li>
+            <li>农信 / 农商体系使用省级或集团口径，个体行资产另行标注。</li>
+            <li>未披露资产的机构只标注分层，不估算数值。</li>
+          </ul>
+        </div>
+        <div class="method-card warn">
+          <h3>重要说明</h3>
+          <ul>
+            <li>本看板是<strong>公开信息梳理</strong>，不是华为官方客户名单，也不构成投资或采购建议。</li>
+            <li>收录不代表排他合作；合作范围与最新状态以机构与华为官方披露为准。</li>
+            <li>金额与性能指标均引自公开来源，口径可能不一致。</li>
+            <li>全球数据（5,600 客户等）来自华为 FinAgent Booster 发布稿（2025-09），与国内案例口径不同。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>公开信息整理 · 不构成投资或采购建议</span>
+    <span class="foot-sep">·</span>
+    <span>数据更新 <b id="footStamp">—</b></span>
+    <a href="#top">回到顶部 ↑</a>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close aria-label="关闭">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js?v=20261117a" defer></script>
+</body>
+</html>

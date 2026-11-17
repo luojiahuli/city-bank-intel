@@ -1,0 +1,952 @@
+{
+  "updated": "2026-11-17",
+  "scope": "基于 2020–2025 年公开报道与华为官方案例梳理；只收录被点名披露的金融机构与可回溯来源，不代表华为官方客户名单。",
+  "global_context": {
+    "customers": 5600,
+    "countries": 80,
+    "top100_banks": 53,
+    "partners": 11000,
+    "as_of": "2025-09",
+    "source": "华为 FinAgent Booster 发布稿（2025-09）",
+    "url": "https://www.huawei.com/en/news/2025/9/hc-finagent-booster-showcases"
+  },
+  "tiers": [
+    { "id": "state", "label": "国有大型银行", "range": "总资产 >15 万亿元", "color": "#e5484d" },
+    { "id": "joint", "label": "股份制银行", "range": "总资产 3–15 万亿元", "color": "#f59e0b" },
+    { "id": "city", "label": "城市商业银行", "range": "总资产 0.2–5 万亿元", "color": "#38bdf8" },
+    { "id": "rural", "label": "农商行 / 农信", "range": "总资产 500–6000 亿元；省级农信为体系口径", "color": "#34d399" },
+    { "id": "private", "label": "民营银行", "range": "总资产 1000–8000 亿元", "color": "#a78bfa" },
+    { "id": "securities", "label": "证券公司", "range": "按行业分类，未按资产统一排序", "color": "#fb7185" },
+    { "id": "insurance", "label": "保险机构", "range": "按行业分类，未按资产统一排序", "color": "#f97316" }
+  ],
+  "pains": [
+    { "id": "core", "label": "核心系统分布式改造 / 主机下移" },
+    { "id": "db", "label": "数据库替换与自主创新" },
+    { "id": "data", "label": "数据仓库 / 数据中台 / 数据湖" },
+    { "id": "ai", "label": "AI 算力与大模型平台" },
+    { "id": "agent", "label": "智能体与业务场景" },
+    { "id": "harmony", "label": "鸿蒙 / 移动生态适配" },
+    { "id": "cloud", "label": "云原生与核心上云" },
+    { "id": "storage", "label": "存算分离 / 容灾 / 数据中心" },
+    { "id": "network", "label": "高性能网络与低时延" },
+    { "id": "sec_core", "label": "证券核心交易系统" }
+  ],
+  "caps": [
+    { "id": "gaussdb", "label": "GaussDB / 分布式数据库" },
+    { "id": "kunpeng", "label": "鲲鹏算力" },
+    { "id": "ascend", "label": "昇腾 AI 算力" },
+    { "id": "huawei_cloud", "label": "华为云 Stack / 云底座" },
+    { "id": "dorado", "label": "OceanStor 全闪存 / 存算分离" },
+    { "id": "fusioninsight", "label": "FusionInsight 大数据" },
+    { "id": "harmony", "label": "鸿蒙生态" },
+    { "id": "pangu", "label": "盘古 / 智能体平台" },
+    { "id": "network", "label": "CloudEngine / 低时延网络" }
+  ],
+  "stages": [
+    { "id": "live", "label": "生产上线", "color": "#2dd4bf" },
+    { "id": "pilot", "label": "试点 / 建设", "color": "#fbbf24" },
+    { "id": "joint", "label": "联合创新 / 战略合作", "color": "#60a5fa" },
+    { "id": "eco", "label": "生态适配", "color": "#c084fc" }
+  ],
+  "institutions": [
+    {
+      "id": "psbc",
+      "name": "中国邮政储蓄银行",
+      "short": "邮储银行",
+      "tier": "state",
+      "type": "国有大型银行",
+      "region": "全国",
+      "asset_note": "总资产 >15 万亿元（2025 年报档）",
+      "summary": "公开信息中唯一可确认完成大规模分布式核心投产的国有大行；同时把大模型用于数据中心运维。",
+      "cases": [
+        {
+          "year": 2022,
+          "month": "04",
+          "title": "新一代个人业务分布式核心系统全面投产",
+          "stage": "live",
+          "pains": ["core", "db", "cloud"],
+          "caps": ["gaussdb", "kunpeng", "huawei_cloud"],
+          "summary": "基于华为云 Stack、GaussDB 与鲲鹏服务器，完成传统商业数据库全面替换，并通过 6.5 亿客户在线无感迁移。",
+          "metrics": "6.5 亿客户；日均 20 亿笔、峰值 6.7 万笔/秒；联机平均耗时 93→65 毫秒；批处理 4.5→3 小时",
+          "sources": [
+            { "title": "华为：邮储银行分布式核心系统全面上线", "url": "https://www.huawei.com/cn/huaweitech/publication/202302/china-postal-savings-bank-intelligent-om-distributed-core" },
+            { "title": "华为云案例：邮储银行新一代个人业务分布式核心系统", "url": "https://www.huaweicloud.com/cases/ycyh.html" }
+          ]
+        },
+        {
+          "year": 2025,
+          "month": "06",
+          "title": "数据中心网络运维智能体",
+          "stage": "pilot",
+          "pains": ["ai", "agent"],
+          "caps": ["ascend", "pangu"],
+          "summary": "在 HiFS 2025 分享运维大模型实践，覆盖知识问答、告警研判、日志分析与配置变更，探索“对话即服务”。",
+          "metrics": "常见网络告警排查自动化率超 87.5%，排查效率提升 90%",
+          "sources": [
+            { "title": "新浪财经：邮储银行 AI 大模型赋能智能运维", "url": "https://finance.sina.com.cn/stock/relnews/hk/2025-06-11/doc-ineztfhw4517351.shtml" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "icbc",
+      "name": "中国工商银行",
+      "short": "工商银行",
+      "tier": "state",
+      "type": "国有大型银行",
+      "region": "全国",
+      "asset_note": "总资产 >15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融生态首批共建伙伴，手机银行原生版已全面对客，并向鸿蒙电脑延伸。",
+      "cases": [
+        {
+          "year": 2023,
+          "month": "12",
+          "title": "手机银行鸿蒙原生版与多端适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "2023 年底推出原生版，2024 年全面对客；业界首家以仓颉开发语言实现“收支日历”，2025 年启动鸿蒙电脑适配。",
+          "metrics": "工银 e 生活、企业手机、商户之家等 App 加速适配；鸿蒙 PC 网银启动开发",
+          "sources": [
+            { "title": "中国日报：华为举行鸿蒙生态金融行业论坛", "url": "https://tech.chinadaily.com.cn/a/202501/13/WS6784b328a310b59111dad7b4.html" },
+            { "title": "财联社：鸿蒙版金融应用突破 1000 款", "url": "https://www.cls.cn/detail/2068207" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ccb",
+      "name": "中国建设银行",
+      "short": "建设银行",
+      "tier": "state",
+      "type": "国有大型银行",
+      "region": "全国",
+      "asset_note": "总资产 >15 万亿元（2025 年报档）",
+      "summary": "鸿蒙原生手机银行全量适配，并把小艺语音、网点推荐等系统级能力嵌入金融服务。",
+      "cases": [
+        {
+          "year": 2023,
+          "month": "12",
+          "title": "手机银行鸿蒙原生全量适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "2023 年底推出鸿蒙原生版个人手机银行，2024 年 6 月完成全量适配；2025 年启动鸿蒙电脑适配。",
+          "metrics": "支持小艺“一句话转账”、临近网点推荐；20 余款应用接入意图框架",
+          "sources": [
+            { "title": "中国日报：鸿蒙生态金融行业论坛", "url": "https://tech.chinadaily.com.cn/a/202501/13/WS6784b328a310b59111dad7b4.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boc",
+      "name": "中国银行",
+      "short": "中国银行",
+      "tier": "state",
+      "type": "国有大型银行",
+      "region": "全国",
+      "asset_note": "总资产 >15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融应用与平板、PC 多端适配持续推进。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "金融应用鸿蒙多端适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "手机银行等金融应用完成鸿蒙手机/平板适配，并启动鸿蒙电脑端开发。",
+          "metrics": "鸿蒙平板全面适配；鸿蒙 PC 网银启动开发",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abc",
+      "name": "中国农业银行",
+      "short": "农业银行",
+      "tier": "state",
+      "type": "国有大型银行",
+      "region": "全国",
+      "asset_note": "总资产 >15 万亿元（2025 年报档）",
+      "summary": "完成鸿蒙平板适配，并将手机银行上架鸿蒙电脑。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "手机银行上架鸿蒙电脑",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "金融应用全面适配鸿蒙平板；手机银行已上架鸿蒙电脑，覆盖 PC 端金融服务。",
+          "metrics": "鸿蒙手机/平板/PC 三端覆盖",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bocom",
+      "name": "交通银行",
+      "short": "交通银行",
+      "tier": "state",
+      "type": "国有大型银行",
+      "region": "全国",
+      "asset_note": "总资产 >15 万亿元（2025 年报档）",
+      "summary": "参与鸿蒙生态金融共建，并在智算底座与大模型落地上与华为同台分享。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "01",
+          "title": "鸿蒙生态金融共建",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "作为首批共建机构参与鸿蒙生态金融论坛，推动金融应用在鸿蒙手机、平板与 PC 上适配。",
+          "metrics": "金融应用完成鸿蒙多端适配",
+          "sources": [
+            { "title": "中国日报：鸿蒙生态金融行业论坛", "url": "https://tech.chinadaily.com.cn/a/202501/13/WS6784b328a310b59111dad7b4.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cmb",
+      "name": "招商银行",
+      "short": "招商银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "从 GaussDB 交易库到 PB 级云数仓的长期联合创新，是华为金融数据库最深的股份行样本之一。",
+      "cases": [
+        {
+          "year": 2020,
+          "month": "06",
+          "title": "新一代数据仓库联合创新实验室",
+          "stage": "joint",
+          "pains": ["data", "db"],
+          "caps": ["gaussdb", "huawei_cloud"],
+          "summary": "双方揭牌联合创新实验室，围绕企业级数仓的高可用、高性能、弹性扩展与安全可信开展共研。",
+          "metrics": "面向 PB 级数据规模；联合探索 Ustore 存储引擎与 DCF 高可用组件",
+          "sources": [
+            { "title": "华为：招行与华为成立新一代数据仓库联合创新实验室", "url": "https://e.huawei.com/cn/news/ebg/2020/new-generation-data-warehouse" }
+          ]
+        },
+        {
+          "year": 2021,
+          "month": "07",
+          "title": "国内首个大规模金融云数仓上线",
+          "stage": "live",
+          "pains": ["data", "db"],
+          "caps": ["gaussdb", "huawei_cloud"],
+          "summary": "基于华为云 GaussDB(DWS) 建成 PB 级金融核心数仓，承载全行数据应用批处理，获 2021 IDC 金融新基建优秀案例。",
+          "metrics": "查询时长缩短 75%；扩容停机 12–24→2–4 小时；在线扩容 20→65TB/h；备份 37→150TB/h",
+          "sources": [
+            { "title": "华为：GaussDB(DWS) 助招行摘得 2021 IDC 金融新基建优秀案例", "url": "https://e.huawei.com/cn/news/ebg/2021/huawei-cloud-idc-recognizes-cmb" }
+          ]
+        },
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙原生应用与智行金融专区",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "完成鸿蒙原生应用适配，并作为合作银行接入鸿蒙智行金融专区。",
+          "metrics": "手机银行等应用上架鸿蒙应用市场",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hxb",
+      "name": "华夏银行",
+      "short": "华夏银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "股份行中少见的公开核心系统分布式转型案例：小型机与集中式数据库同步替换。",
+      "cases": [
+        {
+          "year": 2024,
+          "title": "核心借记卡系统架构转型",
+          "stage": "live",
+          "pains": ["core", "db"],
+          "caps": ["gaussdb", "kunpeng"],
+          "summary": "硬件由 IBM 小型机转向开放 PC 服务器，数据库由集中式转向分布式，采用华为云原生数据库；获 2024 亚洲银行家中国最佳数字基础设施与架构现代化奖。",
+          "metrics": "性能较原系统提升 1.5 倍；业务灵活性提升 30%；支撑日均超千万笔交易",
+          "sources": [
+            { "title": "亚洲银行家：2024 中国最佳数字基础设施和架构现代化实施", "url": "https://www.theasianbanker.com/updates-and-articles/best-digital-infrastructure-and-architecture-modernisation-in-china-2024" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pab",
+      "name": "平安银行",
+      "short": "平安银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融生态合作银行，接入鸿蒙智行金融专区。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙应用与智行金融专区",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "完成鸿蒙原生应用适配，并作为合作金融机构接入鸿蒙智行金融专区。",
+          "metrics": "手机银行等应用上架鸿蒙应用市场",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "citic",
+      "name": "中信银行",
+      "short": "中信银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融应用适配，覆盖手机、平板等多终端。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙原生应用适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "手机银行等金融应用完成鸿蒙原生适配并上架应用市场。",
+          "metrics": "多终端金融服务覆盖",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cib",
+      "name": "兴业银行",
+      "short": "兴业银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融生态合作银行，金融应用完成原生适配。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙原生应用适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "手机银行等金融应用完成鸿蒙原生适配并上架应用市场。",
+          "metrics": "多终端金融服务覆盖",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spdb",
+      "name": "上海浦东发展银行",
+      "short": "浦发银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙原生应用与智行金融专区合作银行。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙应用与智行金融专区",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "完成鸿蒙原生应用适配，并接入鸿蒙智行金融专区。",
+          "metrics": "手机银行等应用上架鸿蒙应用市场",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cmbc",
+      "name": "中国民生银行",
+      "short": "民生银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融生态合作银行，手机银行完成原生适配。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙原生应用适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "手机银行等金融应用完成鸿蒙原生适配并上架应用市场。",
+          "metrics": "多终端金融服务覆盖",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ceb",
+      "name": "中国光大银行",
+      "short": "光大银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融应用适配，手机银行完成原生开发。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙原生应用适配",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "手机银行等金融应用完成鸿蒙原生适配并上架应用市场。",
+          "metrics": "多终端金融服务覆盖",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cgb",
+      "name": "广发银行",
+      "short": "广发银行",
+      "tier": "joint",
+      "type": "股份制银行",
+      "region": "全国",
+      "asset_note": "总资产 3–15 万亿元（2025 年报档）",
+      "summary": "鸿蒙金融生态与智行场景合作银行。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "12",
+          "title": "鸿蒙应用与智行金融专区",
+          "stage": "eco",
+          "pains": ["harmony"],
+          "caps": ["harmony"],
+          "summary": "完成鸿蒙原生应用适配，并作为合作银行接入鸿蒙智行金融专区。",
+          "metrics": "手机银行等应用上架鸿蒙应用市场",
+          "sources": [
+            { "title": "21 世纪经济报道：金融行业加速融入鸿蒙生态", "url": "https://www.21jingji.com/article/20251210/herald/a41b9c2b27d03253eb63a0de02e5c8e1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hzbank",
+      "name": "杭州银行",
+      "short": "杭州银行",
+      "tier": "city",
+      "type": "城市商业银行",
+      "region": "浙江",
+      "asset": 23600,
+      "asset_year": 2025,
+      "asset_note": "总资产 2.36 万亿元（2025 年报）",
+      "summary": "国内首家以鲲鹏为通用算力路线的云原生分布式核心，同时较早落地 FusionInsight 大数据平台。",
+      "cases": [
+        {
+          "year": 2023,
+          "month": "11",
+          "title": "新一代分布式核心系统整体切换上线",
+          "stage": "live",
+          "pains": ["core", "cloud"],
+          "caps": ["kunpeng"],
+          "summary": "以鲲鹏为通用算力底座，联合中电金信等伙伴建设云原生、分布式、全栈自主创新核心系统，2023-11-18 一次性迁移切换。",
+          "metrics": "2500 万账户、270 余个网点；日均 1500 万笔；峰值 3000 TPS；联机耗时缩短 54%；日终耗时缩短 67%",
+          "sources": [
+            { "title": "华为案例：杭州银行与鲲鹏携手共建新一代分布式核心系统", "url": "https://e.huawei.com/cn/case-studies/industries/finance/hzbank-kunpeng-new-digital-core" },
+            { "title": "赛迪网：杭州银行与鲲鹏共建新一代分布式核心系统", "url": "https://www.ccidnet.com/zn/94932.jhtml" }
+          ]
+        },
+        {
+          "year": 2018,
+          "month": "12",
+          "title": "FusionInsight 大数据平台",
+          "stage": "live",
+          "pains": ["data"],
+          "caps": ["fusioninsight"],
+          "summary": "采用 FusionInsight HD 替代传统数仓，统一接入银行内外部结构化与非结构化数据，联合信雅达完成数据集成。",
+          "metrics": "覆盖数据接入、存储、计算、管理与接口五层；支撑批量与精确查询混合场景",
+          "sources": [
+            { "title": "中国电子商会：杭州银行的数字经济探索", "url": "https://www.cecc.org.cn/news/201812/533460.html" },
+            { "title": "IT168：杭州银行与华为签署战略合作协议", "url": "https://safe.it168.com/a2018/1129/5112/000005112740.shtml" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zybank",
+      "name": "中原银行",
+      "short": "中原银行",
+      "tier": "city",
+      "type": "城市商业银行",
+      "region": "河南",
+      "asset": 14142.93,
+      "asset_year": 2025,
+      "asset_note": "总资产 1.41 万亿元（2025 年报）",
+      "summary": "从存算分离数据湖到昇腾轻量化大模型平台，是城商行中少数同时覆盖数据与 AI 底座的样本。",
+      "cases": [
+        {
+          "year": 2024,
+          "title": "OceanStor Pacific 存算分离融合数据湖",
+          "stage": "live",
+          "pains": ["data", "storage"],
+          "caps": ["dorado"],
+          "summary": "以华为分布式存储构建融合数据湖，采用存算分离与弹性 EC，支撑多源数据统一分析与长期留存。",
+          "metrics": "综合 TCO 节省 20% 以上",
+          "sources": [
+            { "title": "华为案例：中原银行携手华为分布式存储打造融合数据湖", "url": "https://e.huawei.com/cn/case-studies/industries/finance/zhongyuan-bank" }
+          ]
+        },
+        {
+          "year": 2025,
+          "month": "06",
+          "title": "轻量化大模型应用平台",
+          "stage": "joint",
+          "pains": ["ai", "agent"],
+          "caps": ["ascend", "pangu"],
+          "summary": "基于昇腾 AI 与盘古等模型建设轻量化大模型研发/应用平台，覆盖反欺诈等场景，并在 HiFS 2025 分享实践。",
+          "metrics": "全行智能算力约 60 PFlops；平台被《昇腾在金融行业的应用与生态白皮书》收录",
+          "sources": [
+            { "title": "华为全球智慧金融峰会 2025（HiFS）", "url": "https://e.huawei.com/cn/events/industries/finance/finance-summit" },
+            { "title": "中原银行 CIO：大模型技术应用探索实践", "url": "https://baijiahao.baidu.com/s?id=1843658255281912999" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wlmqbank",
+      "name": "乌鲁木齐银行",
+      "short": "乌鲁木齐银行",
+      "tier": "city",
+      "type": "城市商业银行",
+      "region": "新疆",
+      "asset": 2564.6,
+      "asset_year": 2025,
+      "asset_note": "总资产 2564.6 亿元（2025 年报）",
+      "summary": "西北地区较早实现全栈自主创新核心上线的城商行，采用华为云 Stack + 鲲鹏 + 微服务容器化。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "08",
+          "title": "新一代核心系统上云投产",
+          "stage": "live",
+          "pains": ["core", "cloud"],
+          "caps": ["huawei_cloud", "kunpeng"],
+          "summary": "基于华为 HCS 云平台与鲲鹏算力底座，采用微服务与容器化部署，由神州信息与华为联合建设。",
+          "metrics": "西北五省率先实现全栈自主创新核心；平稳运行超 8 个月；批量处理效率提升 4 倍",
+          "sources": [
+            { "title": "网易财经：乌鲁木齐银行核心上云新实践", "url": "https://www.163.com/money/article/K7IEULGU00259I71.html" },
+            { "title": "神州信息：神州信息×华为打造银行核心标杆", "url": "http://www.dcits.com/news-and-insights/content-269-7067-1.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sxbank",
+      "name": "绍兴银行",
+      "short": "绍兴银行",
+      "tier": "city",
+      "type": "城市商业银行",
+      "region": "浙江",
+      "asset": 2853.41,
+      "asset_year": 2025,
+      "asset_note": "总资产 2853.41 亿元（2025 年报）",
+      "summary": "“数智绍芯”新核心项目群以鲲鹏、全闪存、智算网络与虚拟化构建全栈信创底座，承载 60 多套系统。",
+      "cases": [
+        {
+          "year": 2024,
+          "month": "10",
+          "title": "“数智绍芯”新核心项目群投产",
+          "stage": "live",
+          "pains": ["core", "cloud"],
+          "caps": ["kunpeng", "dorado", "network"],
+          "summary": "历时 17 个月，核心由集中式走向分布式，软硬件全面国产化；鲲鹏底座承载柜面、移动银行、集中支付、现金管理等 60 多套系统。",
+          "metrics": "支撑超 2000 万客户、4000 万账户、日 3 亿笔交易；联机平均耗时 <100 毫秒；日终批处理效率提升 2.7 倍",
+          "sources": [
+            { "title": "华为：华为助力绍兴银行新核心项目群成功投产上线", "url": "https://e.huawei.com/cn/case-studies/industries/finance/2024-sxccb-new-digital-core" },
+            { "title": "绍兴日报：“数智绍芯”新核心项目群成功投产", "url": "https://m.shaoxing.com.cn/p/3253706.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "szrcb",
+      "name": "江苏苏州农村商业银行",
+      "short": "苏州农商行",
+      "tier": "rural",
+      "type": "农村商业银行",
+      "region": "江苏",
+      "asset": 2309.07,
+      "asset_year": 2025,
+      "asset_note": "总资产 2309.07 亿元（2025 年报）",
+      "summary": "全国区域性银行中率先在核心系统落地 GaussDB + OceanStor Dorado 存算分离架构。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "06",
+          "title": "核心系统存算分离改造与样板点揭牌",
+          "stage": "live",
+          "pains": ["core", "db", "storage", "cloud"],
+          "caps": ["gaussdb", "dorado", "kunpeng"],
+          "summary": "存、贷、汇三大核心业务完成 100% 国产化替换；2025-10-10 与华为揭牌“新一代金融数据基础设施样板点”。",
+          "metrics": "日均交易 100 万→1000 万笔；峰值 200→6800 笔/秒；日终批处理 80→18 分钟；联机响应 30 毫秒；性能提升超 40%",
+          "sources": [
+            { "title": "金融时报：苏州农商行新一代金融数据基础设施样板点揭牌", "url": "https://www.financialnews.com.cn/m/2025-10/10/content_434946.html" },
+            { "title": "同花顺：100% 国产化，全栈信创新突破", "url": "https://field.10jqka.com.cn/20250630/c669259357.shtml" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jnrcb",
+      "name": "江苏江南农村商业银行",
+      "short": "江南农商行",
+      "tier": "rural",
+      "type": "农村商业银行",
+      "region": "江苏",
+      "asset": 6286.03,
+      "asset_year": 2025,
+      "asset_note": "总资产 6286.03 亿元（2025 年报）",
+      "summary": "信贷核算系统基于 GaussDB 完成“全栈自主创新 + 分布式”改造，是同城双集群容灾样本。",
+      "cases": [
+        {
+          "year": 2023,
+          "title": "信贷核算系统分布式改造",
+          "stage": "live",
+          "pains": ["core", "db", "storage"],
+          "caps": ["gaussdb", "dorado"],
+          "summary": "采用 5 节点主集群 + 4 节点容灾集群、两地三中心部署，核心类信贷核算系统完成分布式改造。",
+          "metrics": "性能优于原集中式架构 320%；异地 RPO≤5 秒、RTO≤145 秒",
+          "sources": [
+            { "title": "华为案例：江南农商银行核心系统分布式改造", "url": "https://e.huawei.com/cn/case-studies/industries/finance/jiangnanbank-new-digital-core-gaussdb" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gzrcu",
+      "name": "贵州省农村信用社联合社",
+      "short": "贵州农信",
+      "tier": "rural",
+      "type": "省级农信",
+      "region": "贵州",
+      "asset_note": "省级农信体系，未按单一法人披露总资产",
+      "summary": "全国省级农信首个全栈自主创新核心，22 小时完成 64 套关联系统切换。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "10",
+          "title": "新一代全栈自主创新核心系统投产",
+          "stage": "live",
+          "pains": ["core", "cloud", "storage"],
+          "caps": ["huawei_cloud", "kunpeng", "dorado"],
+          "summary": "采用华为云、鲲鹏服务器、NoF 存储与网络及单元化双活方案，同城双活、异地容灾；历时 520 天攻坚。",
+          "metrics": "22 小时完成 64 套系统切换、核心数据零偏差迁移；峰值 TPS 为旧系统 6 倍；日终清算 70→25 分钟；审批效率提升 60%+",
+          "sources": [
+            { "title": "华为：华为助力贵州农信新一代核心成功投产上线", "url": "https://e.huawei.com/cn/news/2025/industries/finance/guizhou-rural-credit-union" },
+            { "title": "经济参考报：22 小时完成 64 套系统切换", "url": "https://cbgc.scol.com.cn/news/7054172" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zjgnrcb",
+      "name": "江苏张家港农村商业银行",
+      "short": "张家港农商行",
+      "tier": "rural",
+      "type": "农村商业银行",
+      "region": "江苏",
+      "asset_note": "农商行，具体总资产以最新年报为准",
+      "summary": "较早与华为共建鲲鹏联合创新平台，联合长亮科技完成分布式核心全栈国产化投产。",
+      "cases": [
+        {
+          "year": 2021,
+          "title": "鲲鹏联合创新与分布式核心国产化",
+          "stage": "live",
+          "pains": ["core", "db"],
+          "caps": ["kunpeng"],
+          "summary": "长亮科技分布式银行核心系统与华为泰山服务器在该行实现全栈国产正式投产，双方此前共建鲲鹏联合创新平台。",
+          "metrics": "核心系统全栈国产化投产；获华为“计算业务鲲鹏展翅高飞奖”",
+          "sources": [
+            { "title": "江苏省农信社：张家港农商银行携手华为开启国产化布局", "url": "https://www.jsrcub.net/cn/dtzx/jcdt/14718.html" },
+            { "title": "长亮科技荣获华为“计算业务鲲鹏展翅高飞奖”", "url": "https://www.sunline.cn/show-754.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jsrcu",
+      "name": "江苏农商联合银行",
+      "short": "江苏农商联合银行",
+      "tier": "rural",
+      "type": "省级农商联合银行",
+      "region": "江苏",
+      "asset_note": "省级联合银行，未按单一法人披露总资产",
+      "summary": "原江苏省农信联社 2020 年与华为签署战略合作，改制后 2025 年再度签约；核心主机下移项目未公开确认华为为技术供应商。",
+      "cases": [
+        {
+          "year": 2020,
+          "month": "07",
+          "title": "省联社与华为签署战略合作协议",
+          "stage": "joint",
+          "pains": ["cloud", "data", "ai"],
+          "caps": ["huawei_cloud"],
+          "summary": "围绕 5G、IoT、AI、云计算、大数据、生物识别等开展合作，由华为协助制定安全可信的整体技术路线。",
+          "metrics": "建立长期战略合作伙伴关系",
+          "sources": [
+            { "title": "华为：江苏省农村信用社联合社与华为签署战略合作协议", "url": "https://e.huawei.com/cn/news/industries/2020/rural-credit-cooperative-huawei-cooperation" }
+          ]
+        },
+        {
+          "year": 2025,
+          "month": "04",
+          "title": "改制后与华为再度签署战略合作协议",
+          "stage": "joint",
+          "pains": ["cloud"],
+          "caps": ["huawei_cloud"],
+          "summary": "江苏农商联合银行开业活动现场与中国银联、中国信达资产、华为签署战略合作协议。",
+          "metrics": "省级农商联合银行正式挂牌",
+          "sources": [
+            { "title": "中共江苏省委新闻网：江苏农商联合银行开业暨银企签约活动", "url": "https://zgjssw.jschina.com.cn/yaowen/202504/t20250409_8474476.shtml" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "webank",
+      "name": "深圳前海微众银行",
+      "short": "微众银行",
+      "tier": "private",
+      "type": "民营银行",
+      "region": "广东",
+      "asset": 7662.9,
+      "asset_year": 2025,
+      "asset_note": "总资产 7662.9 亿元（2025 年报）",
+      "summary": "民营银行中使用鲲鹏 ARM 服务器与存算分离架构的标杆，核心系统承载亿级账户。",
+      "cases": [
+        {
+          "year": 2020,
+          "title": "鲲鹏 ARM 服务器支撑分布式核心",
+          "stage": "live",
+          "pains": ["core", "db"],
+          "caps": ["kunpeng"],
+          "summary": "2018 年起验证鲲鹏 ARM 泰山服务器并部署到核心业务，实现应用、操作系统到硬件的全路径 ARM 化。",
+          "metrics": "ARM 服务器超 980 台；同等配置整体功耗下降约 25%；IT 资源成本下降约 10%",
+          "sources": [
+            { "title": "南方+：微众银行用国产芯做核心", "url": "https://static.nfapp.southcn.com/content/202112/26/c6075458.html" }
+          ]
+        },
+        {
+          "year": 2025,
+          "month": "04",
+          "title": "存算分离 Diskless 架构与 OceanDisk",
+          "stage": "live",
+          "pains": ["storage", "data"],
+          "caps": ["dorado"],
+          "summary": "数据量从不足 10PB 增至 110PB、服务器增至 2 万台后，采用存算分离 Diskless 架构与华为 OceanDisk 智能盘框。",
+          "metrics": "日交易峰值 14 亿笔；核心可靠性 99.999%；单账户年 IT 运维成本约 2 元",
+          "sources": [
+            { "title": "中金在线：微众银行×华为重塑数据库架构", "url": "http://news.cnfol.com/shangyeyaowen/20250424/31269134.shtml" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guosen",
+      "name": "国信证券",
+      "short": "国信证券",
+      "tier": "securities",
+      "type": "证券公司",
+      "region": "广东",
+      "asset_note": "证券公司，按行业分类",
+      "summary": "联合华为、华锐技术、金证科技建成新一代核心交易系统，交易时延进入微秒级。",
+      "cases": [
+        {
+          "year": 2024,
+          "month": "10",
+          "title": "新一代核心交易系统上线",
+          "stage": "live",
+          "pains": ["sec_core", "db", "network"],
+          "caps": ["kunpeng", "gaussdb", "network"],
+          "summary": "交易、清算、账户运营全面解耦；华为提供鲲鹏、GaussDB 与低时延网络的全栈底座。",
+          "metrics": "交易时延 <500 微秒；并发处理能力提升百倍；核心设备转发时延低至 350 纳秒",
+          "sources": [
+            { "title": "华为：国信证券新一代核心交易系统升级上线", "url": "https://e.huawei.com/cn/news/2024/industries/finance/guosen-securities-launch-system" },
+            { "title": "中国网财经：国信证券新一代核心交易系统正式上线", "url": "http://finance.china.com.cn/roll/20241022/6176989.shtml" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gtht",
+      "name": "国泰海通证券",
+      "short": "国泰海通",
+      "tier": "securities",
+      "type": "证券公司",
+      "region": "上海",
+      "asset_note": "证券公司，按行业分类",
+      "summary": "与华为从 2019 年联合创新走到 2022 年分布式核心上线、2024 年全栈升级，并共建数智化灯塔样板点。",
+      "cases": [
+        {
+          "year": 2024,
+          "title": "分布式核心交易系统全栈升级",
+          "stage": "live",
+          "pains": ["sec_core", "network"],
+          "caps": ["kunpeng", "dorado", "network"],
+          "summary": "横向覆盖移动、桌面、网点、互联网接入、核心交易到灾备，纵向完成存储、交换机、服务器、操作系统、数据库、中间件全栈自主创新；2019 年起与华为联合创新，2022 年上线并完成 2000 万客户切换。",
+          "metrics": "交易时延 20 毫秒→200 微秒；单节点委托 2500→8000 笔/秒；3 分钟内无感回切；经受 2024 年“9·24”行情考验",
+          "sources": [
+            { "title": "新浪财经：国泰海通以全栈创新破局核心技术", "url": "https://finance.sina.com.cn/wm/2025-10-30/doc-infvrhry8181655.shtml" },
+            { "title": "华为案例：国泰海通高品质证券网络", "url": "https://e.huawei.com/cn/case-studies/solutions/enterprise-network/202609-cathay-haitong" }
+          ]
+        },
+        {
+          "year": 2025,
+          "month": "09",
+          "title": "全球数智化升级灯塔样板点",
+          "stage": "joint",
+          "pains": ["network", "ai"],
+          "caps": ["network"],
+          "summary": "华为与券商联合共建的数智化灯塔样板点，展示核心交易、AI、数据中心与 SRv6 骨干网实践；联合发布《新一代证券交易白皮书》。",
+          "metrics": "微秒级全链路网络；32K 组播稳定运行；MoFRR 百毫秒级收敛",
+          "sources": [
+            { "title": "华为：联合发布《新一代证券交易白皮书》", "url": "https://e.huawei.com/cn/news/2025/industries/finance/new-generation-securities-trading" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cmschina",
+      "name": "招商证券",
+      "short": "招商证券",
+      "tier": "securities",
+      "type": "证券公司",
+      "region": "广东",
+      "asset_note": "证券公司，按行业分类",
+      "summary": "以昇腾服务器本地部署大模型，纳管 70 多个模型服务，是券商 AI 算力落地的代表。",
+      "cases": [
+        {
+          "year": 2024,
+          "title": "昇腾大模型管理平台",
+          "stage": "live",
+          "pains": ["ai", "agent"],
+          "caps": ["ascend", "pangu"],
+          "summary": "采用昇腾 Atlas 800T A2 训练服务器与 MindIE 推理引擎，支持 NPU/GPU 异构混合部署，覆盖研报助手、托管助手、智能询价等场景。",
+          "metrics": "累计上线 70+ 大模型服务；年度 token 吞吐量同比提升近 10 倍",
+          "sources": [
+            { "title": "华为：招商证券携手华为共创 AI 证券新范式", "url": "https://e.huawei.com/cn/videos/campaign/finance/7ef81215282f4ba5b22e7db8039bfb4e" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cpic",
+      "name": "中国太平洋保险",
+      "short": "中国太保",
+      "tier": "insurance",
+      "type": "保险机构",
+      "region": "上海",
+      "asset_note": "保险机构，按行业分类",
+      "summary": "与华为共建保险行业首个大规模训推算力平台，从 20+ 场景扩展到 60+ 核心场景。",
+      "cases": [
+        {
+          "year": 2025,
+          "month": "02",
+          "title": "太平洋保险智算中心全球样板点",
+          "stage": "live",
+          "pains": ["ai", "data"],
+          "caps": ["ascend", "huawei_cloud", "dorado"],
+          "summary": "基于昇腾算力底座构建“算-网-存-云”协同的千亿级大模型训推平台，部署 MindIE 推理引擎。",
+          "metrics": "支撑千亿级模型训练推理；上线 20+ AI 场景，后续扩展至 60+、月调用超 500 万次",
+          "sources": [
+            { "title": "华为：联合太保科技发布太平洋保险智算中心全球样板点", "url": "https://e.huawei.com/cn/news/2025/solutions/data-center/huawei-cpic-insurance-computing-center" },
+            { "title": "同花顺：探秘太保×华为智算中心", "url": "https://invest.10jqka.com.cn/20260729/c678517315.shtml" }
+          ]
+        }
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "name": "神州信息",
+      "role": "分布式核心 / 金融知识问答智能体",
+      "summary": "以分布式核心系统为基线，结合 GaussDB、鲲鹏、华为云 Stack 与 Dorado，落地乌鲁木齐银行新核心上云、华北某农商行全栈国产化核心等项目。",
+      "url": "http://www.dcits.com/news-and-insights/content-269-7067-1.html"
+    },
+    {
+      "name": "中电金信",
+      "role": "业务建模智能体 / 金融现代化新核心",
+      "summary": "联合推出业务建模智能体（昇腾 + 盘古/DeepSeek）与金融现代化新核心方案；源启平台完成鲲鹏、openEuler 适配。",
+      "url": "https://www.gientech.com/news-detail/1393.html"
+    },
+    {
+      "name": "长亮科技",
+      "role": "分布式银行核心",
+      "summary": "SunCBS 分布式核心与华为云、鲲鹏结合，在微众银行、张家港农商行实现全栈国产投产。",
+      "url": "https://www.sunline.cn/show-754.html"
+    },
+    {
+      "name": "宇信科技",
+      "role": "信贷平台 / 鲲鹏生态",
+      "summary": "华为云 Stack + GaussDB + 宇信综合信贷平台在某农商行落地；三款产品完成鲲鹏同辕开发。",
+      "url": "https://finance.sina.com.cn/roll/2025-09-19/doc-infqzqqf2928994.shtml"
+    },
+    {
+      "name": "南天信息",
+      "role": "昇腾 AI 全栈 / 智能运维",
+      "summary": "依托昇腾与华为云构建金融 AI 全栈能力，慧府产品簇与昇腾全系列算力底座兼容，服务头部股份行与财险公司。",
+      "url": "https://www.huaweicloud.com/partners/case/zhihuijinrong/nantian.html"
+    },
+    {
+      "name": "达观数据",
+      "role": "知识库 / 审计智能搜索",
+      "summary": "与华为联合举办金融 AI 活动，落地上海农商行智能知识库、微众银行审计智能化搜索等场景。",
+      "url": "https://www.datagrand.com/blog/%e8%be%be%e8%a7%82%e6%95%b0%e6%8d%ae%e6%90%ba%e6%89%8b%e5%8d%8e%e4%b8%ba%e6%88%90%e5%8a%9f%e4%b8%be%e5%8a%9e%e9%87%91%e8%9e%8dai%e8%81%94%e5%90%88%e6%b4%bb%e5%8a%a8%ef%bc%8c%e5%85%b1%e6%8e%a2%e9%87%91%e8%9e%8d%e7%a7%91%e6%8a%80%e8%9e%8d%e5%90%88%e6%96%b0%e8%b7%af%e5%be%84%ef%bc%8c.html"
+    },
+    {
+      "name": "金证科技",
+      "role": "证券基金核心 / 云上泛金融",
+      "summary": "基于华为云打造跨界融合平台，10 多家客户通过泛金融方案迁移上云，交付周期由 1 个月缩短至 1 天。",
+      "url": "https://www.huaweicloud.com/intl/zh-cn/cases/1436013058_73.html"
+    },
+    {
+      "name": "华锐技术",
+      "role": "低时延证券交易平台",
+      "summary": "与华为、国信证券、国泰海通联合适配 T7 分布式交易平台，支撑微秒级核心交易。",
+      "url": "https://www.archforce.cn/news/671f020f7d0f8e1159342016"
+    }
+  ]
+}
