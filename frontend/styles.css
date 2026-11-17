@@ -113,6 +113,21 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 8px rgba(76, 201, 240, 0.9);
 }
 .dash-link .short { display: none; }
+.top-links { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.dash-link.analysis {
+  border-color: rgba(255, 158, 100, 0.32);
+  background: rgba(255, 158, 100, 0.08);
+  color: #ffd9bd;
+}
+.dash-link.analysis:hover {
+  background: rgba(255, 158, 100, 0.16);
+  border-color: rgba(255, 158, 100, 0.6);
+  color: #ffe9d6;
+}
+.dash-link.analysis .dash-dot {
+  background: #ff9e64;
+  box-shadow: 0 0 8px rgba(255, 158, 100, 0.9);
+}
 
 /* ---------------- workspace ---------------- */
 .workspace { display: flex; min-height: 0; position: relative; }
@@ -408,14 +423,16 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 768px) {
   .app-shell { grid-template-rows: calc(54px + env(safe-area-inset-top)) 1fr 0; }
-  .topbar { gap: 8px; padding: env(safe-area-inset-top) 10px 0; min-height: 54px; }
+  .topbar { gap: 6px; padding: env(safe-area-inset-top) 10px 0; min-height: 54px; }
+  .top-links { gap: 6px; }
   .brand { min-width: 0; flex: 1 1 auto; gap: 8px; }
   .brand-mark { width: 30px; height: 30px; border-radius: 8px; font-size: 11px; }
   .brand h1 { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .brand-long { display: none; }
   .brand-short { display: inline; }
   .brand p { display: none; }
-  .search-wrap { flex: 0 1 32vw; width: 32vw; }
+  .search-wrap { flex: 0 1 28vw; width: 28vw; min-width: 0; }
+  #fitBtn { display: none; }
   #searchInput { height: 32px; padding-left: 30px; font-size: 12px; background-position: 10px center; }
   .search-results { position: fixed; top: calc(54px + env(safe-area-inset-top)); left: 8px; right: 8px; max-height: 52vh; z-index: 45; }
   .icon-btn { width: 32px; height: 32px; font-size: 14px; }
@@ -459,9 +476,10 @@ a:hover { text-decoration: underline; }
   .canvas-tooltip { display: none !important; }
 }
 @media (max-width: 420px) {
+  .brand { flex: 0 0 auto; }
   .brand h1 { font-size: 12px; }
   .brand-mark { width: 28px; height: 28px; }
-  .search-wrap { flex: 1 1 auto; width: auto; }
+  .search-wrap { flex: 1 1 auto; width: auto; min-width: 0; }
   .detail-panel { height: min(76vh, 700px); }
   .view-tab { padding: 6px 9px; }
 }
