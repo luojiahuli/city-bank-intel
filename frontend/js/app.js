@@ -1,9 +1,9 @@
 /* App orchestration: data loading, filters, views, search and panel wiring. */
 
-import { GraphCanvas } from "./canvas.js?v=20261116b";
-import { DetailPanel } from "./detail.js?v=20261116b";
-import { BankSearch } from "./search.js?v=20261116b";
-import { ConclusionModal } from "./insight.js?v=20261116b";
+import { GraphCanvas } from "./canvas.js?v=20261120a";
+import { DetailPanel } from "./detail.js?v=20261120a";
+import { BankSearch } from "./search.js?v=20261120a";
+import { ConclusionModal } from "./insight.js?v=20261120a";
 
 const GROUPS = [
   { key: "city", label: "城商行", color: "#4cc9f0" },

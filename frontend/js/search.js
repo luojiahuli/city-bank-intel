@@ -35,7 +35,9 @@ export class BankSearch {
     this.filterFn = filterFn;
     this.matches = [];
     this.activeIndex = -1;
-    this._prepared = items.map((item) => ({ item, hay: haystack(item) }));
+    this._prepared = new Array(items.length);
+    this._prepIndex = 0;
+    this._schedulePrepare();
 
     this.input.addEventListener("input", () => this.search(this.input.value));
     this.input.addEventListener("focus", () => {
@@ -53,6 +55,21 @@ export class BankSearch {
     });
   }
 
+  _schedulePrepare() {
+    const idle = window.requestIdleCallback
+      ? (fn) => window.requestIdleCallback(fn, { timeout: 800 })
+      : (fn) => window.setTimeout(fn, 16);
+    const step = () => {
+      const end = Math.min(this.items.length, this._prepIndex + 200);
+      for (; this._prepIndex < end; this._prepIndex += 1) {
+        const item = this.items[this._prepIndex];
+        this._prepared[this._prepIndex] = { item, hay: haystack(item) };
+      }
+      if (this._prepIndex < this.items.length) idle(step);
+    };
+    idle(step);
+  }
+
   search(raw) {
     const tokens = String(raw || "").toLowerCase().trim().split(/\s+/).map(norm).filter(Boolean);
     const q = tokens.join("");
@@ -61,7 +78,13 @@ export class BankSearch {
       return;
     }
     const hits = [];
-    for (const entry of this._prepared) {
+    for (let i = 0; i < this._prepared.length; i += 1) {
+      let entry = this._prepared[i];
+      if (!entry) {
+        const item = this.items[i];
+        entry = { item, hay: haystack(item) };
+        this._prepared[i] = entry;
+      }
       if (this.filterFn && !this.filterFn(entry.item)) continue;
       if (!tokens.every((t) => entry.hay.includes(t))) continue;
       const name = norm(entry.item.name);

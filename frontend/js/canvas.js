@@ -28,6 +28,12 @@ const EDGE_STYLE = {
 
 const FONT = '"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif';
 
+// Below this zoom the whole country is on screen, so panning redraws every
+// node and edge. Cache that frame and blit it while only the translation
+// changes.
+const CACHE_MAX_K = 0.9;
+const CACHE_PAN_MARGIN = 60;
+
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
 function easeOutCubic(t) {
@@ -68,6 +74,12 @@ export class GraphCanvas {
     this._map = null;
     this._mapLayer = null;
 
+    this._ov = null;
+    this._ovKey = "";
+    this._ovPos = { k: 0, x: 0, y: 0 };
+    this._ovWanted = false;
+    this._version = 0;
+
     this._bindEvents();
     if (typeof ResizeObserver !== "undefined") {
       this._ro = new ResizeObserver(() => this._resize());
@@ -80,14 +92,20 @@ export class GraphCanvas {
 
   /* ---------------- data ---------------- */
 
+  _touch() {
+    this._version += 1;
+  }
+
   setMap(geojson) {
     if (!geojson || !geojson.features) return;
     this._map = geojson;
     this._mapLayer = null;
+    this._touch();
     this._mark();
   }
 
   setData(nodes, regionLinks = []) {
+    this._touch();
     this.nodes = nodes;
     this.banks = nodes.filter((n) => n.type === "bank");
     this.nodeById = new Map(nodes.map((n) => [n.id, n]));
@@ -109,6 +127,7 @@ export class GraphCanvas {
   setView(view) {
     if (!VIEW_HUBS[view]) return;
     this.activeView = view;
+    this._touch();
     this._recount();
     this._rebuildQuad();
     this._mark();
@@ -116,6 +135,7 @@ export class GraphCanvas {
 
   setEdges(view, links) {
     this.edges[view] = Array.isArray(links) ? links : [];
+    this._touch();
     if (view === "similar") {
       const ids = new Set();
       for (const link of this.edges[view]) {
@@ -135,6 +155,7 @@ export class GraphCanvas {
 
   setVisible(set) {
     this.visible = set || null;
+    this._touch();
     this._recount();
     this._rebuildQuad();
     this._mark();
@@ -231,6 +252,7 @@ export class GraphCanvas {
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     const oldW = this.w;
     const oldH = this.h;
+    if (w !== oldW || h !== oldH || dpr !== this.dpr) this._touch();
     this.w = w;
     this.h = h;
     this.dpr = dpr;
@@ -400,6 +422,7 @@ export class GraphCanvas {
         nx: hit ? hit.x : 0,
         ny: hit ? hit.y : 0,
       };
+      if (!this._drag.node && this.transform.k < CACHE_MAX_K) this._ovWanted = true;
       cv.setPointerCapture(e.pointerId);
       cv.classList.add("dragging");
       cv.style.cursor = "grabbing";
@@ -436,6 +459,7 @@ export class GraphCanvas {
             const k = this.transform.k;
             this._drag.node.x = this._drag.nx + dx / k;
             this._drag.node.y = this._drag.ny + dy / k;
+            this._touch();
             this._rebuildQuad();
           } else {
             this.transform = {
@@ -558,19 +582,83 @@ export class GraphCanvas {
 
   /* ---------------- render ---------------- */
 
+  _cacheKey() {
+    return [
+      this._version,
+      this.activeView,
+      this.transform.k.toFixed(5),
+      `${this.w}x${this.h}`,
+      this.dpr,
+      this.selectedId || "",
+      this.hoverId || "",
+      this.highlight.size ? [...this.highlight].join(",") : "",
+    ].join("|");
+  }
+
   _render() {
     const { ctx, w, h, dpr } = this;
     if (!w || !h) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const t = this.transform;
+    const cacheable = t.k < CACHE_MAX_K && !this._anim;
+
+    if (cacheable && this._ov && this._ovKey === this._cacheKey()) {
+      const dx = t.x - this._ovPos.x;
+      const dy = t.y - this._ovPos.y;
+      if (Math.abs(dx) > CACHE_PAN_MARGIN || Math.abs(dy) > CACHE_PAN_MARGIN) {
+        // The viewport left the cached area; rebuild at the new position.
+        this._buildOverviewLayer();
+        ctx.fillStyle = "#070b14";
+        ctx.fillRect(0, 0, w, h);
+        this._drawMap();
+        ctx.drawImage(this._ov, 0, 0, w, h);
+        return;
+      }
+      ctx.fillStyle = "#070b14";
+      ctx.fillRect(0, 0, w, h);
+      this._drawMap();
+      ctx.drawImage(this._ov, dx, dy, w, h);
+      return;
+    }
+
     ctx.fillStyle = "#070b14";
     ctx.fillRect(0, 0, w, h);
     this._drawMap();
+    this._paintGraph();
 
+    if (cacheable && this._ovWanted) {
+      this._ovWanted = false;
+      this._buildOverviewLayer();
+    }
+  }
+
+  _buildOverviewLayer() {
+    const layer = document.createElement("canvas");
+    layer.width = Math.round(this.w * this.dpr);
+    layer.height = Math.round(this.h * this.dpr);
+    const octx = layer.getContext("2d");
+    octx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    const main = this.ctx;
+    this.ctx = octx;
+    try {
+      this._paintGraph();
+    } finally {
+      this.ctx = main;
+    }
+    this._ov = layer;
+    this._ovPos = { k: this.transform.k, x: this.transform.x, y: this.transform.y };
+    this._ovKey = this._cacheKey();
+  }
+
+  _paintGraph() {
+    const { w, h } = this;
     const t = this.transform;
     const margin = 70;
     const screen = new Map();
+    const vis = [];
     for (const n of this.nodes) {
       if (!this._visible(n)) continue;
+      vis.push(n);
       const sx = n.x * t.k + t.x;
       const sy = n.y * t.k + t.y;
       if (sx < -margin || sy < -margin || sx > w + margin || sy > h + margin) continue;
@@ -579,13 +667,25 @@ export class GraphCanvas {
 
     const k = t.k;
     if (k >= 0.13) this._drawEdges(screen, k);
-    for (const n of this.nodes) {
-      if (n.type === "bank" && this._visible(n)) this._drawBank(n, screen.get(n.id), k);
+
+    const alpha = k < 0.22 ? 0.62 : 0.94;
+    const small = new Map();
+    for (const n of vis) {
+      if (n.type === "bank") this._drawBank(n, screen.get(n.id), k, small, alpha);
     }
-    for (const n of this.nodes) {
-      if (n.type !== "bank" && this._visible(n)) this._drawHub(n, screen.get(n.id), k);
+    if (small.size) {
+      const ctx = this.ctx;
+      ctx.globalAlpha = alpha;
+      for (const [color, path] of small) {
+        ctx.fillStyle = color;
+        ctx.fill(path);
+      }
+      ctx.globalAlpha = 1;
     }
-    this._drawLabels(screen, k);
+    for (const n of vis) {
+      if (n.type !== "bank") this._drawHub(n, screen.get(n.id), k);
+    }
+    this._drawLabels(screen, k, vis);
   }
 
   _drawMap() {
@@ -694,16 +794,21 @@ export class GraphCanvas {
     }
   }
 
-  _drawBank(node, pos, k) {
+  _drawBank(node, pos, k, small, alpha) {
     if (!pos) return;
     const { ctx } = this;
     const r = Math.max(1, (node.size || 3) * 0.65 * k);
-    const alpha = k < 0.22 ? 0.62 : 0.94;
-    ctx.globalAlpha = alpha;
-    ctx.fillStyle = node.color || "#94a3b8";
+    const color = node.color || "#94a3b8";
     if (r < 1.5) {
-      ctx.fillRect(pos.sx - r, pos.sy - r, r * 2, r * 2);
+      let path = small.get(color);
+      if (!path) {
+        path = new Path2D();
+        small.set(color, path);
+      }
+      path.rect(pos.sx - r, pos.sy - r, r * 2, r * 2);
     } else {
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = color;
       ctx.beginPath();
       ctx.arc(pos.sx, pos.sy, r, 0, Math.PI * 2);
       ctx.fill();
@@ -712,8 +817,8 @@ export class GraphCanvas {
         ctx.lineWidth = 0.8;
         ctx.stroke();
       }
+      ctx.globalAlpha = 1;
     }
-    ctx.globalAlpha = 1;
 
     if (this.highlight.has(node.id)) {
       ctx.beginPath();
@@ -767,7 +872,7 @@ export class GraphCanvas {
     }
   }
 
-  _drawLabels(screen, k) {
+  _drawLabels(screen, k, nodes = this.nodes) {
     const { ctx, w, h } = this;
     ctx.textBaseline = "middle";
     ctx.lineJoin = "round";
@@ -798,8 +903,8 @@ export class GraphCanvas {
     };
 
     // Hubs, largest province clusters first, so important labels win collisions.
-    const hubs = this.nodes
-      .filter((n) => n.type !== "bank" && this._visible(n) && screen.has(n.id))
+    const hubs = nodes
+      .filter((n) => n.type !== "bank" && screen.has(n.id))
       .sort((a, b) => {
         const ca = a.type === "province" ? this._liveCount.get(a.id) || 0 : a.size || 0;
         const cb = b.type === "province" ? this._liveCount.get(b.id) || 0 : b.size || 0;
@@ -839,8 +944,8 @@ export class GraphCanvas {
     // Bank labels only for higher zoom or focus.
     const showBanks = k >= 1.25;
     if (!showBanks && !this.hoverId && !this.selectedId) return;
-    const bankNodes = this.banks
-      .filter((n) => this._visible(n) && screen.has(n.id))
+    const bankNodes = nodes
+      .filter((n) => n.type === "bank" && screen.has(n.id))
       .sort((a, b) => (b.asset || b.size || 0) - (a.asset || a.size || 0));
     for (const node of bankNodes) {
       const focused = node.id === this.hoverId || node.id === this.selectedId;
